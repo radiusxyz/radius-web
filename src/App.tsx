@@ -1,7 +1,8 @@
+import TopAlert from './components/TopAlert';
 import './index.css';
 
 function App() {
-  return <h1>Hello from Radius</h1>;
+  return <TopAlert />;
 }
 
 export default App;

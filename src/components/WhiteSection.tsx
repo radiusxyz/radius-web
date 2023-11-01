@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import lab from '../assets/images/lab.svg';
 import arrow from '../assets/images/arrow.svg';
+import purple_card_1 from '../assets/images/purple_card_1.svg';
+import purple_card_2 from '../assets/images/purple_card_2.svg';
+import purple_card_3 from '../assets/images/purple_card_3.svg';
+import purple_card_4 from '../assets/images/purple_card_4.svg';
+import PurpleCards from './PurpleCards';
 
 const Container = styled.div`
   display: flex;
@@ -76,16 +81,55 @@ const TrueToDec = styled.p`
 `;
 
 const BuiltIn = styled.div`
-color: #FFF;
-text-align: center;
-font-family: Atyp Display;
-font-size: 80px;
-font-style: normal;
-font-weight: 400;
-line-height: 120%; /* 96px *
+  color: #fff;
+  text-align: center;
+  font-family: Atyp Display;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 111px;
 `;
 
+type Card = {
+  pddn: string;
+  title: string;
+  details: string;
+  imgUrl: string;
+};
+
 const WhiteSection = () => {
+  const cards: Card[] = [
+    {
+      pddn: '36px 32px 40px 44px',
+      title: 'Censorship Resistance',
+      details:
+        'Our trustless approach to transaction ordering remains true to decentralization values with powerful censorship resistance.',
+      imgUrl: purple_card_1,
+    },
+    {
+      pddn: '50px 67.65px 45px 42px',
+      title: 'MEV Success',
+      details:
+        'While MEV resistance is valuable, sustaining rollup economics can be challenging. At Radius, we build with zero knowledge to find the perfect formula for MEV.',
+      imgUrl: purple_card_2,
+    },
+    {
+      pddn: '45px 32px 33px 34px',
+      title: 'Fast Finality',
+      details:
+        'Fast pre-confirmations and proofs add an extra layer of assurance and transparency for users.',
+      imgUrl: purple_card_4,
+    },
+    {
+      pddn: '44px 45px 41px 42px',
+      title: 'Interoperability',
+      details:
+        'With atomic composability in place, rollups can maximize resources and unlock exciting new possibilities.',
+      imgUrl: purple_card_3,
+    },
+  ];
+
   return (
     <Container>
       <Img src={lab} alt='lab' />
@@ -106,6 +150,7 @@ const WhiteSection = () => {
           Built-in defensibility and trustless capabilities with{' '}
           <strong>zero knowledge</strong>
         </BuiltIn>
+        <PurpleCards cards={cards} />
       </PurpleWrapper>
     </Container>
   );

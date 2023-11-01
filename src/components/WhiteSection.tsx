@@ -67,7 +67,7 @@ const PurpleWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 208px 171px 0px 171px;
+  padding: 208px 171px 203px 171px;
 `;
 
 const TrueToDec = styled.p`

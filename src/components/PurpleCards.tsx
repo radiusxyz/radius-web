@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
 const CardsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px 30px;
+  display: flex;
+  gap: 30px;
   align-items: start;
-  grid-auto-rows: min-content;
+`;
+
+const Half = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 `;
 
 const Container = styled.div<{ pddn: string }>`
@@ -51,15 +55,38 @@ type Props = {
 const PurpleCards = ({ cards }: { cards: Props[] }) => {
   return (
     <CardsContainer>
-      {cards.map((card: Props) => (
-        <Container key={card.title} pddn={card.pddn}>
+      <Half>
+        <Container key={cards[0].title} pddn={cards[0].pddn}>
           <ImgContainer>
-            <img src={card.imgUrl} alt={card.imgUrl} />
+            <img src={cards[0].imgUrl} alt={cards[0].imgUrl} />
           </ImgContainer>
-          <Title>{card.title}</Title>
-          <Details>{card.details}</Details>
+          <Title>{cards[0].title}</Title>
+          <Details>{cards[0].details}</Details>
         </Container>
-      ))}
+        <Container key={cards[3].title} pddn={cards[3].pddn}>
+          <ImgContainer>
+            <img src={cards[3].imgUrl} alt={cards[3].imgUrl} />
+          </ImgContainer>
+          <Title>{cards[3].title}</Title>
+          <Details>{cards[3].details}</Details>
+        </Container>
+      </Half>
+      <Half>
+        <Container key={cards[1].title} pddn={cards[1].pddn}>
+          <ImgContainer>
+            <img src={cards[1].imgUrl} alt={cards[1].imgUrl} />
+          </ImgContainer>
+          <Title>{cards[1].title}</Title>
+          <Details>{cards[1].details}</Details>
+        </Container>
+        <Container key={cards[2].title} pddn={cards[2].pddn}>
+          <ImgContainer>
+            <img src={cards[2].imgUrl} alt={cards[2].imgUrl} />
+          </ImgContainer>
+          <Title>{cards[2].title}</Title>
+          <Details>{cards[2].details}</Details>
+        </Container>
+      </Half>
     </CardsContainer>
   );
 };

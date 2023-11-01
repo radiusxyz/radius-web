@@ -1,13 +1,18 @@
 :root {
   font-family: Roboto, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   box-sizing: border-box;
-  color-scheme: light dark;
   background-color: #fff;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
 }
 
 @font-face {
@@ -96,7 +101,7 @@
 }
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy-Medium';
   src: url('./assets/fonts/gilroy/Gilroy-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
@@ -153,33 +158,13 @@
 }
 
 @font-face {
-  font-family: 'AtypDisplay';
-  src: url('./assets/fonts/gilroy/AtypDisplay-Medium.ttf') format('truetype');
-  font-weight: 500;
+  font-family: 'Atyp Display';
+  src: url('./assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.woff2')
+      format('woff2'),
+    url('./assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.woff')
+      format('woff'),
+    url('./assets/fonts/AtypDisplay-Medium/AtypDisplay-Medium.ttf')
+      format('truetype');
+
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'AtypDisplay';
-  src: url('./assets/fonts/gilroy/AtypDisplay-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'AtypDisplay';
-  src: url('./assets/fonts/gilroy/AtypDisplay-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body,
-html {
-  height: 100vh;
-  width: 100vw;
 }

@@ -1,9 +1,11 @@
-import styled from 'styled-components/macro';
-
+import styled from 'styled-components';
 const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 52px;
-  background: #ff5c0;
+  background: #ff5c00;
 `;
 
 const Text = styled.div`
@@ -13,16 +15,18 @@ const Text = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  &:last-child {
-    text-decoration: underline;
-  }
+`;
+
+const Link = styled.a`
+  color: #fff;
 `;
 
 const TopAlert = () => {
   return (
     <Container>
       <Text>
-        Our private testnet is live! Sign up to participate <span>here</span>.
+        Our private testnet is live! Sign up to participate{' '}
+        <Link href='https://www.google.ru'>here</Link>.
       </Text>
     </Container>
   );

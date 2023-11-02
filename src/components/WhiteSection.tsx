@@ -17,10 +17,27 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const Img = styled.img`
-  width: 100%;
+const Img = styled.div`
+  width: 1920px;
+  // height: 1015px;
   height: auto;
   margin-bottom: 24px;
+  background-image: url(${lab});
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+`;
+
+const Content = styled.div`
+  display: flex;
+  width: 100%;
+`;
+
+const TopRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 `;
 
 const EcoContent = styled.div`
@@ -109,7 +126,7 @@ const BuiltIn = styled.div`
 `;
 
 type Card = {
-  pddn: string;
+  topPadding: string;
   title: string;
   details: string;
   imgUrl: string;
@@ -118,28 +135,28 @@ type Card = {
 const WhiteSection = () => {
   const cards: Card[] = [
     {
-      pddn: '36px 32px 40px 44px',
+      topPadding: '36px',
       title: 'Censorship Resistance',
       details:
         'Our trustless approach to transaction ordering remains true to decentralization values with powerful censorship resistance.',
       imgUrl: purple_card_1,
     },
     {
-      pddn: '50px 67.65px 45px 42px',
+      topPadding: '50px',
       title: 'MEV Success',
       details:
         'While MEV resistance is valuable, sustaining rollup economics can be challenging. At Radius, we build with zero knowledge to find the perfect formula for MEV.',
       imgUrl: purple_card_2,
     },
     {
-      pddn: '45px 32px 33px 34px',
+      topPadding: '45px',
       title: 'Fast Finality',
       details:
         'Fast pre-confirmations and proofs add an extra layer of assurance and transparency for users.',
       imgUrl: purple_card_4,
     },
     {
-      pddn: '44px 45px 41px 42px',
+      topPadding: '44px',
       title: 'Interoperability',
       details:
         'With atomic composability in place, rollups can maximize resources and unlock exciting new possibilities.',
@@ -149,7 +166,11 @@ const WhiteSection = () => {
 
   return (
     <Container>
-      <Img src={lab} alt='lab' />
+      <Img>
+        <Content>
+          <TopRow></TopRow>
+        </Content>
+      </Img>
       <EcoWrapper>
         <EcoContent>
           <Eco>
@@ -173,7 +194,6 @@ const WhiteSection = () => {
           <PurpleCards cards={cards} />
         </PurpleContent>
       </PurpleWrapper>
-
       <BeyondSection />
     </Container>
   );

@@ -6,13 +6,15 @@ import purple_card_2 from '../assets/images/purple_card_2.svg';
 import purple_card_3 from '../assets/images/purple_card_3.svg';
 import purple_card_4 from '../assets/images/purple_card_4.svg';
 import PurpleCards from './PurpleCards';
+import BeyondSection from './BeyondSection';
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
   background: #fff;
-  padding: 41px 30px 0px 30px;
+  padding: 41px 30px 238px 30px;
+  align-items: center;
 `;
 
 const Img = styled.img`
@@ -152,6 +154,7 @@ const WhiteSection = () => {
         </BuiltIn>
         <PurpleCards cards={cards} />
       </PurpleWrapper>
+      <BeyondSection />
     </Container>
   );
 };

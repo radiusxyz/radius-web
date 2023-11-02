@@ -5,6 +5,9 @@ const MainContainer = styled.div`
   max-width: 1400px;
   width: 100%;
   margin-top: 290px;
+  flex-direction: column;
+  align-items: center;
+  gap: 180px;
 `;
 
 const Header = styled.p`
@@ -14,12 +17,18 @@ const Header = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 96px */
-  margin-bottom: 180px;
 `;
 
 const Row = styled.div`
   display: flex;
   align-items: center;
+  gap: 124px;
+`;
+
+const Body = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 121px;
 `;
 
 const DummyImg = styled.div`
@@ -31,6 +40,9 @@ const DummyImg = styled.div`
 
 const TextWrapper = styled.div`
   max-width: 763px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
 
 const Title = styled.p`
@@ -56,30 +68,32 @@ const BeyondSection = () => {
       <Header>
         How our design and system goes <strong>beyond decentralization</strong>
       </Header>
-      <Row>
-        <DummyImg />
-        <TextWrapper>
-          <Title>Creating sustainable rollup economics</Title>
-          <Details>
-            While MEV resistance is valuable, the challenge is finding ways to
-            sustain rollup economics. Radius not only effectively prevents
-            centralization pressures, security concerns, and economic
-            inefficiencies but also makes
-          </Details>
-        </TextWrapper>
-      </Row>
-      <Row>
-        <DummyImg />
-        <TextWrapper>
-          <Title>Connecting through a shared layer</Title>
-          <Details>
-            A shared layer is essential to atomic composability, ensuring
-            consistent data exchange and value flow across different rollups.
-            With atomic composability in place, rollups can optimize resources
-            and unlock exciting new possibilities.
-          </Details>
-        </TextWrapper>
-      </Row>
+      <Body>
+        <Row>
+          <DummyImg />
+          <TextWrapper>
+            <Title>Creating sustainable rollup economics</Title>
+            <Details>
+              While MEV resistance is valuable, the challenge is finding ways to
+              sustain rollup economics. Radius not only effectively prevents
+              centralization pressures, security concerns, and economic
+              inefficiencies but also makes
+            </Details>
+          </TextWrapper>
+        </Row>
+        <Row>
+          <TextWrapper>
+            <Title>Connecting through a shared layer</Title>
+            <Details>
+              A shared layer is essential to atomic composability, ensuring
+              consistent data exchange and value flow across different rollups.
+              With atomic composability in place, rollups can optimize resources
+              and unlock exciting new possibilities.
+            </Details>
+          </TextWrapper>{' '}
+          <DummyImg />
+        </Row>
+      </Body>
     </MainContainer>
   );
 };

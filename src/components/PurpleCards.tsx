@@ -12,9 +12,9 @@ const Half = styled.div`
   gap: 30px;
 `;
 
-const Container = styled.div<{ pddn: string }>`
+const Container = styled.div<{ topPadding: string }>`
   width: 597px;
-  padding: ${(props) => props.pddn};
+  padding: ${(props) => props.topPadding} 44px 44px 44px;
   border-radius: 8px;
   border: 1px solid #624784;
   background: #381b5b;
@@ -46,7 +46,7 @@ const ImgContainer = styled.div`
 `;
 
 type Props = {
-  pddn: string;
+  topPadding: string;
   title: string;
   details: string;
   imgUrl: string;
@@ -56,14 +56,14 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
   return (
     <CardsContainer>
       <Half>
-        <Container key={cards[0].title} pddn={cards[0].pddn}>
+        <Container key={cards[0].title} topPadding={cards[0].topPadding}>
           <ImgContainer>
             <img src={cards[0].imgUrl} alt={cards[0].imgUrl} />
           </ImgContainer>
           <Title>{cards[0].title}</Title>
           <Details>{cards[0].details}</Details>
         </Container>
-        <Container key={cards[3].title} pddn={cards[3].pddn}>
+        <Container key={cards[3].title} topPadding={cards[3].topPadding}>
           <ImgContainer>
             <img src={cards[3].imgUrl} alt={cards[3].imgUrl} />
           </ImgContainer>
@@ -72,14 +72,14 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
         </Container>
       </Half>
       <Half>
-        <Container key={cards[1].title} pddn={cards[1].pddn}>
+        <Container key={cards[1].title} topPadding={cards[1].topPadding}>
           <ImgContainer>
             <img src={cards[1].imgUrl} alt={cards[1].imgUrl} />
           </ImgContainer>
           <Title>{cards[1].title}</Title>
           <Details>{cards[1].details}</Details>
         </Container>
-        <Container key={cards[2].title} pddn={cards[2].pddn}>
+        <Container key={cards[2].title} topPadding={cards[2].topPadding}>
           <ImgContainer>
             <img src={cards[2].imgUrl} alt={cards[2].imgUrl} />
           </ImgContainer>

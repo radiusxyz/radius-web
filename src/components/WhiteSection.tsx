@@ -17,16 +17,18 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const Img = styled.div`
-  width: 1920px;
-  // height: 1015px;
+const LabWrapper = styled.div`
+  width: 100%;
   height: auto;
   margin-bottom: 24px;
-  background-image: url(${lab});
   display: flex;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  position: relative;
+`;
+
+const Img = styled.img`
+  width: 100%;
+  height: auto;
 `;
 
 const Content = styled.div`
@@ -166,11 +168,12 @@ const WhiteSection = () => {
 
   return (
     <Container>
-      <Img>
+      <Img src={lab} />
+      <LabWrapper>
         <Content>
           <TopRow></TopRow>
         </Content>
-      </Img>
+      </LabWrapper>
       <EcoWrapper>
         <EcoContent>
           <Eco>

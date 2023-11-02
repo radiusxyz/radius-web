@@ -51,7 +51,7 @@ html {
 }
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy-SemiBold';
   src: url('./assets/fonts/gilroy/Gilroy-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;

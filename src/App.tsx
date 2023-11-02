@@ -1,4 +1,4 @@
-import BssCards from './components/BssCards';
+import BuildSecureScale from './components/BuildSecureScale';
 import TopAlert from './components/TopAlert';
 import WhiteSection from './components/WhiteSection';
 import './index.css';
@@ -8,7 +8,7 @@ function App() {
     <>
       <TopAlert />
       <WhiteSection />
-      <BssCards />
+      <BuildSecureScale />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import lab from '../assets/images/lab.svg';
+import radius from '../assets/images/radius.svg';
 import arrow from '../assets/images/arrow.svg';
 import purple_card_1 from '../assets/images/purple_card_1.svg';
 import purple_card_2 from '../assets/images/purple_card_2.svg';
@@ -20,26 +21,79 @@ const Container = styled.div`
 const LabWrapper = styled.div`
   width: 100%;
   height: auto;
-  margin-bottom: 24px;
   display: flex;
   justify-content: center;
   position: relative;
+  margin-bottom: 24px;
 `;
 
 const Img = styled.img`
   width: 100%;
   height: auto;
+  position: absolute;
 `;
 
 const Content = styled.div`
   display: flex;
   width: 100%;
+  max-width: 1400px;
 `;
 
 const TopRow = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+`;
+
+const EcoDocGit = styled.div`
+  display: flex;
+  border-radius: 34px;
+  max-width: 600px;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const EcoBtn = styled.button`
+  color: #000;
+  font-family: Gilroy-SemiBold;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: transparent;
+`;
+const DocBtn = styled.button`
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Gilroy-SemiBold;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+  border: none;
+  background: transparent;
+`;
+const GitBtn = styled.button`
+  color: #000;
+  font-family: Gilroy-SemiBold;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: transparent;
 `;
 
 const EcoContent = styled.div`
@@ -168,10 +222,17 @@ const WhiteSection = () => {
 
   return (
     <Container>
-      <Img src={lab} />
       <LabWrapper>
+        <Img src={lab} />
         <Content>
-          <TopRow></TopRow>
+          <TopRow>
+            <img src={radius} alt='radius' />
+            <EcoDocGit>
+              <EcoBtn>Ecosystem</EcoBtn>
+              <DocBtn>Documentation</DocBtn>
+              <GitBtn>Github</GitBtn>
+            </EcoDocGit>
+          </TopRow>
         </Content>
       </LabWrapper>
       <EcoWrapper>

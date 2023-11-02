@@ -1,3 +1,4 @@
+import BuildSecureScale from './components/BuildSecureScale';
 import InvestorsSection from './components/InvestorsSection';
 import TopAlert from './components/TopAlert';
 import WhiteSection from './components/WhiteSection';
@@ -8,7 +9,9 @@ function App() {
     <>
       <TopAlert />
       <WhiteSection />
+      <BuildSecureScale />
       <InvestorsSection />
+
     </>
   );
 }

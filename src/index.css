@@ -30,7 +30,7 @@ html {
 }
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy-Bold';
   src: url('./assets/fonts/gilroy/Gilroy-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;

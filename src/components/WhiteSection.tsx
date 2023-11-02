@@ -23,12 +23,19 @@ const Img = styled.img`
   margin-bottom: 24px;
 `;
 
-const EcoWrapper = styled.div`
-  width: auto;
-  padding: 115px 223px 115px 245px;
-  background: #fdeba8;
+const EcoContent = styled.div`
   display: flex;
+  width: 100%;
+  max-width: 1400px;
   justify-content: space-between;
+`;
+
+const EcoWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 115px 10px;
+  background: #fdeba8;
+  justify-content: center;
   border-radius: 20px 20px 0px 0px;
 `;
 const Eco = styled.div`
@@ -66,10 +73,18 @@ const Arrow = styled.img`
 const PurpleWrapper = styled.div`
   display: flex;
   background: #291346;
+  width: 100%;
+  padding: 208px 10px;
+  justify-content: center;
+`;
+
+const PurpleContent = styled.div`
+  display: flex;
+  max-width: 1400px;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 208px 171px 203px 171px;
 `;
 
 const TrueToDec = styled.p`
@@ -136,24 +151,29 @@ const WhiteSection = () => {
     <Container>
       <Img src={lab} alt='lab' />
       <EcoWrapper>
-        <Eco>
-          <Title>Ecosystem</Title>
-          <Details>
-            Radius collaborates with builders and partners in research and
-            development to bring together the most promising ideas and forge a
-            better path for Ethereum’s decentralized future
-          </Details>
-        </Eco>
-        <Arrow src={arrow} alt='arrow_right' />
+        <EcoContent>
+          <Eco>
+            <Title>Ecosystem</Title>
+            <Details>
+              Radius collaborates with builders and partners in research and
+              development to bring together the most promising ideas and forge a
+              better path for Ethereum’s decentralized future
+            </Details>
+          </Eco>
+          <Arrow src={arrow} alt='arrow_right' />
+        </EcoContent>
       </EcoWrapper>
       <PurpleWrapper>
-        <TrueToDec>TRUE TO DECENTRALIZATION</TrueToDec>
-        <BuiltIn>
-          Built-in defensibility and trustless capabilities with{' '}
-          <strong>zero knowledge</strong>
-        </BuiltIn>
-        <PurpleCards cards={cards} />
+        <PurpleContent>
+          <TrueToDec>TRUE TO DECENTRALIZATION</TrueToDec>
+          <BuiltIn>
+            Built-in defensibility and trustless capabilities with{' '}
+            <strong>zero knowledge</strong>
+          </BuiltIn>
+          <PurpleCards cards={cards} />
+        </PurpleContent>
       </PurpleWrapper>
+
       <BeyondSection />
     </Container>
   );

@@ -9,12 +9,18 @@ import empty from '../assets/images/empty.svg';
 
 const MainContainer = styled.div`
   display: flex;
-  gap: 98px;
-  align-items: center;
   width: 100%;
   padding: 180px 10px;
   background: #000;
   justify-content: center;
+`;
+
+const Content = styled.div`
+  display: flex;
+  max-width: 1400px;
+  gap: 98px;
+  align-items: center;
+  width: 100%;
 `;
 
 const Title = styled.p`
@@ -48,19 +54,21 @@ const RightGrad = styled.div`
 const InvestorsSection = () => {
   return (
     <MainContainer>
-      <Title>Investors</Title>
-      <Logos>
-        <LeftGrad>
-          <img src={grad_left} />
-        </LeftGrad>
-        <img src={hashed} />
-        <img src={lambda} />
-        <img src={superscrypt} />
-        <img src={empty} />
-        <RightGrad>
-          <img src={grad_right} />
-        </RightGrad>
-      </Logos>
+      <Content>
+        <Title>Investors</Title>
+        <Logos>
+          <LeftGrad>
+            <img src={grad_left} />
+          </LeftGrad>
+          <img src={hashed} />
+          <img src={lambda} />
+          <img src={superscrypt} />
+          <img src={empty} />
+          <RightGrad>
+            <img src={grad_right} />
+          </RightGrad>
+        </Logos>
+      </Content>
     </MainContainer>
   );
 };

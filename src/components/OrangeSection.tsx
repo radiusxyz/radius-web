@@ -1,0 +1,67 @@
+import styled from 'styled-components';
+import orange_mosaic from '../assets/images/orange_mosaic.svg';
+
+const Background = styled.div`
+  background-image: url(${orange_mosaic});
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 330px 0;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+`;
+
+const Title = styled.p`
+  max-width: 1400px;
+  color: #fff;
+  font-family: Atyp Display;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 130px */
+`;
+
+const BuildBtn = styled.button`
+  display: inline-flex;
+  padding: 20px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #ff7a00;
+  text-align: center;
+  font-family: Gilroy-SemiBold;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 28.8px */
+  max-width: 300px;
+  border-radius: 81px;
+  background: #fff;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+    background: #ff9a00;
+    outline: 1px solid #fff;
+  }
+`;
+
+const OrangeSection = () => {
+  return (
+    <Background>
+      <Wrapper>
+        <Title>
+          Laying the foundation for a <strong>sustainable future</strong> for
+          rollups
+        </Title>
+        <BuildBtn>BUILD WITH RADIUS</BuildBtn>
+      </Wrapper>
+    </Background>
+  );
+};
+
+export default OrangeSection;

@@ -1,4 +1,5 @@
 import BuildSecureScale from './components/BuildSecureScale';
+import Footer from './components/Footer';
 import InvestorsSection from './components/InvestorsSection';
 import OrangeSection from './components/OrangeSection';
 import ResearchAreas from './components/ResearchAreas';
@@ -15,6 +16,7 @@ function App() {
       <InvestorsSection />
       <OrangeSection />
       <ResearchAreas />
+      <Footer />
     </>
   );
 }

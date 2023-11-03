@@ -278,18 +278,6 @@ const WhiteSection = () => {
       <LabWrapper>
         <Img src={lab} />
         <Content>
-          <TopRow>
-            <img src={radius} alt='radius' />
-            <EcoDocGit>
-              <EcoBtn>Ecosystem</EcoBtn>
-              <StyledLink href='https://docs.theradius.xyz/overview/introduction-to-radius'>
-                <DocBtn>Documentation</DocBtn>
-              </StyledLink>
-              <StyledLink href='https://github.com/radiusxyz'>
-                <GitBtn>Github</GitBtn>
-              </StyledLink>
-            </EcoDocGit>
-          </TopRow>
           <IntroWrapper>
             <IntroTitle>
               Empowering rollups <strong>Beyond decentralization</strong>

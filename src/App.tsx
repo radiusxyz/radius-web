@@ -7,25 +7,32 @@ import TopAlert from './components/TopAlert';
 import WhiteSection from './components/WhiteSection';
 import radius from './assets/images/radius.svg';
 import './index.css';
+import radius_dark from './assets/images/radius_dark.svg';
+import { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
 
-const NavBar = styled.div`
+const NavBar = styled.div<{ sticky: boolean }>`
   position: absolute;
   width: 100%;
+  height: 70px;
   display: flex;
+  background:${(props) => (props.sticky && '#fff') || 'transparent'}
+  align-items: center;
   justify-content: center;
   // background: #fff;
-  // box-shadow: 0px 4px 36px 0px rgba(255, 122, 0, 0.25);
-  top: 93px;
+  box-shadow:${(props) =>
+    props.sticky && '0px 4px 36px 0px rgba(255, 122, 0, 0.25))'};
+  top: 92px;
   z-index: 10;
+  margin-top: 9px;
 `;
 
 const Content = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  margin-top: 19px;
   max-width: 1400px;
 `;
 
@@ -61,6 +68,7 @@ const EcoBtn = styled.button`
     background: #ff5c02;
   }
 `;
+
 const DocBtn = styled.button`
   color: #000;
   display: flex;
@@ -80,6 +88,7 @@ const DocBtn = styled.button`
     background: #ff5c02;
   }
 `;
+
 const GitBtn = styled.button`
   color: #000;
   font-family: Gilroy-SemiBold;
@@ -107,11 +116,29 @@ const StyledLink = styled.a`
 `;
 
 function App() {
+  const [gnb, setGnb] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', stickNavbar);
+
+    return () => {
+      window.removeEventListener('scroll', stickNavbar);
+    };
+  }, []);
+
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      console.log(windowHeight);
+      windowHeight > 162 ? setGnb(true) : setGnb(false);
+    }
+  };
+
   return (
     <>
-      <NavBar>
+      <NavBar sticky={gnb}>
         <Content>
-          <img src={radius} alt='radius' />
+          <img src={gnb ? radius_dark : radius} alt='radius' />
           <EcoDocGit>
             <EcoBtn>Ecosystem</EcoBtn>
             <StyledLink href='https://docs.theradius.xyz/overview/introduction-to-radius'>

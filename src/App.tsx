@@ -13,9 +13,9 @@ function App() {
       <TopAlert />
       <WhiteSection />
       <BuildSecureScale />
+      <ResearchAreas />
       <InvestorsSection />
       <OrangeSection />
-      <ResearchAreas />
       <Footer />
     </>
   );

@@ -230,6 +230,10 @@ const BuiltIn = styled.div`
   margin-bottom: 111px;
 `;
 
+const StyledLink = styled.a`
+  text-decoration: none;
+`;
+
 type Card = {
   topPadding: string;
   title: string;
@@ -278,8 +282,12 @@ const WhiteSection = () => {
             <img src={radius} alt='radius' />
             <EcoDocGit>
               <EcoBtn>Ecosystem</EcoBtn>
-              <DocBtn>Documentation</DocBtn>
-              <GitBtn>Github</GitBtn>
+              <StyledLink href='https://docs.theradius.xyz/overview/introduction-to-radius'>
+                <DocBtn>Documentation</DocBtn>
+              </StyledLink>
+              <StyledLink href='https://github.com/radiusxyz'>
+                <GitBtn>Github</GitBtn>
+              </StyledLink>
             </EcoDocGit>
           </TopRow>
           <IntroWrapper>

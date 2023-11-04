@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import logo from '../assets/images/logo.svg';
 import entanglement from '../assets/images/entanglement.svg';
+import Footer from './Footer';
 
 const IntroSection = styled.div`
   width: 100%;
@@ -273,6 +274,7 @@ const EcoPage = () => {
           </a>
         </GradientContent>
       </GradientSection>
+      <Footer />
     </>
   );
 };

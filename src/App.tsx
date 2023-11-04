@@ -1,27 +1,25 @@
-import BuildSecureScale from './components/BuildSecureScale';
-import EcoPage from './components/EcoPage';
-import Footer from './components/Footer';
-import InvestorsSection from './components/InvestorsSection';
-import NavBar from './components/NavBar';
-import OrangeSection from './components/OrangeSection';
-import ResearchAreas from './components/ResearchAreas';
-import TopAlert from './components/TopAlert';
-import WhiteSection from './components/WhiteSection';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
+import EcoPage from './pages/EcoPage';
+import HomePage from './pages/HomePage';
+import RootLayout from './pages/RootLayout';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: 'ecosystem', element: <EcoPage /> },
+    ],
+  },
+]);
 
 function App() {
   return (
-    <>
-      <EcoPage></EcoPage>
-      {/* <TopAlert />
-      <NavBar />
-      <WhiteSection />
-      <BuildSecureScale />
-      <ResearchAreas />
-      <InvestorsSection />
-      <OrangeSection />
-      <Footer /> */}
-    </>
+    <RouterProvider router={router} />
+    /*
+     */
   );
 }
 

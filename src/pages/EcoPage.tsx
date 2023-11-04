@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import radius_dark from '../assets/images/radius_dark.svg';
 import logo from '../assets/images/logo.svg';
 import entanglement from '../assets/images/entanglement.svg';
-import Footer from './Footer';
+import Footer from '../components/Footer';
 
 const StyledLink = styled.a`
   text-decoration: none;

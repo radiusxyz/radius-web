@@ -127,6 +127,40 @@ const CardDetails = styled.p`
   line-height: 140.625%; /* 22.5px */
 `;
 
+const GradientSection = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #1b191f 0%, #302b38 100%);
+`;
+
+const GradientContent = styled.div`
+  max-width: 1400px;
+  width: 100%;
+`;
+
+const GradientText = styled.p`
+  color: #fff;
+  font-family: Atyp Display;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140.625%; /* 112.5px */
+  margin-top: 267px;
+  margin-bottom: 31px;
+`;
+
+const GradientLink = styled.p`
+  color: #ff7a00;
+  font-family: Gilroy-Medium;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; /* 44px */
+  text-decoration-line: underline;
+  margin-bottom: 332px;
+`;
+
 const cards = [
   {
     logo: logo,
@@ -229,6 +263,16 @@ const EcoPage = () => {
           </Cards>
         </CardsSectionContent>
       </CardsSection>
+      <GradientSection>
+        <GradientContent>
+          <GradientText>
+            Join Radius in decentralizing and future-proofing Ethereum
+          </GradientText>
+          <a href='https://twitter.com/radius_xyz'>
+            <GradientLink>Talk to us</GradientLink>
+          </a>
+        </GradientContent>
+      </GradientSection>
     </>
   );
 };

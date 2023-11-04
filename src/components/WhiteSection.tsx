@@ -235,7 +235,7 @@ const StyledLink = styled.a`
 `;
 
 type Card = {
-  topPadding: string;
+  toppadding: string;
   title: string;
   details: string;
   imgUrl: string;
@@ -244,28 +244,28 @@ type Card = {
 const WhiteSection = () => {
   const cards: Card[] = [
     {
-      topPadding: '36px',
+      toppadding: '36px',
       title: 'Censorship Resistance',
       details:
         'Our trustless approach to transaction ordering remains true to decentralization values with powerful censorship resistance.',
       imgUrl: purple_card_1,
     },
     {
-      topPadding: '50px',
+      toppadding: '50px',
       title: 'MEV Success',
       details:
         'While MEV resistance is valuable, sustaining rollup economics can be challenging. At Radius, we build with zero knowledge to find the perfect formula for MEV.',
       imgUrl: purple_card_2,
     },
     {
-      topPadding: '45px',
+      toppadding: '45px',
       title: 'Fast Finality',
       details:
         'Fast pre-confirmations and proofs add an extra layer of assurance and transparency for users.',
       imgUrl: purple_card_4,
     },
     {
-      topPadding: '44px',
+      toppadding: '44px',
       title: 'Interoperability',
       details:
         'With atomic composability in place, rollups can maximize resources and unlock exciting new possibilities.',

@@ -12,18 +12,30 @@ import { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
 
-const NavBar = styled.div<{ sticky: boolean }>`
+const NavBar = styled.div`
   position: absolute;
   width: 100%;
   height: 70px;
   display: flex;
-  background:${(props) => (props.sticky && '#fff') || 'transparent'}
   align-items: center;
   justify-content: center;
-  // background: #fff;
-  box-shadow:${(props) =>
-    props.sticky && '0px 4px 36px 0px rgba(255, 122, 0, 0.25))'};
+  background: transparent;
+  box-shadow: none;
   top: 92px;
+  z-index: 10;
+  margin-top: 9px;
+`;
+
+const StickyNavBar = styled.div`
+  position: sticky;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0px 4px 36px 0px rgba(255, 122, 0, 0.25);
+  top: 0px;
   z-index: 10;
   margin-top: 9px;
 `;
@@ -116,40 +128,61 @@ const StyledLink = styled.a`
 `;
 
 function App() {
-  const [gnb, setGnb] = useState(false);
+  const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', stickNavbar);
+    const handleScroll = () => {
+      let windowHeight = window.scrollY;
+      console.log(windowHeight);
+      if (windowHeight > 162) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
 
+    // Set up the event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener
     return () => {
-      window.removeEventListener('scroll', stickNavbar);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const stickNavbar = () => {
-    if (window !== undefined) {
-      let windowHeight = window.scrollY;
-      console.log(windowHeight);
-      windowHeight > 162 ? setGnb(true) : setGnb(false);
-    }
-  };
-
   return (
     <>
-      <NavBar sticky={gnb}>
-        <Content>
-          <img src={gnb ? radius_dark : radius} alt='radius' />
-          <EcoDocGit>
-            <EcoBtn>Ecosystem</EcoBtn>
-            <StyledLink href='https://docs.theradius.xyz/overview/introduction-to-radius'>
-              <DocBtn>Documentation</DocBtn>
-            </StyledLink>
-            <StyledLink href='https://github.com/radiusxyz'>
-              <GitBtn>Github</GitBtn>
-            </StyledLink>
-          </EcoDocGit>
-        </Content>
-      </NavBar>
+      {(sticky && (
+        <StickyNavBar>
+          <Content>
+            <img src={radius_dark} alt='radius' />
+            <EcoDocGit>
+              <EcoBtn>Ecosystem</EcoBtn>
+              <StyledLink href='https://docs.theradius.xyz/overview/introduction-to-radius'>
+                <DocBtn>Documentation</DocBtn>
+              </StyledLink>
+              <StyledLink href='https://github.com/radiusxyz'>
+                <GitBtn>Github</GitBtn>
+              </StyledLink>
+            </EcoDocGit>
+          </Content>
+        </StickyNavBar>
+      )) || (
+        <NavBar>
+          <Content>
+            <img src={radius} alt='radius' />
+            <EcoDocGit>
+              <EcoBtn>Ecosystem</EcoBtn>
+              <StyledLink href='https://docs.theradius.xyz/overview/introduction-to-radius'>
+                <DocBtn>Documentation</DocBtn>
+              </StyledLink>
+              <StyledLink href='https://github.com/radiusxyz'>
+                <GitBtn>Github</GitBtn>
+              </StyledLink>
+            </EcoDocGit>
+          </Content>
+        </NavBar>
+      )}
       <TopAlert />
       <WhiteSection />
       <BuildSecureScale />

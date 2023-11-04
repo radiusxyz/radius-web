@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import BssCards from './BssCards';
+import black_mosaic from '../assets/images/black_mosaic.svg';
 
 const Container = styled.div`
   width: 100%;
@@ -7,12 +8,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 221px 10px 222px 10px;
-  background: linear-gradient(
-    180deg,
-    #1b1b1b 40.68%,
-    rgba(27, 27, 27, 0.74) 75.49%,
-    #1b1b1b 100.59%
-  );
+  background-image: url(${black_mosaic});
 `;
 
 const Title = styled.p`

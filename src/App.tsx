@@ -1,4 +1,5 @@
 import BuildSecureScale from './components/BuildSecureScale';
+import EcoPage from './components/EcoPage';
 import Footer from './components/Footer';
 import InvestorsSection from './components/InvestorsSection';
 import NavBar from './components/NavBar';
@@ -11,14 +12,15 @@ import './index.css';
 function App() {
   return (
     <>
-      <TopAlert />
+      <EcoPage></EcoPage>
+      {/* <TopAlert />
       <NavBar />
       <WhiteSection />
       <BuildSecureScale />
       <ResearchAreas />
       <InvestorsSection />
       <OrangeSection />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }

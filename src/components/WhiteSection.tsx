@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import lab from '../assets/images/lab.svg';
+import lab_mob from '../assets/images/lab_mob.svg';
 import arrow from '../assets/images/arrow.svg';
 import purple_card_1 from '../assets/images/purple_card_1.svg';
 import purple_card_2 from '../assets/images/purple_card_2.svg';
@@ -15,6 +16,9 @@ const Container = styled.div`
   background: #fff;
   padding: 41px 30px 238px 30px;
   align-items: center;
+  @media (max-width: 750px) {
+    padding: 0;
+  }
 `;
 
 const LabWrapper = styled.div`
@@ -24,11 +28,18 @@ const LabWrapper = styled.div`
   justify-content: center;
   margin-bottom: 24px;
   position: relative;
+  @media (max-width: 750px) {
+    margin-bottom: 0;
+    height: 100vh;
+  }
 `;
 
 const Img = styled.img`
   width: 100%;
   height: auto;
+  @media (max-width: 750px) {
+    object-fit: cover;
+  }
 `;
 
 const Content = styled.div`
@@ -36,6 +47,12 @@ const Content = styled.div`
   max-width: 1400px;
   position: absolute;
   height: 100%;
+  @media (max-width: 750px) {
+    padding: 0px 30px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 `;
 
 const IntroWrapper = styled.div`
@@ -46,7 +63,15 @@ const IntroWrapper = styled.div`
   top: 50%;
   transform: translate(0, -50%);
   max-width: 658px;
+  @media (max-width: 750px) {
+    max-width: 315px;
+    gap: 10px;
+    position: relative;
+    top: 0px;
+    transform: translate(0, 0);
+  }
 `;
+
 const IntroTitle = styled.p`
   color: #fff;
   font-family: Atyp Display;
@@ -55,7 +80,11 @@ const IntroTitle = styled.p`
   font-weight: 400;
   line-height: 120%; /* 72px */
   text-transform: capitalize;
+  @media (max-width: 750px) {
+    font-size: 30px;
+  }
 `;
+
 const IntroSub = styled.p`
   color: rgba(255, 255, 255, 0.8);
   font-family: Atyp Display;
@@ -63,7 +92,11 @@ const IntroSub = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 136%; /* 32.64px */
+  @media (max-width: 750px) {
+    font-size: 14px;
+  }
 `;
+
 const EcoContent = styled.div`
   display: flex;
   width: 100%;
@@ -78,6 +111,9 @@ const EcoWrapper = styled.div`
   background: #fdeba8;
   justify-content: center;
   border-radius: 20px 20px 0px 0px;
+  @media (max-width: 750px) {
+    padding: 78px 32px;
+  }
 `;
 const Eco = styled.div`
   width: auto;
@@ -191,7 +227,7 @@ const WhiteSection = () => {
   return (
     <Container>
       <LabWrapper>
-        <Img src={lab} />
+        <Img src={window.innerWidth > 740 ? lab : lab_mob} />
         <Content>
           <IntroWrapper>
             <IntroTitle>

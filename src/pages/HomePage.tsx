@@ -12,7 +12,7 @@ import WhiteSection from '../components/WhiteSection';
 const HomePage = () => {
   return (
     <>
-      <TopAlert />
+      {window.innerWidth > 740 && <TopAlert />}
       <WhiteSection />
       <BuildSecureScale />
       <ResearchAreas />

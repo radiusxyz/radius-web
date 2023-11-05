@@ -171,6 +171,9 @@ const PurpleWrapper = styled.div`
   width: 100%;
   padding: 208px 10px;
   justify-content: center;
+  @media (max-width: 750px) {
+    padding: 79px 30px 148px;
+  }
 `;
 
 const PurpleContent = styled.div`
@@ -190,6 +193,10 @@ const TrueToDec = styled.p`
   font-weight: 400;
   line-height: 130%; /* 41.6px */
   margin-bottom: 34px;
+  @media (max-width: 750px) {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
 `;
 
 const BuiltIn = styled.div`
@@ -201,6 +208,10 @@ const BuiltIn = styled.div`
   font-weight: 400;
   line-height: 120%;
   margin-bottom: 111px;
+  @media (max-width: 750px) {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
 `;
 
 type Card = {

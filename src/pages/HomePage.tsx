@@ -1,7 +1,3 @@
-import React from 'react';
-
-type Props = {};
-
 import BuildSecureScale from '../components/BuildSecureScale';
 import InvestorsSection from '../components/InvestorsSection';
 import OrangeSection from '../components/OrangeSection';

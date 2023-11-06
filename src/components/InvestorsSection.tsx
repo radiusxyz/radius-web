@@ -13,6 +13,9 @@ const MainContainer = styled.div`
   padding: 180px 10px;
   background: #000;
   justify-content: center;
+  @media (max-width: 750px) {
+    padding: 72px 60px 55px;
+  }
 `;
 
 const Content = styled.div`
@@ -21,6 +24,11 @@ const Content = styled.div`
   gap: 98px;
   align-items: center;
   width: 100%;
+  @media (max-width: 750px) {
+    font-size: 24px;
+    gap: 26px;
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.p`
@@ -30,6 +38,9 @@ const Title = styled.p`
   font-style: normal;
   font-weight: 500;
   line-height: 130%; /* 78px */
+  @media (max-width: 750px) {
+    font-size: 24px;
+  }
 `;
 
 const Logos = styled.div`
@@ -37,6 +48,10 @@ const Logos = styled.div`
   gap: 12px;
   align-items: center;
   position: relative;
+  @media (max-width: 750px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 const LeftGrad = styled.div`
@@ -57,16 +72,32 @@ const InvestorsSection = () => {
       <Content>
         <Title>Investors</Title>
         <Logos>
-          <LeftGrad>
-            <img src={grad_left} />
-          </LeftGrad>
-          <img src={hashed} />
-          <img src={lambda} />
-          <img src={superscrypt} />
-          <img src={empty} />
-          <RightGrad>
-            <img src={grad_right} />
-          </RightGrad>
+          {window.innerWidth > 750 && (
+            <LeftGrad>
+              <img src={grad_left} />
+            </LeftGrad>
+          )}
+          <img
+            src={hashed}
+            width={(window.innerWidth < 750 && '126px') || 'auto'}
+          />
+          <img
+            src={lambda}
+            width={(window.innerWidth < 750 && '126px') || 'auto'}
+          />
+          <img
+            src={superscrypt}
+            width={(window.innerWidth < 750 && '126px') || 'auto'}
+          />
+          <img
+            src={empty}
+            width={(window.innerWidth < 750 && '126px') || 'auto'}
+          />
+          {window.innerWidth > 750 && (
+            <RightGrad>
+              <img src={grad_right} />
+            </RightGrad>
+          )}
         </Logos>
       </Content>
     </MainContainer>

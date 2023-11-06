@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import radius_footer from '../assets/images/radius_footer.svg';
 import x_footer from '../assets/images/x_footer.svg';
+import radius_footer_150x37 from '../assets/images/radius_150x37.svg';
 import discord from '../assets/images/discord.svg';
 import medium from '../assets/images/medium.svg';
 import github from '../assets/images/github.svg';
@@ -11,6 +12,10 @@ const Container = styled.div`
   justify-content: center;
   background: #0e0e0e;
   padding: 117px 0px 103px;
+  @media (max-width: 750px) {
+    flex-direction: column;
+    padding: 56px 30px 110px;
+  }
 `;
 
 const Content = styled.div`
@@ -19,6 +24,10 @@ const Content = styled.div`
   width: 100%;
   justify-content: space-between;
   align-items: flex-start;
+  @media (max-width: 750px) {
+    flex-direction: column;
+    gap: 64px;
+  }
 `;
 
 const Links = styled.div`
@@ -27,6 +36,10 @@ const Links = styled.div`
   gap: 55px;
   max-width: 831px;
   width: 100%;
+  @media (max-width: 750px) {
+    flex-direction: column;
+    gap: 64px;
+  }
 `;
 
 const RowWrapper = styled.div`
@@ -47,6 +60,12 @@ const RowTitle = styled.span`
 const CardRow = styled.div`
   display: flex;
   gap: 18px;
+  @media (max-width: 750px) {
+    flex-direction: column;
+    border: none;
+    border-top: 1px solid #2b2b2b;
+    gap: 0px;
+  }
 `;
 
 const Card = styled.div`
@@ -60,6 +79,15 @@ const Card = styled.div`
   border: 1px solid #222;
   background: linear-gradient(180deg, #161616 0%, #0e0e0e 100%);
   gap: 19px;
+  @media (max-width: 750px) {
+    border: none;
+    border-bottom: 1px solid #2b2b2b;
+    border-radius: 0;
+    max-width: none;
+    justify-content: flex-start;
+    padding: 20px 0px 19px;
+    background: transparent;
+  }
 `;
 
 // const CardContent = styled.div`
@@ -83,7 +111,10 @@ const Footer = () => {
   return (
     <Container>
       <Content>
-        <img src={radius_footer} alt='radius_footer' />
+        <img
+          src={window.innerWidth > 750 ? radius_footer : radius_footer_150x37}
+          alt='radius_footer'
+        />
         <Links>
           <RowWrapper>
             <RowTitle>Follow us</RowTitle>
@@ -96,7 +127,6 @@ const Footer = () => {
                 <img src={discord} /> <CardText>DISCORD</CardText>
               </Card>
               <Card>
-                {' '}
                 <img src={medium} /> <CardText>BLOG</CardText>
               </Card>
             </CardRow>
@@ -105,12 +135,10 @@ const Footer = () => {
             <RowTitle>Recources</RowTitle>
             <CardRow>
               <Card>
-                {' '}
                 <img src={x_footer} />
                 <CardText>Documentation</CardText>
               </Card>
               <Card>
-                {' '}
                 <img src={github} /> <CardText>Github</CardText>
               </Card>
             </CardRow>

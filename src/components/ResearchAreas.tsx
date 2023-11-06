@@ -79,6 +79,7 @@ const SubText = styled.div`
   @media (max-width: 750px) {
     margin-top: 18px;
     font-size: 18px;
+    max-width: 270px;
   }
 `;
 
@@ -107,8 +108,7 @@ const ResearchAreas = () => {
         </Tags>
         <img src={x} width='63px' alt='x' />
         <SubText>
-          Interested in collaboration? <br />
-          We'd love to hear from you!
+          Interested in collaboration? We'd love to hear from you!
         </SubText>
       </Content>
     </Container>

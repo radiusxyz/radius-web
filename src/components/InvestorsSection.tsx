@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import hashed from '../assets/images/hashed.svg';
 import lambda from '../assets/images/lambda.svg';
+import cryptocom from '../assets/images/cryptocom.svg';
 import superscrypt from '../assets/images/superscrypt.svg';
 import grad_left from '../assets/images/grad_left.svg';
 import grad_right from '../assets/images/grad_right.svg';
-
-import empty from '../assets/images/empty.svg';
 
 const MainContainer = styled.div`
   display: flex;
@@ -90,7 +89,7 @@ const InvestorsSection = () => {
             width={(window.innerWidth < 750 && '126px') || 'auto'}
           />
           <img
-            src={empty}
+            src={cryptocom}
             width={(window.innerWidth < 750 && '126px') || 'auto'}
           />
           {window.innerWidth > 750 && (

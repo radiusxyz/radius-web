@@ -25,7 +25,16 @@ const Container = styled.div<{ toppadding: string }>`
   @media (max-width: 750px) {
     padding: 22px 18px;
     width: 100%;
+    height: 246px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
+`;
+
+const TextWrapper = styled.div`
+  dislay: flex;
+  flex-direction: column;
 `;
 
 const Title = styled.p`
@@ -38,6 +47,7 @@ const Title = styled.p`
   margin-bottom: 13px;
   @media (max-width: 750px) {
     font-size: 16px;
+    margin-top: auto;
     margin-bottom: 8px;
   }
 `;
@@ -109,29 +119,37 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
         <ImgContainer>
           <img src={cards[0].imgUrl} width='103px' alt={cards[0].imgUrl} />
         </ImgContainer>
-        <Title>{cards[0].title}</Title>
-        <Details>{cards[0].details}</Details>
+        <TextWrapper>
+          <Title>{cards[0].title}</Title>
+          <Details>{cards[0].details}</Details>
+        </TextWrapper>
       </Container>
       <Container key={cards[3].title} toppadding={cards[3].toppadding}>
         <ImgContainer>
           <img src={cards[3].imgUrl} width='103px' alt={cards[3].imgUrl} />
         </ImgContainer>
-        <Title>{cards[3].title}</Title>
-        <Details>{cards[3].details}</Details>
+        <TextWrapper>
+          <Title>{cards[3].title}</Title>
+          <Details>{cards[3].details}</Details>
+        </TextWrapper>
       </Container>
       <Container key={cards[1].title} toppadding={cards[1].toppadding}>
         <ImgContainer>
           <img src={cards[1].imgUrl} width='103px' alt={cards[1].imgUrl} />
         </ImgContainer>
-        <Title>{cards[1].title}</Title>
-        <Details>{cards[1].details}</Details>
+        <TextWrapper>
+          <Title>{cards[1].title}</Title>
+          <Details>{cards[1].details}</Details>
+        </TextWrapper>
       </Container>
       <Container key={cards[2].title} toppadding={cards[2].toppadding}>
         <ImgContainer>
           <img src={cards[2].imgUrl} width='103px' alt={cards[2].imgUrl} />
         </ImgContainer>
-        <Title>{cards[2].title}</Title>
-        <Details>{cards[2].details}</Details>
+        <TextWrapper>
+          <Title>{cards[2].title}</Title>
+          <Details>{cards[2].details}</Details>
+        </TextWrapper>
       </Container>
     </CardsContainer>
   );

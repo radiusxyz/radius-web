@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import logo from '../assets/images/logo.svg';
 import entanglement from '../assets/images/entanglement.svg';
+import entanglement_mob from '../assets/images/entanglement_mob.svg';
 
 const IntroSection = styled.div`
   width: 100%;
@@ -8,11 +9,23 @@ const IntroSection = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  @media (max-width: 750px) {
+    padding: 0px 30px 45px;
+    height: 567px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 `;
 
 const IntroBackground = styled.img`
   width: 100%;
   height: auto;
+  @media (max-width: 750px) {
+    width: 100%;
+    height: auto;
+    @media (max-width: 750px) {
+      position: absolute;
+    }
 `;
 
 const IntroContent = styled.div`
@@ -20,12 +33,20 @@ const IntroContent = styled.div`
   max-width: 1400px;
   position: absolute;
   top: calc(50%-20px);
+  @media (max-width: 750px) {
+    position: relative;
+    height: 100%;
+  }
 `;
 
 const IntroText = styled.div`
   max-width: 697px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 750px) {
+    position: absolute;
+    bottom: 0;
+  }
 `;
 
 const IntroMiniTitle = styled.p`
@@ -36,6 +57,10 @@ const IntroMiniTitle = styled.p`
   font-weight: 700;
   line-height: 120%; /* 28.8px */
   margin-bottom: 51px;
+  @media (max-width: 750px) {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
 `;
 
 const IntroTitle = styled.p`
@@ -47,6 +72,10 @@ const IntroTitle = styled.p`
   line-height: 120%; /* 98.4px */
   max-width: 568px;
   margin-bottom: 37px;
+  @media (max-width: 750px) {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
 `;
 
 const IntroDetails = styled.p`
@@ -56,6 +85,9 @@ const IntroDetails = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 31.2px */
+  @media (max-width: 750px) {
+    font-size: 12px;
+  }
 `;
 
 const CardsSection = styled.div`
@@ -64,6 +96,9 @@ const CardsSection = styled.div`
   padding: 250px 0 16px;
   display: flex;
   justify-content: center;
+  @media (max-width: 750px) {
+    padding: 50px 30px;
+  }
 `;
 
 const CardsSectionContent = styled.div`
@@ -76,6 +111,11 @@ const Cards = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 19px 18px;
+  @media (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 
 const Card = styled.div`
@@ -89,12 +129,18 @@ const Card = styled.div`
   flex-direction: column;
   gap: 60px;
   min-height: 276px;
+  @media (max-width: 750px) {
+    gap: 15.48px;
+  }
 `;
 
 const LogoTitle = styled.div`
   display: flex;
   gap: 12px;
   align-items: center;
+  @media (max-width: 750px) {
+    gap: 10px;
+  }
 `;
 
 const Logo = styled.div`
@@ -107,6 +153,10 @@ const Logo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 750px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 const CardTitle = styled.span`
@@ -116,6 +166,9 @@ const CardTitle = styled.span`
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 31.2px */
+  @media (max-width: 750px) {
+    font-size: 18px;
+  }
 `;
 
 const CardDetails = styled.p`
@@ -125,6 +178,9 @@ const CardDetails = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 140.625%; /* 22.5px */
+  @media (max-width: 750px) {
+    font-size: 12px;
+  }
 `;
 
 const GradientSection = styled.div`
@@ -148,6 +204,9 @@ const GradientText = styled.p`
   line-height: 140.625%; /* 112.5px */
   margin-top: 267px;
   margin-bottom: 31px;
+  @media (max-width: 750px) {
+    font-size: 20px;
+  }
 `;
 
 const GradientLink = styled.p`
@@ -159,6 +218,9 @@ const GradientLink = styled.p`
   line-height: 110%; /* 44px */
   text-decoration-line: underline;
   margin-bottom: 332px;
+  @media (max-width: 750px) {
+    font-size: 14px;
+  }
 `;
 
 const cards = [
@@ -234,7 +296,9 @@ const EcoPage = () => {
   return (
     <>
       <IntroSection>
-        <IntroBackground src={entanglement} />
+        <IntroBackground
+          src={window.innerWidth > 750 ? entanglement : entanglement_mob}
+        />
         <IntroContent>
           <IntroText>
             <IntroMiniTitle>OUR ECOSYSTEM</IntroMiniTitle>

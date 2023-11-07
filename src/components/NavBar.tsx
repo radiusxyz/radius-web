@@ -65,6 +65,12 @@ const EcoBtn = styled.button`
     cursor: pointer;
     color: #ff7a00;
   }
+  &:active {
+    color: #ff7a00;
+  }
+  &:focus {
+    color: #ff7a00;
+  }
 `;
 
 const DocBtn = styled.button`
@@ -132,11 +138,11 @@ const NavBar = () => {
     };
   }, [location]);
 
-  // useEffect(() => {
-  //   if (location.pathname === '/ecosystem') {
-  //     setSticky(true);
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (location.pathname === '/ecosystem') {
+      setSticky(true);
+    }
+  }, []);
 
   useEffect(() => {
     const handleBackButton = () => {

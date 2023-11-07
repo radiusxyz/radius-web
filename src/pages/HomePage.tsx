@@ -1,7 +1,3 @@
-import React from 'react';
-
-type Props = {};
-
 import BuildSecureScale from '../components/BuildSecureScale';
 import InvestorsSection from '../components/InvestorsSection';
 import OrangeSection from '../components/OrangeSection';
@@ -12,7 +8,7 @@ import WhiteSection from '../components/WhiteSection';
 const HomePage = () => {
   return (
     <>
-      <TopAlert />
+      {window.innerWidth > 740 && <TopAlert />}
       <WhiteSection />
       <BuildSecureScale />
       <ResearchAreas />

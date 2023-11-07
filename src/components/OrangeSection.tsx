@@ -7,12 +7,19 @@ const Background = styled.div`
   display: flex;
   justify-content: center;
   padding: 330px 0;
+  @media (max-width: 750px) {
+    padding: 62px 30px;
+    background-size: contain;
+  }
 `;
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 11px;
+  @media (max-width: 750px) {
+    gap: 9px;
+  }
 `;
 
 const Title = styled.p`
@@ -23,6 +30,9 @@ const Title = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 130px */
+  @media (max-width: 750px) {
+    font-size: 30px;
+  }
 `;
 
 const BuildBtn = styled.button`
@@ -47,6 +57,11 @@ const BuildBtn = styled.button`
     color: #fff;
     background: #ff9a00;
     outline: 1px solid #fff;
+  }
+  @media (max-width: 750px) {
+    font-size: 12px;
+    padding: 10px;
+    max-width: 240px;
   }
 `;
 

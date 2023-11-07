@@ -4,6 +4,10 @@ import bss_icon from '../assets/images/bss_icon.svg';
 const CardsContainer = styled.div`
   display: flex;
   gap: 18px;
+  @media (max-width: 750px) {
+    gap: 10px;
+    flex-direction: column;
+  }
 `;
 
 const Card = styled.div`
@@ -18,11 +22,20 @@ const Card = styled.div`
   background: #111;
   padding: 62px 36px 55px 36px;
   align-items: center;
+  @media (max-width: 750px) {
+    margin-bottom: 35px;
+    padding: 30px 10px 32px 10px;
+    max-height: 221px;
+  }
 `;
 
 const Img = styled.img`
   width: 92px;
   margin-bottom: 58px;
+  @media (max-width: 750px) {
+    width: 57px;
+    margin-bottom: 35px;
+  }
 `;
 
 const CardTitle = styled.p`
@@ -33,6 +46,10 @@ const CardTitle = styled.p`
   font-weight: 400;
   line-height: 130%; /* 31.2px */
   margin-bottom: 10px;
+  @media (max-width: 750px) {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
 `;
 
 const CardDetails = styled.p`
@@ -43,6 +60,9 @@ const CardDetails = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 23.4px */
+  @media (max-width: 750px) {
+    font-size: 14px;
+  }
 `;
 
 const BssCards = () => {

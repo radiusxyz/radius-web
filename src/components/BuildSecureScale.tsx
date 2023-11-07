@@ -9,6 +9,10 @@ const Container = styled.div`
   align-items: center;
   padding: 221px 10px 222px 10px;
   background-image: url(${black_mosaic});
+  @media (max-width: 750px) {
+    flex-direction: column;
+    padding: 66px 30px 100px;
+  }
 `;
 
 const Title = styled.p`
@@ -21,6 +25,10 @@ const Title = styled.p`
   line-height: 130%; /* 54.6px */
   margin-bottom: 77px;
   max-width: 1020px;
+  @media (max-width: 750px) {
+    margin-bottom: 61px;
+    font-size: 24px;
+  }
 `;
 
 const BuildSecureScale = () => {

@@ -8,6 +8,11 @@ const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 180px;
+  @media (max-width: 750px) {
+    margin-top: 0px;
+    padding: 68px 30px 122px;
+    gap: 24px;
+  }
 `;
 
 const Header = styled.p`
@@ -17,18 +22,28 @@ const Header = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 96px */
+  @media (max-width: 750px) {
+    font-size: 24px;
+  }
 `;
 
 const Row = styled.div`
   display: flex;
   align-items: center;
   gap: 124px;
+  @media (max-width: 750px) {
+    flex-direction: column;
+    gap: 30px;
+  }
 `;
 
 const Body = styled.div`
   display: flex;
   flex-direction: column;
   gap: 121px;
+  @media (max-width: 750px) {
+    gap: 62px;
+  }
 `;
 
 const DummyImg = styled.div`
@@ -36,6 +51,10 @@ const DummyImg = styled.div`
   height: 555px;
   border-radius: 8px;
   background: #7bff88;
+  @media (max-width: 750px) {
+    width: 315px;
+    height: 349px;
+  }
 `;
 
 const TextWrapper = styled.div`
@@ -43,6 +62,9 @@ const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media (max-width: 750px) {
+    gap: 10px;
+  }
 `;
 
 const Title = styled.p`
@@ -52,6 +74,9 @@ const Title = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 50.4px */
+  @media (max-width: 750px) {
+    font-size: 24px;
+  }
 `;
 
 const Details = styled.p`
@@ -61,6 +86,9 @@ const Details = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 42px */
+  @media (max-width: 750px) {
+    font-size: 14px;
+  }
 `;
 const BeyondSection = () => {
   return (
@@ -81,18 +109,33 @@ const BeyondSection = () => {
             </Details>
           </TextWrapper>
         </Row>
-        <Row>
-          <TextWrapper>
-            <Title>Connecting through a shared layer</Title>
-            <Details>
-              A shared layer is essential to atomic composability, ensuring
-              consistent data exchange and value flow across different rollups.
-              With atomic composability in place, rollups can optimize resources
-              and unlock exciting new possibilities.
-            </Details>
-          </TextWrapper>{' '}
-          <DummyImg />
-        </Row>
+        {window.innerWidth > 750 ? (
+          <Row>
+            <TextWrapper>
+              <Title>Connecting through a shared layer</Title>
+              <Details>
+                A shared layer is essential to atomic composability, ensuring
+                consistent data exchange and value flow across different
+                rollups. With atomic composability in place, rollups can
+                optimize resources and unlock exciting new possibilities.
+              </Details>
+            </TextWrapper>{' '}
+            <DummyImg />
+          </Row>
+        ) : (
+          <Row>
+            <DummyImg />
+            <TextWrapper>
+              <Title>Connecting through a shared layer</Title>
+              <Details>
+                A shared layer is essential to atomic composability, ensuring
+                consistent data exchange and value flow across different
+                rollups. With atomic composability in place, rollups can
+                optimize resources and unlock exciting new possibilities.
+              </Details>
+            </TextWrapper>{' '}
+          </Row>
+        )}
       </Body>
     </MainContainer>
   );

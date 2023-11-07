@@ -14,6 +14,9 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 750px) {
+    padding: 130px 30px 122px;
+  }
 `;
 
 const Text = styled.p`
@@ -25,6 +28,10 @@ const Text = styled.p`
   font-weight: 400;
   line-height: 130%; /* 54.6px */
   margin-bottom: 58px;
+  @media (max-width: 750px) {
+    font-size: 24px;
+    margin-bottom: 75px;
+  }
 `;
 
 const Tags = styled.div`
@@ -33,7 +40,12 @@ const Tags = styled.div`
   margin-bottom: 159px;
   justify-content: center;
   flex-wrap: wrap;
+  @media (max-width: 750px) {
+    gap: 10px;
+    margin-bottom: 75px;
+  }
 `;
+
 const Tag = styled.div`
   display: flex;
   padding: 21px 46px;
@@ -49,6 +61,10 @@ const Tag = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 31.2px */
+  @media (max-width: 750px) {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
 `;
 
 const SubText = styled.div`
@@ -60,6 +76,11 @@ const SubText = styled.div`
   font-weight: 400;
   line-height: 130%; /* 31.2px */
   margin-top: 32px;
+  @media (max-width: 750px) {
+    margin-top: 18px;
+    font-size: 18px;
+    max-width: 270px;
+  }
 `;
 
 const tagTexts = [

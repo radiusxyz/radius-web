@@ -316,10 +316,10 @@ const EcoPage = () => {
             <IntroMiniTitle>OUR ECOSYSTEM</IntroMiniTitle>
             <IntroTitle>Meet builders and partners</IntroTitle>
             <IntroDetails>
-              We're all about making rollups more decentralized, sustainable,
-              and scalable. We collaborate with like-minded builders and
-              infrastructure partners to drive our research and development
-              efforts, working together to shape a decentralized future.
+              We're all about making rollups decentralized, interoperable, and
+              sustainable. We work with like-minded builders and infrastructure
+              partners to collectively advance research and development, shaping
+              a decentralized future together.
             </IntroDetails>
           </IntroText>
         </IntroContent>

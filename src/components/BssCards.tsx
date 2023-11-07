@@ -86,7 +86,7 @@ const BssCards = () => {
       </Card>
       <Card>
         <Img src={bss_icon} alt={bss_icon} />
-        <CardTitle>SCALE</CardTitle>
+        <CardTitle>CONNECT</CardTitle>
         <CardDetails>
           Rollups achieve better scale with cross-rollup interactions, creating
           better experiences for users.

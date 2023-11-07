@@ -25,7 +25,7 @@ const TopAlert = () => {
   return (
     <Container>
       <Text>
-        Our private testnet is live! Sign up to participate{' '}
+        Our first testnet is live! Sign up to participate
         <Link href='https://www.google.ru'>here</Link>.
       </Text>
     </Container>

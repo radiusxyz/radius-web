@@ -88,9 +88,9 @@ const tagTexts = [
   '# Zero Knowledge',
   '# Encrypted Mempool',
   '# Distributed Sequencer',
-  '# Interperability',
+  '# Interoperability',
   '# Proposer Builder Separation',
-  '# Atomic Conposability',
+  '# Atomic Composability',
 ];
 const ResearchAreas = () => {
   return (
@@ -108,7 +108,7 @@ const ResearchAreas = () => {
         </Tags>
         <img src={x} width='63px' alt='x' />
         <SubText>
-          Interested in collaboration? We'd love to hear from you!
+          Interested in collaboration? We want to hear from you!
         </SubText>
       </Content>
     </Container>

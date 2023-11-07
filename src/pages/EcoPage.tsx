@@ -105,6 +105,10 @@ const CardsSectionContent = styled.div`
   display: flex;
   width: 100%;
   max-width: 1400px;
+  @media (max-width: 750px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Cards = styled.div`
@@ -131,6 +135,8 @@ const Card = styled.div`
   min-height: 276px;
   @media (max-width: 750px) {
     gap: 15.48px;
+    min-height: 157px;
+    padding: 20px;
   }
 `;
 
@@ -188,6 +194,9 @@ const GradientSection = styled.div`
   display: flex;
   justify-content: center;
   background: linear-gradient(180deg, #1b191f 0%, #302b38 100%);
+  @media (max-width: 750px) {
+    padding: 78px 30px;
+  }
 `;
 
 const GradientContent = styled.div`
@@ -206,6 +215,8 @@ const GradientText = styled.p`
   margin-bottom: 31px;
   @media (max-width: 750px) {
     font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 16px;
   }
 `;
 
@@ -220,6 +231,7 @@ const GradientLink = styled.p`
   margin-bottom: 332px;
   @media (max-width: 750px) {
     font-size: 14px;
+    margin-bottom: 0;
   }
 `;
 

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import orange_mosaic from '../assets/images/orange_mosaic.svg';
+import { Link } from 'react-router-dom';
 
 const Background = styled.div`
   background-image: url(${orange_mosaic});
@@ -65,6 +66,12 @@ const BuildBtn = styled.button`
   }
 `;
 
+const StyledLink = styled(Link)`
+  display: block;
+  text-decoration: none;
+  color: inherit;
+`;
+
 const OrangeSection = () => {
   return (
     <Background>
@@ -73,7 +80,9 @@ const OrangeSection = () => {
           Laying the foundation for a <strong>sustainable future</strong> for
           rollups
         </Title>
-        <BuildBtn>BUILD WITH RADIUS</BuildBtn>
+        <StyledLink to='https://docs.theradius.xyz/'>
+          <BuildBtn>BUILD WITH RADIUS</BuildBtn>
+        </StyledLink>
       </Wrapper>
     </Background>
   );

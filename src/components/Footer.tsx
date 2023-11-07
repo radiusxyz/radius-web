@@ -5,6 +5,7 @@ import radius_footer_150x37 from '../assets/images/radius_150x37.svg';
 import discord from '../assets/images/discord.svg';
 import medium from '../assets/images/medium.svg';
 import github from '../assets/images/github.svg';
+import { Link, NavLink } from 'react-router-dom';
 
 const Container = styled.div`
   width: 100%;
@@ -107,6 +108,17 @@ const CardText = styled.span`
   margin-top: 7px;
 `;
 
+const StyledLink = styled(Link)`
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  max-width: 265px;
+  @media (max-width: 750px) {
+    max-width: none;
+  }
+`;
+
 const Footer = () => {
   return (
     <Container>
@@ -119,28 +131,37 @@ const Footer = () => {
           <RowWrapper>
             <RowTitle>Follow us</RowTitle>
             <CardRow>
-              <Card>
-                <img src={x_footer} />
-                <CardText>Twitter</CardText>
-              </Card>
+              <StyledLink to='https://twitter.com/radius_xyz'>
+                <Card>
+                  <img src={x_footer} />
+                  <CardText>Twitter</CardText>
+                </Card>
+              </StyledLink>
               <Card>
                 <img src={discord} /> <CardText>DISCORD</CardText>
               </Card>
-              <Card>
-                <img src={medium} /> <CardText>BLOG</CardText>
-              </Card>
+              <StyledLink to='https://medium.com/@radius_xyz'>
+                <Card>
+                  <img src={medium} /> <CardText>BLOG</CardText>
+                </Card>
+              </StyledLink>
             </CardRow>
           </RowWrapper>
           <RowWrapper>
             <RowTitle>Recources</RowTitle>
             <CardRow>
-              <Card>
-                <img src={x_footer} />
-                <CardText>Documentation</CardText>
-              </Card>
-              <Card>
-                <img src={github} /> <CardText>Github</CardText>
-              </Card>
+              <StyledLink to='https://docs.theradius.xyz/'>
+                <Card>
+                  <img src={x_footer} />
+                  <CardText>Documentation</CardText>
+                </Card>
+              </StyledLink>
+              <StyledLink to='https://github.com/radiusxyz'>
+                <Card>
+                  <img src={github} />
+                  <CardText>Github</CardText>
+                </Card>
+              </StyledLink>
             </CardRow>
           </RowWrapper>
         </Links>

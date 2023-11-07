@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import x from '../assets/images/x.svg';
+import { Link } from 'react-router-dom';
 const Container = styled.div`
   height: 100%;
   width: 100%;
@@ -83,6 +84,12 @@ const SubText = styled.div`
   }
 `;
 
+const StyledLink = styled(Link)`
+  display: block;
+  text-decoration: none;
+  color: inherit;
+`;
+
 const tagTexts = [
   '# MEV',
   '# Zero Knowledge',
@@ -106,7 +113,9 @@ const ResearchAreas = () => {
             <Tag key={tag}>{tag}</Tag>
           ))}
         </Tags>
-        <img src={x} width='63px' alt='x' />
+        <StyledLink to='https://twitter.com/radius_xyz'>
+          <img src={x} width='63px' alt='x' />
+        </StyledLink>
         <SubText>
           Interested in collaboration? We want to hear from you!
         </SubText>

@@ -77,7 +77,20 @@ const IntroTitle = styled.p`
   font-family: Atyp Display;
   font-size: 60px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
+  line-height: 120%; /* 72px */
+  text-transform: capitalize;
+  @media (max-width: 750px) {
+    font-size: 30px;
+  }
+`;
+
+const Bold = styled.span`
+  color: #fff;
+  font-family: Atyp Display;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
   line-height: 120%; /* 72px */
   text-transform: capitalize;
   @media (max-width: 750px) {
@@ -90,7 +103,7 @@ const IntroSub = styled.p`
   font-family: Atyp Display;
   font-size: 24px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 136%; /* 32.64px */
   @media (max-width: 750px) {
     font-size: 14px;
@@ -260,7 +273,7 @@ const WhiteSection = () => {
         <Content>
           <IntroWrapper>
             <IntroTitle>
-              Empowering rollups <strong>Beyond decentralization</strong>
+              Empowering rollups <Bold>Beyond decentralization</Bold>
             </IntroTitle>
             <IntroSub>
               A way to build, connect, and scale rollups with one decentralized
@@ -274,9 +287,9 @@ const WhiteSection = () => {
           <Eco>
             <Title>Ecosystem</Title>
             <Details>
-              Radius collaborates with builders and partners in research and
-              development to bring together the most promising ideas and forge a
-              better path for Ethereum’s decentralized future
+              We collaborate with builders and partners who share our
+              decentralized vision to bring together the most promising ideas
+              and forge a better path for Ethereum
             </Details>
           </Eco>
           <Arrow src={arrow} alt='arrow_right' />

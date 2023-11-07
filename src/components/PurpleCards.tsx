@@ -54,10 +54,10 @@ const Title = styled.p`
 
 const Details = styled.p`
   color: rgba(255, 255, 255, 0.6);
-  font-family: Gilroy-Regular;
+  font-family: Gilroy-Light;
   font-size: 24px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 136%; /* 32.64px */
   @media (max-width: 750px) {
     font-size: 12px;

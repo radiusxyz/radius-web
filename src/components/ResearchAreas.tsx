@@ -56,10 +56,10 @@ const Tag = styled.div`
   background: rgba(255, 255, 255, 0.3);
   color: #fff;
   text-align: center;
-  font-family: Gilroy-SemiBold;
+  font-family: Gilroy-Medium;
   font-size: 24px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 130%; /* 31.2px */
   @media (max-width: 750px) {
     font-size: 12px;

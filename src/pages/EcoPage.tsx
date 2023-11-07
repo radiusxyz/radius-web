@@ -179,10 +179,10 @@ const CardTitle = styled.span`
 
 const CardDetails = styled.p`
   color: #fff;
-  font-family: Gilroy-Regular;
+  font-family: Gilroy-Light;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 140.625%; /* 22.5px */
   @media (max-width: 750px) {
     font-size: 12px;

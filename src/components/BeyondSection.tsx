@@ -72,7 +72,7 @@ const Title = styled.p`
   font-family: Atyp Display;
   font-size: 42px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 120%; /* 50.4px */
   @media (max-width: 750px) {
     font-size: 24px;
@@ -94,7 +94,7 @@ const BeyondSection = () => {
   return (
     <MainContainer>
       <Header>
-        How our design and system goes <strong>beyond decentralization</strong>
+        How our design and system go <strong>beyond decentralization</strong>
       </Header>
       <Body>
         <Row>
@@ -102,10 +102,9 @@ const BeyondSection = () => {
           <TextWrapper>
             <Title>Creating sustainable rollup economics</Title>
             <Details>
-              While MEV resistance is valuable, the challenge is finding ways to
-              sustain rollup economics. Radius not only effectively prevents
-              centralization pressures, security concerns, and economic
-              inefficiencies but also makes
+              Encrypted mempool and zero knowledge are the backbones for
+              protection. We redesign rollup economics and create a system where
+              everyone’s interests align.
             </Details>
           </TextWrapper>
         </Row>
@@ -114,12 +113,11 @@ const BeyondSection = () => {
             <TextWrapper>
               <Title>Connecting through a shared layer</Title>
               <Details>
-                A shared layer is essential to atomic composability, ensuring
-                consistent data exchange and value flow across different
-                rollups. With atomic composability in place, rollups can
-                optimize resources and unlock exciting new possibilities.
+                In the age of countless rollups, a shared layer is essential for
+                atomic composability. That’s why we’re creating a superhighway
+                optimized for interoperability and efficient data exchange.
               </Details>
-            </TextWrapper>{' '}
+            </TextWrapper>
             <DummyImg />
           </Row>
         ) : (
@@ -128,12 +126,11 @@ const BeyondSection = () => {
             <TextWrapper>
               <Title>Connecting through a shared layer</Title>
               <Details>
-                A shared layer is essential to atomic composability, ensuring
-                consistent data exchange and value flow across different
-                rollups. With atomic composability in place, rollups can
-                optimize resources and unlock exciting new possibilities.
+                In the age of countless rollups, a shared layer is essential for
+                atomic composability. That’s why we’re creating a superhighway
+                optimized for interoperability and efficient data exchange.
               </Details>
-            </TextWrapper>{' '}
+            </TextWrapper>
           </Row>
         )}
       </Body>

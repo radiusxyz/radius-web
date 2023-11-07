@@ -72,24 +72,24 @@ const BssCards = () => {
         <Img src={bss_icon} alt={bss_icon} />
         <CardTitle>BUILD</CardTitle>
         <CardDetails>
-          Building Radius at any point in rollup deployment into a new or
-          existing design
+          Building rollups can be a tough feat. Let us handle the heavy lifting
+          — so rollups can focus on execution.
         </CardDetails>
       </Card>
       <Card>
         <Img src={bss_icon} alt={bss_icon} />
         <CardTitle>SECURE</CardTitle>
         <CardDetails>
-          Our distributed sequencer network guarantees liveness and keeps the
-          rollups active and secure
+          Our distributed sequencer network ensures liveness, keeping rollups
+          active and secure at all times.
         </CardDetails>
       </Card>
       <Card>
         <Img src={bss_icon} alt={bss_icon} />
         <CardTitle>SCALE</CardTitle>
         <CardDetails>
-          With these systems in place, rollups can better scale to meet growing
-          demands
+          Rollups achieve better scale with cross-rollup interactions, creating
+          better experiences for users.
         </CardDetails>
       </Card>
     </CardsContainer>

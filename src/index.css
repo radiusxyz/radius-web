@@ -23,7 +23,7 @@ html {
 }
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy-Light';
   src: url('./assets/fonts/gilroy/Gilroy-Light.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;

@@ -1,7 +1,17 @@
 import styled from 'styled-components';
-import logo from '../assets/images/logo.svg';
 import entanglement from '../assets/images/entanglement.svg';
 import entanglement_mob from '../assets/images/entanglement_mob.svg';
+import altlayer from '../assets/images/altlayer.svg';
+import caldera from '../assets/images/caldera.svg';
+import celestia from '../assets/images/celestia.svg';
+import herodotus from '../assets/images/herodotus.svg';
+import lumoz from '../assets/images/lumoz.svg';
+import madara from '../assets/images/madara.svg';
+import pragma from '../assets/images/pragma.svg';
+import rollkit from '../assets/images/rollkit.svg';
+import saga from '../assets/images/saga.svg';
+import stackr from '../assets/images/stackr.svg';
+import vistara from '../assets/images/vistara.svg';
 
 const IntroSection = styled.div`
   width: 100%;
@@ -149,19 +159,13 @@ const LogoTitle = styled.div`
   }
 `;
 
-const Logo = styled.div`
+const Logo = styled.img`
+  width: 100%;
   width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-image: url(${logo});
-  background-size: 60px;
-  object-fit: contain;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: auto;
   @media (max-width: 750px) {
     width: 30px;
-    height: 30px;
+    height: auto;
   }
 `;
 
@@ -237,67 +241,67 @@ const GradientLink = styled.p`
 
 const cards = [
   {
-    logo: logo,
+    logo: altlayer,
     title: 'ALTLAYER',
     details:
       'AltLayer is an open and decentralized protocol for developers to launch highly elastic application-tailored rollups.',
   },
   {
-    logo: logo,
+    logo: caldera,
     title: 'caldera',
     details:
       'Caldera specializes in building high-performance, customizable, and application-specific layer-two blockchains.',
   },
   {
-    logo: logo,
+    logo: celestia,
     title: 'CELESTIA',
     details:
       'Celestia is a modular data availability network that securely scales with the number of users, making it easy for anyone to launch their own blockchain.',
   },
   {
-    logo: logo,
+    logo: herodotus,
     title: 'HERODOTUS',
     details:
       'Herodotus is a powerful data access middleware that provides smart contracts with synchronous access to both current and historical on-chain data across Ethereum layers.',
   },
   {
-    logo: logo,
+    logo: lumoz,
     title: 'LUMOZ',
     details:
       'Lumoz (Previously Opside) is a decentralized ZK-RaaS platform as well as a PoW network that facilitates ZKP mining.',
   },
   {
-    logo: logo,
+    logo: madara,
     title: 'MADARA',
     details:
       'Madara is standard, customizable and blazing fast Starknet sequencer. Madara delivers unmatched performance and scalability to power Starknet-based Validity Rollup chain.',
   },
   {
-    logo: logo,
-    title: 'Parama',
+    logo: pragma,
+    title: 'Pragma',
     details:
       'Pragma is a decentralized, transparent and composable oracle network, leveraging state-of-the-art zero-knowledge cryptography.',
   },
   {
-    logo: logo,
+    logo: rollkit,
     title: 'Rollkit',
     details:
       'Rollkit is a rollup framework that gives developers the freedom to deploy rollups throughout the modular stack.',
   },
   {
-    logo: logo,
+    logo: saga,
     title: 'SAGA',
     details:
       'Saga is a protocol for automatically provisioning application-specific blockchains.',
   },
   {
-    logo: logo,
-    title: 'Stacker',
+    logo: stackr,
+    title: 'Stackr',
     details:
       'Stackr is a modular SDK for building micro-rollups in general-purpose languages.',
   },
   {
-    logo: logo,
+    logo: vistara,
     title: 'Vistara',
     details:
       'Vistara is a one-click rollup deployment framework for designing and managing scalable infrastructure.',
@@ -330,7 +334,7 @@ const EcoPage = () => {
             {cards.map((card) => (
               <Card key={card.title}>
                 <LogoTitle>
-                  <Logo />
+                  <Logo src={card.logo} />
                   <CardTitle>{card.title}</CardTitle>
                 </LogoTitle>
                 <CardDetails>{card.details}</CardDetails>

@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import creating from '../assets/images/creating.svg';
+import connecting from '../assets/images/connecting.svg';
 
 const MainContainer = styled.div`
   display: flex;
@@ -46,11 +48,9 @@ const Body = styled.div`
   }
 `;
 
-const DummyImg = styled.div`
-  width: 551px;
-  height: 555px;
-  border-radius: 8px;
-  background: #7bff88;
+const DummyImg = styled.img`
+  width: 100%;
+  height: auto;
   @media (max-width: 750px) {
     width: 315px;
     height: 349px;
@@ -98,7 +98,7 @@ const BeyondSection = () => {
       </Header>
       <Body>
         <Row>
-          <DummyImg />
+          <DummyImg src={creating} />
           <TextWrapper>
             <Title>Creating sustainable rollup economics</Title>
             <Details>
@@ -118,11 +118,11 @@ const BeyondSection = () => {
                 optimized for interoperability and efficient data exchange.
               </Details>
             </TextWrapper>
-            <DummyImg />
+            <DummyImg src={connecting} />
           </Row>
         ) : (
           <Row>
-            <DummyImg />
+            <DummyImg src={connecting} />
             <TextWrapper>
               <Title>Connecting through a shared layer</Title>
               <Details>

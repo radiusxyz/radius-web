@@ -25,7 +25,7 @@ const TopAlert = () => {
   return (
     <Container>
       <Text>
-        Our first testnet is live! Sign up to participate
+        Our first testnet is live! Sign up to participate&nbsp;
         <Link href='https://7r9olam1w6v.typeform.com/to/k3fkrwY6'>here</Link>.
       </Text>
     </Container>

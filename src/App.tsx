@@ -9,8 +9,22 @@ const router = createBrowserRouter([
     path: '/',
     element: <RootLayout />,
     children: [
-      { index: true, element: <HomePage /> },
-      { path: 'ecosystem', element: <EcoPage /> },
+      {
+        index: true,
+        element: <HomePage />,
+        loader: () => {
+          window.scrollTo(0, 0);
+          return null;
+        },
+      },
+      {
+        path: 'ecosystem',
+        element: <EcoPage />,
+        loader: () => {
+          window.scrollTo(0, 0);
+          return null;
+        },
+      },
     ],
   },
 ]);

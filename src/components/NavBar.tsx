@@ -5,8 +5,11 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
+  display: block;
   text-decoration: none;
+  color: inherit;
+  width: 100%;
 `;
 
 const CustomNavBar = styled.div<{ sticky: boolean }>`
@@ -60,8 +63,7 @@ const EcoBtn = styled.button`
   border-radius: 34px 0px 0px 34px;
   &:hover {
     cursor: pointer;
-    color: #fff;
-    background: #ff5c02;
+    color: #ff7a00;
   }
 `;
 
@@ -80,8 +82,7 @@ const DocBtn = styled.button`
   padding: 14px 35px 13px 35px;
   &:hover {
     cursor: pointer;
-    color: #fff;
-    background: #ff5c02;
+    color: #ff7a00;
   }
 `;
 
@@ -102,57 +103,63 @@ const GitBtn = styled.button`
   border-radius: 0px 34px 34px 0px;
   &:hover {
     cursor: pointer;
-    color: #fff;
-    background: #ff5c02;
+    color: #ff7a00;
   }
 `;
 
 const NavBar = () => {
   const [sticky, setSticky] = useState(false);
   const location = useLocation();
-  // const match = useMatch('/ecosystem'); // Replace '/your/path/*' with your actual path pattern
-
-  // If you want just the path name
-  console.log(location.pathname);
-
-  // If you need to match a path pattern and extract params (with useMatch)
-  // if (match) {
-  //   console.log(match.pathname); // This will give you the matched part of the URL
-  //   console.log(match.params); // This will give you the matched parameters
-  // }
 
   useEffect(() => {
     const handleScroll = () => {
-      let windowHeight = window.scrollY;
-      if (windowHeight > 162) {
+      if (
+        (location.pathname === '/' && window.scrollY > 162) ||
+        location.pathname === '/ecosystem'
+      ) {
         setSticky(true);
+        console.log('sticky is set to true');
       } else {
-        if (location.pathname !== '/ecosystem') {
-          setSticky(false);
-        }
+        console.log('sticky is set to false', window.scrollY);
+        setSticky(false);
       }
     };
 
-    // Set up the event listener
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+  }, [location]);
+
+  // useEffect(() => {
+  //   if (location.pathname === '/ecosystem') {
+  //     setSticky(true);
+  //   }
+  // }, []);
+
+  useEffect(() => {
+    const handleBackButton = () => {
+      setSticky(false);
+    };
+    window.addEventListener('popstate', handleBackButton);
+    return () => {
+      window.removeEventListener('popstate', handleBackButton);
+    };
   }, []);
+
   return (
     <CustomNavBar sticky={sticky}>
       <Content>
         <img src={sticky ? radius_dark : radius} alt='radius' />
         <EcoDocGit>
-          <Link to='/ecosystem' onClick={() => setSticky(true)}>
+          <StyledLink to='/ecosystem' onClick={() => setSticky(true)}>
             <EcoBtn>Ecosystem</EcoBtn>
-          </Link>
-          <StyledLink href='https://docs.theradius.xyz/overview/introduction-to-radius'>
+          </StyledLink>
+          <StyledLink to='https://docs.theradius.xyz/overview/introduction-to-radius'>
             <DocBtn>Documentation</DocBtn>
           </StyledLink>
-          <StyledLink href='https://github.com/radiusxyz'>
+          <StyledLink to='https://github.com/radiusxyz'>
             <GitBtn>Github</GitBtn>
           </StyledLink>
         </EcoDocGit>

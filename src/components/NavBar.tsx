@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import radius from '../assets/images/radius.svg';
 import radius_dark from '../assets/images/radius_dark.svg';
 import hamburger from '../assets/images/hamburger.svg';
+import close from '../assets/images/close.svg';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
@@ -255,7 +256,9 @@ const NavBar = () => {
           <LogoAndClose>
             <Logo src={radius} width='93px' alt='Radius' />
             {isShown ? (
-              <CloseButton onClick={handleMenu}>X</CloseButton>
+              <CloseButton onClick={handleMenu}>
+                <img src={close} />
+              </CloseButton>
             ) : (
               <img onClick={handleMenu} src={hamburger} />
             )}

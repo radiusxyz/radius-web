@@ -116,6 +116,13 @@ const GitBtn = styled.button`
 `;
 
 // Styled components
+
+const Sticky = styled.div`
+  position: sticky;
+  height: auto;
+  z-index: 10;
+`;
+
 const NavbarContainer = styled.nav`
   display: flex;
   flex-direction: column;
@@ -170,6 +177,14 @@ const LogoAndClose = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+`;
+
+const Backdrop = styled.div`
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 205px;
+  z-index: 9;
 `;
 
 const NavBar = () => {
@@ -234,32 +249,40 @@ const NavBar = () => {
       </Content>
     </CustomNavBar>
   ) : (
-    <NavbarContainer>
-      <LogoAndClose>
-        <Logo src={radius} width='93px' alt='Radius' />
-        {isShown ? (
-          <CloseButton onClick={handleMenu}>X</CloseButton>
-        ) : (
-          <img onClick={handleMenu} src={hamburger} />
-        )}
-      </LogoAndClose>
-      {isShown && (
-        <NavLinksContainer>
-          <StyledNavLink onClick={handleMenu} to='/ecosystem'>
-            Ecosystem
-          </StyledNavLink>
-          <StyledNavLink
-            onClick={handleMenu}
-            to='https://docs.theradius.xyz/overview/introduction-to-radius'
-          >
-            Documentation
-          </StyledNavLink>
-          <StyledNavLink onClick={handleMenu} to='https://github.com/radiusxyz'>
-            Github
-          </StyledNavLink>
-        </NavLinksContainer>
-      )}
-    </NavbarContainer>
+    <>
+      <Sticky>
+        <NavbarContainer>
+          <LogoAndClose>
+            <Logo src={radius} width='93px' alt='Radius' />
+            {isShown ? (
+              <CloseButton onClick={handleMenu}>X</CloseButton>
+            ) : (
+              <img onClick={handleMenu} src={hamburger} />
+            )}
+          </LogoAndClose>
+          {isShown && (
+            <NavLinksContainer>
+              <StyledNavLink onClick={handleMenu} to='/ecosystem'>
+                Ecosystem
+              </StyledNavLink>
+              <StyledNavLink
+                onClick={handleMenu}
+                to='https://docs.theradius.xyz/overview/introduction-to-radius'
+              >
+                Documentation
+              </StyledNavLink>
+              <StyledNavLink
+                onClick={handleMenu}
+                to='https://github.com/radiusxyz'
+              >
+                Github
+              </StyledNavLink>
+            </NavLinksContainer>
+          )}
+        </NavbarContainer>
+      </Sticky>
+      <Backdrop onClick={handleMenu} />
+    </>
   );
 };
 

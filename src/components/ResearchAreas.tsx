@@ -80,7 +80,7 @@ const SubText = styled.div`
   @media (max-width: 750px) {
     margin-top: 18px;
     font-size: 18px;
-    max-width: 270px;
+    max-width: 260px;
   }
 `;
 
@@ -113,7 +113,7 @@ const ResearchAreas = () => {
             <Tag key={tag}>{tag}</Tag>
           ))}
         </Tags>
-        <StyledLink to='https://twitter.com/radius_xyz'>
+        <StyledLink to='https://twitter.com/radius_xyz' target='_blank'>
           <img src={x} width='63px' alt='x' />
         </StyledLink>
         <SubText>

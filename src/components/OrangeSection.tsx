@@ -18,13 +18,17 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 11px;
+  max-width: 1480px;
+  padding-left: 40px;
+  padding-right: 40px;
   @media (max-width: 750px) {
     gap: 9px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 `;
 
 const Title = styled.p`
-  max-width: 1400px;
   color: #fff;
   font-family: Atyp Display;
   font-size: 100px;
@@ -80,7 +84,7 @@ const OrangeSection = () => {
           Laying the foundation for a <strong>sustainable future</strong> for
           rollups
         </Title>
-        <StyledLink to='https://docs.theradius.xyz/'>
+        <StyledLink to='https://docs.theradius.xyz/' target='_blank'>
           <BuildBtn>BUILD WITH RADIUS</BuildBtn>
         </StyledLink>
       </Wrapper>

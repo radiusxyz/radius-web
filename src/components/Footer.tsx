@@ -21,13 +21,17 @@ const Container = styled.div`
 
 const Content = styled.div`
   display: flex;
-  max-width: 1400px;
+  max-width: 1480px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 100%;
   justify-content: space-between;
   align-items: flex-start;
   @media (max-width: 750px) {
     flex-direction: column;
     gap: 64px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 `;
 
@@ -37,9 +41,13 @@ const Links = styled.div`
   gap: 55px;
   max-width: 831px;
   width: 100%;
+  @media (max-width: 1100px) {
+    margin-left: 40px;
+  }
   @media (max-width: 750px) {
     flex-direction: column;
     gap: 64px;
+    margin-left: 0px;
   }
 `;
 
@@ -131,18 +139,23 @@ const Footer = () => {
           <RowWrapper>
             <RowTitle>Follow us</RowTitle>
             <CardRow>
-              <StyledLink to='https://twitter.com/radius_xyz'>
+              <StyledLink to='https://twitter.com/radius_xyz' target='_blank'>
                 <Card>
                   <img src={x_footer} />
                   <CardText>Twitter</CardText>
                 </Card>
               </StyledLink>
-              <Card>
-                <img src={discord} /> <CardText>DISCORD</CardText>
-              </Card>
-              <StyledLink to='https://medium.com/@radius_xyz'>
+              <StyledLink
+                to='https://discord.com/invite/wdS6k4wz9H'
+                target='_blank'
+              >
                 <Card>
-                  <img src={medium} /> <CardText>BLOG</CardText>
+                  <img src={discord} /> <CardText>Discord</CardText>
+                </Card>
+              </StyledLink>
+              <StyledLink to='https://medium.com/@radius_xyz' target='_blank'>
+                <Card>
+                  <img src={medium} /> <CardText>Blog</CardText>
                 </Card>
               </StyledLink>
             </CardRow>
@@ -150,13 +163,13 @@ const Footer = () => {
           <RowWrapper>
             <RowTitle>Recources</RowTitle>
             <CardRow>
-              <StyledLink to='https://docs.theradius.xyz/'>
+              <StyledLink to='https://docs.theradius.xyz/' target='_blank'>
                 <Card>
                   <img src={x_footer} />
                   <CardText>Documentation</CardText>
                 </Card>
               </StyledLink>
-              <StyledLink to='https://github.com/radiusxyz'>
+              <StyledLink to='https://github.com/radiusxyz' target='_blank'>
                 <Card>
                   <img src={github} />
                   <CardText>Github</CardText>

@@ -4,6 +4,11 @@ const CardsContainer = styled.div`
   display: flex;
   gap: 30px;
   align-items: start;
+  justify-content: center;
+  @media (max-width: 950px) {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
   @media (max-width: 750px) {
     flex-direction: column;
     gap: 14px;
@@ -17,7 +22,8 @@ const Half = styled.div`
 `;
 
 const Container = styled.div<{ toppadding: string }>`
-  width: 597px;
+  width: 100%;
+  max-width: 597px;
   padding: ${(props) => props.toppadding} 44px 44px 44px;
   border-radius: 8px;
   border: 1px solid #624784;

@@ -38,7 +38,6 @@ const LabWrapper = styled.div`
 `;
 
 const VideoWrapper = styled.div`
-  width: 100%;
   @media (max-width: 750px) {
     height: 100%;
   }
@@ -47,7 +46,7 @@ const VideoWrapper = styled.div`
 const StyledVideo = styled.video`
   width: 100%;
   height: auto;
-  border-radius: 20px;
+ border-radius: 20px;
   // transform: rotateY(180deg);
   // -webkit-transform: rotateY(180deg); /* Safari and Chrome */
   // -moz-transform: rotateY(180deg); /* Firefox */

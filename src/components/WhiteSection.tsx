@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import lab from '../assets/images/lab.svg';
-import lab_mob from '../assets/images/lab_mob.svg';
+// import lab from '../assets/images/lab.svg';
+// import lab_mob from '../assets/images/lab_mob.svg';
 import arrow from '../assets/images/arrow.svg';
 import purple_card_1 from '../assets/images/purple_card_1.svg';
 import purple_card_2 from '../assets/images/purple_card_2.svg';
@@ -60,13 +60,13 @@ const StyledVideo = styled.video`
   }
 `;
 
-const Img = styled.img`
-  width: 100%;
-  height: auto;
-  @media (max-width: 750px) {
-    object-fit: cover;
-  }
-`;
+// const Img = styled.img`
+//   width: 100%;
+//   height: auto;
+//   @media (max-width: 750px) {
+//     object-fit: cover;
+//   }
+// `;
 
 const Content = styled.div`
   width: 100%;

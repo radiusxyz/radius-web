@@ -5,7 +5,7 @@ import radius_footer_150x37 from '../assets/images/radius_150x37.svg';
 import discord from '../assets/images/discord.svg';
 import medium from '../assets/images/medium.svg';
 import github from '../assets/images/github.svg';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   width: 100%;

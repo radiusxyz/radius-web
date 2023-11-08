@@ -8,6 +8,7 @@ import purple_card_3 from '../assets/images/purple_card_3.svg';
 import purple_card_4 from '../assets/images/purple_card_4.svg';
 import PurpleCards from './PurpleCards';
 import BeyondSection from './BeyondSection';
+import myvid from '../assets/images/video.mp4';
 
 const Container = styled.div`
   display: flex;
@@ -30,7 +31,31 @@ const LabWrapper = styled.div`
   position: relative;
   @media (max-width: 750px) {
     margin-bottom: 0;
-    height: 100vh;
+    height: 502px;
+  }
+`;
+
+const VideoWrapper = styled.div`
+  width: 100%;
+  @media (max-width: 750px) {
+    height: 100%;
+  }
+`;
+
+const StyledVideo = styled.video`
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  -moz-transform: rotateY(180deg); /* Firefox */
+  @media (max-width: 750px) {
+    object-fit: cover;
+    object-position: 30% center;
+    position absolute;
+    height: 100%;
+    border-radius: 0px;
+
   }
 `;
 
@@ -269,7 +294,12 @@ const WhiteSection = () => {
   return (
     <Container>
       <LabWrapper>
-        <Img src={window.innerWidth > 740 ? lab : lab_mob} />
+        {/* <Img src={window.innerWidth > 740 ? lab : lab_mob} /> */}
+        <VideoWrapper>
+          <StyledVideo playsInline autoPlay muted loop>
+            <source src={myvid} />
+          </StyledVideo>
+        </VideoWrapper>
         <Content>
           <IntroWrapper>
             <IntroTitle>

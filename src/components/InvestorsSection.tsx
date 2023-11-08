@@ -19,7 +19,9 @@ const MainContainer = styled.div`
 
 const Content = styled.div`
   display: flex;
-  max-width: 1400px;
+  max-width: 1480px;
+  padding-left: 40px;
+  padding-right: 40px;
   gap: 98px;
   align-items: center;
   width: 100%;
@@ -47,6 +49,10 @@ const Logos = styled.div`
   gap: 12px;
   align-items: center;
   position: relative;
+  @media (max-width: 1640px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   @media (max-width: 750px) {
     flex-wrap: wrap;
     justify-content: center;

@@ -4,6 +4,9 @@ import bss_icon from '../assets/images/bss_icon.svg';
 const CardsContainer = styled.div`
   display: flex;
   gap: 18px;
+  @media (max-width: 1030px) {
+    flex-direction: column;
+  }
   @media (max-width: 750px) {
     gap: 10px;
     flex-direction: column;

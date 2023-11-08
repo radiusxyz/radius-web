@@ -12,6 +12,7 @@ import rollkit from '../assets/images/rollkit.svg';
 import saga from '../assets/images/saga.svg';
 import stackr from '../assets/images/stackr.svg';
 import vistara from '../assets/images/vistara.svg';
+import { Link } from 'react-router-dom';
 
 const IntroSection = styled.div`
   width: 100%;
@@ -40,12 +41,16 @@ const IntroBackground = styled.img`
 
 const IntroContent = styled.div`
   width: 100%;
-  max-width: 1400px;
+  max-width: 1480px;
+  padding-left: 40px;
+  padding-right: 40px;
   position: absolute;
   top: calc(50%-20px);
   @media (max-width: 750px) {
     position: relative;
     height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 `;
 
@@ -104,6 +109,8 @@ const CardsSection = styled.div`
   width: 100%;
   background: #1b191f;
   padding: 250px 0 16px;
+  padding-left: 40px;
+  padding-right: 40px;
   display: flex;
   justify-content: center;
   @media (max-width: 750px) {
@@ -115,6 +122,7 @@ const CardsSectionContent = styled.div`
   display: flex;
   width: 100%;
   max-width: 1400px;
+  justify-content: center;
   @media (max-width: 750px) {
     flex-direction: column;
     align-items: center;
@@ -125,11 +133,23 @@ const Cards = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 19px 18px;
+
+  @media (max-width: 850px) {
+    grid-wrap: wrap;
+    gap: 10px;
+  }
   @media (max-width: 750px) {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
+`;
+
+const StyledLink = styled(Link)`
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
 `;
 
 const Card = styled.div`
@@ -204,8 +224,14 @@ const GradientSection = styled.div`
 `;
 
 const GradientContent = styled.div`
-  max-width: 1400px;
+  max-width: 1480px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 100%;
+  @media (max-width: 750px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 `;
 
 const GradientText = styled.p`
@@ -241,66 +267,77 @@ const GradientLink = styled.p`
 
 const cards = [
   {
+    url: 'https://altlayer.io/',
     logo: altlayer,
-    title: 'ALTLAYER',
+    title: 'Altlayer',
     details:
       'AltLayer is an open and decentralized protocol for developers to launch highly elastic application-tailored rollups.',
   },
   {
+    url: 'https://caldera.xyz/',
     logo: caldera,
-    title: 'caldera',
+    title: 'Caldera',
     details:
       'Caldera specializes in building high-performance, customizable, and application-specific layer-two blockchains.',
   },
   {
+    url: 'https://celestia.org/',
     logo: celestia,
-    title: 'CELESTIA',
+    title: 'Celestia',
     details:
       'Celestia is a modular data availability network that securely scales with the number of users, making it easy for anyone to launch their own blockchain.',
   },
   {
     logo: herodotus,
-    title: 'HERODOTUS',
+    url: 'https://www.herodotus.dev/',
+    title: 'Herodotus',
     details:
       'Herodotus is a powerful data access middleware that provides smart contracts with synchronous access to both current and historical on-chain data across Ethereum layers.',
   },
   {
+    url: 'https://lumoz.org/',
     logo: lumoz,
-    title: 'LUMOZ',
+    title: 'Lumoz',
     details:
       'Lumoz (Previously Opside) is a decentralized ZK-RaaS platform as well as a PoW network that facilitates ZKP mining.',
   },
   {
+    url: 'https://www.madara.zone/',
     logo: madara,
-    title: 'MADARA',
+    title: 'Madara',
     details:
       'Madara is standard, customizable and blazing fast Starknet sequencer. Madara delivers unmatched performance and scalability to power Starknet-based Validity Rollup chain.',
   },
   {
+    url: 'https://www.pragmaoracle.com/',
     logo: pragma,
     title: 'Pragma',
     details:
       'Pragma is a decentralized, transparent and composable oracle network, leveraging state-of-the-art zero-knowledge cryptography.',
   },
   {
+    url: 'https://rollkit.dev/',
     logo: rollkit,
     title: 'Rollkit',
     details:
       'Rollkit is a rollup framework that gives developers the freedom to deploy rollups throughout the modular stack.',
   },
   {
+    url: 'https://www.saga.xyz/',
     logo: saga,
-    title: 'SAGA',
+    title: 'Saga',
     details:
       'Saga is a protocol for automatically provisioning application-specific blockchains.',
   },
   {
+    url: 'https://www.stackrlabs.xyz/',
     logo: stackr,
     title: 'Stackr',
     details:
       'Stackr is a modular SDK for building micro-rollups in general-purpose languages.',
   },
   {
+    url: 'https://www.vistara.dev/',
     logo: vistara,
     title: 'Vistara',
     details:
@@ -331,15 +368,21 @@ const EcoPage = () => {
       <CardsSection>
         <CardsSectionContent>
           <Cards>
-            {cards.map((card) => (
-              <Card key={card.title}>
-                <LogoTitle>
-                  <Logo src={card.logo} />
-                  <CardTitle>{card.title}</CardTitle>
-                </LogoTitle>
-                <CardDetails>{card.details}</CardDetails>
-              </Card>
-            ))}
+            {cards
+              .sort((a, b) =>
+                a.title.toUpperCase() > b.title.toUpperCase() ? 1 : -1
+              )
+              .map((card) => (
+                <StyledLink to={card.url} target='_blank'>
+                  <Card key={card.title}>
+                    <LogoTitle>
+                      <Logo src={card.logo} />
+                      <CardTitle>{card.title}</CardTitle>
+                    </LogoTitle>
+                    <CardDetails>{card.details}</CardDetails>
+                  </Card>
+                </StyledLink>
+              ))}
           </Cards>
         </CardsSectionContent>
       </CardsSection>
@@ -348,7 +391,7 @@ const EcoPage = () => {
           <GradientText>
             Join Radius in decentralizing and future-proofing Ethereum
           </GradientText>
-          <a href='https://twitter.com/radius_xyz'>
+          <a href='https://twitter.com/radius_xyz' target='_blank'>
             <GradientLink>Talk to us</GradientLink>
           </a>
         </GradientContent>

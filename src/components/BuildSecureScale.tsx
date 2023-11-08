@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 221px 10px 222px 10px;
+  padding: 221px 40px 222px 40px;
   background-image: url(${black_mosaic});
   @media (max-width: 750px) {
     flex-direction: column;

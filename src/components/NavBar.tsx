@@ -35,7 +35,9 @@ const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1480px;
+  padding-left: 40px;
+  padding-right: 40px;
 `;
 
 const EcoDocGit = styled.div`
@@ -232,24 +234,7 @@ const NavBar = () => {
     };
   }, []);
 
-  return window.innerWidth > 750 ? (
-    <CustomNavBar sticky={sticky}>
-      <Content>
-        <img src={sticky ? radius_dark : radius} alt='radius' />
-        <EcoDocGit>
-          <StyledLink to='/ecosystem' onClick={() => setSticky(true)}>
-            <EcoBtn>Ecosystem</EcoBtn>
-          </StyledLink>
-          <StyledLink to='https://docs.theradius.xyz/overview/introduction-to-radius'>
-            <DocBtn>Documentation</DocBtn>
-          </StyledLink>
-          <StyledLink to='https://github.com/radiusxyz'>
-            <GitBtn>Github</GitBtn>
-          </StyledLink>
-        </EcoDocGit>
-      </Content>
-    </CustomNavBar>
-  ) : (
+  return window.innerWidth <= 750 ? (
     <>
       <Sticky>
         <NavbarContainer>
@@ -284,8 +269,31 @@ const NavBar = () => {
           )}
         </NavbarContainer>
       </Sticky>
-      <Backdrop onClick={handleMenu} />
+      {isShown && <Backdrop onClick={handleMenu} />}
     </>
+  ) : (
+    <CustomNavBar sticky={sticky}>
+      <Content>
+        <StyledLink to='/' onClick={() => setSticky(false)}>
+          <img src={sticky ? radius_dark : radius} alt='radius' />
+        </StyledLink>
+
+        <EcoDocGit>
+          <StyledLink to='/ecosystem' onClick={() => setSticky(true)}>
+            <EcoBtn>Ecosystem</EcoBtn>
+          </StyledLink>
+          <StyledLink
+            to='https://docs.theradius.xyz/overview/introduction-to-radius'
+            target='_blank'
+          >
+            <DocBtn>Documentation</DocBtn>
+          </StyledLink>
+          <StyledLink to='https://github.com/radiusxyz' target='_blank'>
+            <GitBtn>Github</GitBtn>
+          </StyledLink>
+        </EcoDocGit>
+      </Content>
+    </CustomNavBar>
   );
 };
 

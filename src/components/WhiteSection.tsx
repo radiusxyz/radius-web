@@ -8,7 +8,8 @@ import purple_card_3 from '../assets/images/purple_card_3.svg';
 import purple_card_4 from '../assets/images/purple_card_4.svg';
 import PurpleCards from './PurpleCards';
 import BeyondSection from './BeyondSection';
-import myvid from '../assets/images/video.mp4';
+// import myvid from '../assets/images/video.mp4';
+import newVid from '../assets/images/video_new.mp4';
 import { Link } from 'react-router-dom';
 
 const Container = styled.div`
@@ -47,12 +48,12 @@ const StyledVideo = styled.video`
   width: 100%;
   height: auto;
   border-radius: 20px;
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg); /* Safari and Chrome */
-  -moz-transform: rotateY(180deg); /* Firefox */
+  // transform: rotateY(180deg);
+  // -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  // -moz-transform: rotateY(180deg); /* Firefox */
   @media (max-width: 750px) {
     object-fit: cover;
-    object-position: 30% center;
+    object-position: 58% center;
     position absolute;
     height: 100%;
     border-radius: 0px;
@@ -305,7 +306,7 @@ const WhiteSection = () => {
         {/* <Img src={window.innerWidth > 740 ? lab : lab_mob} /> */}
         <VideoWrapper>
           <StyledVideo playsInline autoPlay muted loop>
-            <source src={myvid} />
+            <source src={newVid} />
           </StyledVideo>
         </VideoWrapper>
         <Content>

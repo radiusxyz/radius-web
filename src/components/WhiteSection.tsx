@@ -9,6 +9,7 @@ import purple_card_4 from '../assets/images/purple_card_4.svg';
 import PurpleCards from './PurpleCards';
 import BeyondSection from './BeyondSection';
 import myvid from '../assets/images/video.mp4';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   display: flex;
@@ -252,6 +253,13 @@ const BuiltIn = styled.div`
   }
 `;
 
+const StyledLink = styled(Link)`
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  width: auto;
+`;
+
 type Card = {
   toppadding: string;
   title: string;
@@ -322,7 +330,9 @@ const WhiteSection = () => {
               and forge a better path for Ethereum
             </Details>
           </Eco>
-          <Arrow src={arrow} alt='arrow_right' />
+          <StyledLink to='/ecosystem'>
+            <Arrow src={arrow} alt='arrow_right' />
+          </StyledLink>
         </EcoContent>
       </EcoWrapper>
       <PurpleWrapper>

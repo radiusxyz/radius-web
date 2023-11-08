@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import radius from '../assets/images/radius.svg';
 import radius_dark from '../assets/images/radius_dark.svg';
+import hamburger from '../assets/images/hamburger.svg';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const StyledLink = styled(Link)`
   display: block;
@@ -113,9 +115,71 @@ const GitBtn = styled.button`
   }
 `;
 
+// Styled components
+const NavbarContainer = styled.nav`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  padding: 0 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.5s ease-in;
+`;
+
+const Logo = styled.img`
+  height: 50px;
+  cursor: pointer;
+`;
+
+const NavLinksContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const StyledNavLink = styled(NavLink)`
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 13px 5px 14px;
+  font-family: Gilroy-SemiBold;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  &.active {
+    color: #ff7a00;
+  }
+  &:focus {
+    color: #ff7a00;
+  }
+`;
+
+const CloseButton = styled.button`
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+`;
+
+const LogoAndClose = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`;
+
 const NavBar = () => {
   const [sticky, setSticky] = useState(false);
+  const [isShown, setIsShown] = useState(false);
   const location = useLocation();
+
+  const handleMenu = () => {
+    setIsShown((prevState) => !prevState);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -124,9 +188,7 @@ const NavBar = () => {
         location.pathname === '/ecosystem'
       ) {
         setSticky(true);
-        console.log('sticky is set to true');
       } else {
-        console.log('sticky is set to false', window.scrollY);
         setSticky(false);
       }
     };
@@ -154,7 +216,7 @@ const NavBar = () => {
     };
   }, []);
 
-  return (
+  return window.innerWidth > 750 ? (
     <CustomNavBar sticky={sticky}>
       <Content>
         <img src={sticky ? radius_dark : radius} alt='radius' />
@@ -171,6 +233,33 @@ const NavBar = () => {
         </EcoDocGit>
       </Content>
     </CustomNavBar>
+  ) : (
+    <NavbarContainer>
+      <LogoAndClose>
+        <Logo src={radius} width='93px' alt='Radius' />
+        {isShown ? (
+          <CloseButton onClick={handleMenu}>X</CloseButton>
+        ) : (
+          <img onClick={handleMenu} src={hamburger} />
+        )}
+      </LogoAndClose>
+      {isShown && (
+        <NavLinksContainer>
+          <StyledNavLink onClick={handleMenu} to='/ecosystem'>
+            Ecosystem
+          </StyledNavLink>
+          <StyledNavLink
+            onClick={handleMenu}
+            to='https://docs.theradius.xyz/overview/introduction-to-radius'
+          >
+            Documentation
+          </StyledNavLink>
+          <StyledNavLink onClick={handleMenu} to='https://github.com/radiusxyz'>
+            Github
+          </StyledNavLink>
+        </NavLinksContainer>
+      )}
+    </NavbarContainer>
   );
 };
 

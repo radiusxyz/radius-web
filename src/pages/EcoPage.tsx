@@ -13,6 +13,7 @@ import saga from '../assets/images/saga.svg';
 import stackr from '../assets/images/stackr.svg';
 import vistara from '../assets/images/vistara.svg';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const IntroSection = styled.div`
   width: 100%;
@@ -32,11 +33,10 @@ const IntroBackground = styled.img`
   width: 100%;
   height: auto;
   @media (max-width: 750px) {
-    width: 100%;
-    height: auto;
-    @media (max-width: 750px) {
-      position: absolute;
-    }
+    object-fit: cover;
+    height: 438px;
+    position: absolute;
+  }
 `;
 
 const IntroContent = styled.div`
@@ -72,6 +72,9 @@ const IntroMiniTitle = styled.p`
   font-weight: 700;
   line-height: 120%; /* 28.8px */
   margin-bottom: 51px;
+  @media (max-width: 980px) {
+    font-size: 13px;
+  }
   @media (max-width: 750px) {
     font-size: 14px;
     margin-bottom: 8px;
@@ -87,6 +90,10 @@ const IntroTitle = styled.p`
   line-height: 120%; /* 98.4px */
   max-width: 568px;
   margin-bottom: 37px;
+  @media (max-width: 980px) {
+    font-size: 55px;
+    max-width: 450px;
+  }
   @media (max-width: 750px) {
     font-size: 24px;
     margin-bottom: 8px;
@@ -100,6 +107,10 @@ const IntroDetails = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 31.2px */
+  @media (max-width: 980px) {
+    font-size: 16px;
+    max-width: 450px;
+  }
   @media (max-width: 750px) {
     font-size: 12px;
   }
@@ -346,11 +357,29 @@ const cards = [
 ];
 
 const EcoPage = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width to state
+      setWindowWidth(window.innerWidth);
+    }
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // Empty array ensures that effect is only run on mount and unmount
+
   return (
     <>
       <IntroSection>
         <IntroBackground
-          src={window.innerWidth > 750 ? entanglement : entanglement_mob}
+          src={windowWidth > 750 ? entanglement : entanglement_mob}
         />
         <IntroContent>
           <IntroText>

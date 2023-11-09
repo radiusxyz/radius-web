@@ -91,6 +91,10 @@ const IntroWrapper = styled.div`
   top: 50%;
   transform: translate(0, -50%);
   max-width: 658px;
+
+  @media (max-width: 1040px) {
+    max-width: 300px;
+  }
   @media (max-width: 750px) {
     max-width: 315px;
     gap: 10px;
@@ -108,6 +112,9 @@ const IntroTitle = styled.p`
   font-weight: 200;
   line-height: 120%; /* 72px */
   text-transform: capitalize;
+  @media (max-width: 1040px) {
+    font-size: 28px;
+  }
   @media (max-width: 750px) {
     font-size: 30px;
   }
@@ -121,6 +128,9 @@ const Bold = styled.span`
   font-weight: 600;
   line-height: 120%; /* 72px */
   text-transform: capitalize;
+  @media (max-width: 1040px) {
+    font-size: 28px;
+  }
   @media (max-width: 750px) {
     font-size: 30px;
   }

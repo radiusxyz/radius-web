@@ -27,7 +27,7 @@ const HomePage = () => {
 
   return (
     <>
-      {windowWidth > 750 && <TopAlert />}
+      {/* {windowWidth > 750 && <TopAlert />} */}
       <WhiteSection />
       <BuildSecureScale />
       <ResearchAreas />

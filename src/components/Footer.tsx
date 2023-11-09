@@ -83,7 +83,7 @@ const Card = styled.div`
   justify-content: center;
   align-items: center !important;
   width: 100%;
-  padding: 39px 0;
+  padding: 39px 20px;
   border-radius: 4px;
   border: 1px solid #222;
   background: linear-gradient(180deg, #161616 0%, #0e0e0e 100%);
@@ -127,14 +127,23 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledLinkLogo = styled(Link)`
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+`;
+
 const Footer = () => {
   return (
     <Container>
       <Content>
-        <img
-          src={window.innerWidth > 750 ? radius_footer : radius_footer_150x37}
-          alt='radius_footer'
-        />
+        <StyledLinkLogo to='/'>
+          <img
+            src={window.innerWidth > 750 ? radius_footer : radius_footer_150x37}
+            alt='radius_footer'
+          />
+        </StyledLinkLogo>
         <Links>
           <RowWrapper>
             <RowTitle>Follow us</RowTitle>

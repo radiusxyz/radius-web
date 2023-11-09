@@ -35,6 +35,7 @@ const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  gap: 20px;
   max-width: 1480px;
   padding-left: 40px;
   padding-right: 40px;
@@ -64,7 +65,7 @@ const EcoBtn = styled.button`
   border: none;
   background: transparent;
   width: 100%;
-  padding: 14px 35px 13px 91px;
+  padding: 14px 10px 13px 20px;
   border-radius: 34px 0px 0px 34px;
   &:hover {
     cursor: pointer;
@@ -83,6 +84,7 @@ const DocBtn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   font-family: Gilroy-SemiBold;
   font-size: 18px;
   font-style: normal;
@@ -90,7 +92,7 @@ const DocBtn = styled.button`
   line-height: 130%; /* 23.4px */
   border: none;
   background: transparent;
-  padding: 14px 35px 13px 35px;
+  padding: 14px 10px 13px 10px;
   &:hover {
     cursor: pointer;
     color: #ff7a00;
@@ -110,8 +112,8 @@ const GitBtn = styled.button`
   border: none;
   width: 100%;
   background: transparent;
-  padding: 14px 90px 13px 35px;
-  border-radius: 0px 34px 34px 0px;
+  padding: 14px 20px 13px 10px;
+  border-radius: 0px 20px 24px 10px;
   &:hover {
     cursor: pointer;
     color: #ff7a00;
@@ -234,7 +236,26 @@ const NavBar = () => {
     };
   }, []);
 
-  return window.innerWidth <= 750 ? (
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width to state
+      setWindowWidth(window.innerWidth);
+    }
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // Empty array ensures that effect is only run on mount and unmount
+
+  return windowWidth <= 750 ? (
     <>
       <Sticky>
         <NavbarContainer>

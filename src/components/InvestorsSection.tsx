@@ -5,6 +5,7 @@ import cryptocom from '../assets/images/cryptocom.svg';
 import superscrypt from '../assets/images/superscrypt.svg';
 import grad_left from '../assets/images/grad_left.svg';
 import grad_right from '../assets/images/grad_right.svg';
+import { Link } from 'react-router-dom';
 
 const MainContainer = styled.div`
   display: flex;
@@ -59,6 +60,13 @@ const Logos = styled.div`
   }
 `;
 
+const StyledLink = styled(Link)`
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  width: auto;
+`;
+
 const LeftGrad = styled.div`
   position: absolute;
   background: transparent;
@@ -81,23 +89,31 @@ const InvestorsSection = () => {
             <LeftGrad>
               <img src={grad_left} />
             </LeftGrad>
-          )}
-          <img
-            src={hashed}
-            width={(window.innerWidth < 750 && '126px') || 'auto'}
-          />
-          <img
-            src={lambda}
-            width={(window.innerWidth < 750 && '126px') || 'auto'}
-          />
-          <img
-            src={superscrypt}
-            width={(window.innerWidth < 750 && '126px') || 'auto'}
-          />
-          <img
-            src={cryptocom}
-            width={(window.innerWidth < 750 && '126px') || 'auto'}
-          />
+          )}{' '}
+          <StyledLink to='https://www.hashed.com/' target='_blank'>
+            <img
+              src={hashed}
+              width={(window.innerWidth < 750 && '126px') || 'auto'}
+            />{' '}
+          </StyledLink>
+          <StyledLink to='https://lambdaclass.com/' target='_blank'>
+            <img
+              src={lambda}
+              width={(window.innerWidth < 750 && '126px') || 'auto'}
+            />
+          </StyledLink>
+          <StyledLink to='https://www.superscrypt.xyz/' target='_blank'>
+            <img
+              src={superscrypt}
+              width={(window.innerWidth < 750 && '126px') || 'auto'}
+            />{' '}
+          </StyledLink>
+          <StyledLink to='https://crypto.com/capital' target='_blank'>
+            <img
+              src={cryptocom}
+              width={(window.innerWidth < 750 && '126px') || 'auto'}
+            />{' '}
+          </StyledLink>
           {window.innerWidth > 750 && (
             <RightGrad>
               <img src={grad_right} />

@@ -1,13 +1,12 @@
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import BuildSecureScale from '../components/BuildSecureScale';
 import InvestorsSection from '../components/InvestorsSection';
 import OrangeSection from '../components/OrangeSection';
 import ResearchAreas from '../components/ResearchAreas';
-// import TopAlert from '../components/TopAlert';
+import TopAlert from '../components/TopAlert';
 import WhiteSection from '../components/WhiteSection';
 
 const HomePage = () => {
-  /*
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     // Handler to call on window resize
@@ -25,10 +24,10 @@ const HomePage = () => {
     // Remove event listener on cleanup
     return () => window.removeEventListener('resize', handleResize);
   }, []); // Empty array ensures that effect is only run on mount and unmount
-*/
+
   return (
     <>
-      {/* {windowWidth > 750 && <TopAlert />} */}
+      {windowWidth > 750 && <TopAlert />}
       <WhiteSection />
       <BuildSecureScale />
       <ResearchAreas />

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import radius from '../assets/images/radius.svg';
 import radius_dark from '../assets/images/radius_dark.svg';
 import hamburger from '../assets/images/hamburger.svg';
@@ -199,6 +199,7 @@ const NavBar = () => {
   const [sticky, setSticky] = useState(false);
   const [isShown, setIsShown] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleMenu = () => {
     setIsShown((prevState) => !prevState);
@@ -263,7 +264,12 @@ const NavBar = () => {
       <Sticky eco={location.pathname}>
         <NavbarContainer>
           <LogoAndClose>
-            <Logo src={radius} width='93px' alt='Radius' />
+            <Logo
+              onClick={() => navigate('/')}
+              src={radius}
+              width='93px'
+              alt='Radius'
+            />
             {isShown ? (
               <CloseButton onClick={handleMenu}>
                 <img src={close} />

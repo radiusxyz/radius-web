@@ -6,6 +6,13 @@ const Container = styled.div`
   width: 100%;
   height: 52px;
   background: #ff5c00;
+  @media (max-width: 750px) {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 1;
+  }
 `;
 
 const Text = styled.div`

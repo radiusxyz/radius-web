@@ -123,9 +123,11 @@ const GitBtn = styled.button`
 // Styled components
 
 const Sticky = styled.div`
-  position: sticky;
+  position: absolute;
+  width: 100%;
   height: auto;
   z-index: 10;
+  top: 40px;
 `;
 
 const NavbarContainer = styled.nav`

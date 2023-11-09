@@ -12,6 +12,7 @@ import rollkit from '../assets/images/rollkit.svg';
 import saga from '../assets/images/saga.svg';
 import stackr from '../assets/images/stackr.svg';
 import vistara from '../assets/images/vistara.svg';
+import nectar from '../assets/images/nectar.svg';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -353,6 +354,13 @@ const cards = [
     title: 'Vistara',
     details:
       'Vistara is a one-click rollup deployment framework for designing and managing scalable infrastructure.',
+  },
+  {
+    url: 'https://www.nectarx.io/',
+    logo: nectar,
+    title: 'Nectar',
+    details:
+      'Nectar is a safe and affordable on-chain trading for all by WASD3R.',
   },
 ];
 

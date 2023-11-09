@@ -122,12 +122,13 @@ const GitBtn = styled.button`
 
 // Styled components
 
-const Sticky = styled.div`
-  position: absolute;
+const Sticky = styled.div<{ eco: string }>`
+  // position: absolute;
+  position: ${(props) => (props.eco === '/ecosystem' ? 'sticky' : 'absolute')};
   width: 100%;
   height: auto;
   z-index: 10;
-  top: 40px;
+  top: ${(props) => (props.eco === '/ecosystem' ? '0px' : '40px')};
 `;
 
 const NavbarContainer = styled.nav`
@@ -259,7 +260,7 @@ const NavBar = () => {
 
   return windowWidth <= 750 ? (
     <>
-      <Sticky>
+      <Sticky eco={location.pathname}>
         <NavbarContainer>
           <LogoAndClose>
             <Logo src={radius} width='93px' alt='Radius' />

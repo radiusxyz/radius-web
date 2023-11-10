@@ -131,7 +131,7 @@ const StyledLinkLogo = styled(Link)`
   display: block;
   text-decoration: none;
   color: inherit;
-  width: 100%;
+  width: auto;
 `;
 
 const Footer = () => {

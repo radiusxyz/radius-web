@@ -166,7 +166,7 @@ const StyledLink = styled(Link)`
 
 const Card = styled.div`
   border-radius: 12px;
-  border: 1.5px solid rgba(255, 255, 255, 0.83);
+  border: 1px solid #444;
   background: #2d2d2d;
   width: 100%;
   max-width: 454px;

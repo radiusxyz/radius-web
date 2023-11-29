@@ -24,7 +24,8 @@ const CustomNavBar = styled.div<{ sticky: boolean }>`
   background: ${({ sticky }) => (sticky ? '#fff' : 'transparent')};
   box-shadow: ${({ sticky }) =>
     sticky ? '0px 4px 36px 0px rgba(255, 122, 0, 0.25)' : 'none'};
-  top: ${({ sticky }) => (sticky ? '0px' : '92px')};
+  // Adjust this property if there is a top alert
+  top: ${({ sticky }) => (sticky ? '0px' : '41px')};
   z-index: 10;
   margin-top: ${({ sticky }) => (sticky ? '0px' : '9px')};
   padding: ${({ sticky }) => (sticky ? '0px' : '0px 30px')};
@@ -129,7 +130,8 @@ const Sticky = styled.div<{ eco: string }>`
   width: 100%;
   height: auto;
   z-index: 10;
-  top: ${(props) => (props.eco === '/ecosystem' ? '0px' : '40px')};
+  // Adjust the below property when there is a top alert
+  top: ${(props) => (props.eco === '/ecosystem' ? '0px' : '0px')};
 `;
 
 const NavbarContainer = styled.nav`

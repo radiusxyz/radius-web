@@ -46,17 +46,18 @@ const VideoWrapper = styled.div`
 const StyledVideo = styled.video`
   width: 100%;
   height: auto;
- border-radius: 20px;
-  // transform: rotateY(180deg);
-  // -webkit-transform: rotateY(180deg); /* Safari and Chrome */
-  // -moz-transform: rotateY(180deg); /* Firefox */
+  border-radius: 20px;
+  @media (max-width: 1920px) {
+    height: 1015px;
+    object-fit: cover;
+   }
+  
   @media (max-width: 750px) {
     object-fit: cover;
     object-position: 58% center;
     position absolute;
     height: 100%;
     border-radius: 0px;
-
   }
 `;
 
@@ -112,8 +113,8 @@ const IntroTitle = styled.p`
   font-weight: 200;
   line-height: 120%; /* 72px */
   text-transform: capitalize;
-  @media (max-width: 1040px) {
-    font-size: 28px;
+  @media (max-width: 1400px) {
+    font-size: 60px;
   }
   @media (max-width: 750px) {
     font-size: 30px;
@@ -129,7 +130,7 @@ const Bold = styled.span`
   line-height: 120%; /* 72px */
   text-transform: capitalize;
   @media (max-width: 1040px) {
-    font-size: 28px;
+    font-size: 60px;
   }
   @media (max-width: 750px) {
     font-size: 30px;

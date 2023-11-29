@@ -175,6 +175,7 @@ const Card = styled.div`
   flex-direction: column;
   gap: 60px;
   min-height: 276px;
+  height: 100%;
   @media (max-width: 750px) {
     gap: 15.48px;
     min-height: 157px;
@@ -410,7 +411,7 @@ const EcoPage = () => {
                 a.title.toUpperCase() > b.title.toUpperCase() ? 1 : -1
               )
               .map((card) => (
-                <StyledLink to={card.url} target='_blank'>
+                <StyledLink key={card.title} to={card.url} target='_blank'>
                   <Card key={card.title}>
                     <LogoTitle>
                       <Logo src={card.logo} />

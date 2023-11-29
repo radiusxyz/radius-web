@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import creating from '../assets/images/creating.svg';
-import connecting from '../assets/images/connecting.svg';
+import creating_new from '../assets/images/creating_new.svg';
+import connecting_new from '../assets/images/connecting_new.svg';
+import { useEffect, useState } from 'react';
 
 const MainContainer = styled.div`
   display: flex;
@@ -14,8 +15,17 @@ const MainContainer = styled.div`
   gap: 180px;
   @media (max-width: 750px) {
     margin-top: 0px;
-    padding: 68px 30px 122px;
+    padding: 68px 30px 84px;
     gap: 24px;
+  }
+`;
+
+const HeaderWrapper = styled.div`
+  @media (max-width: 750px) {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 `;
 
@@ -28,6 +38,8 @@ const Header = styled.p`
   line-height: 120%; /* 96px */
   @media (max-width: 750px) {
     font-size: 24px;
+    width: auto;
+    text-align: center;
   }
 `;
 
@@ -59,10 +71,9 @@ const Body = styled.div`
 `;
 
 const DummyImg = styled.img`
-  width: 100%;
+  width: 501px;
   height: auto;
   @media (max-width: 930px) {
-    width: 400px;
     height: auto;
   }
   @media (max-width: 750px) {
@@ -105,14 +116,33 @@ const Details = styled.p`
   }
 `;
 const BeyondSection = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width to state
+      setWindowWidth(window.innerWidth);
+    }
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // Empty array ensures that effect is only run on mount and unmount
   return (
     <MainContainer>
-      <Header>
-        How our design and system go <strong>beyond decentralization</strong>
-      </Header>
+      <HeaderWrapper>
+        <Header>
+          How our design and system go <strong>beyond decentralization</strong>
+        </Header>
+      </HeaderWrapper>
       <Body>
         <Row>
-          <DummyImg src={creating} />
+          <DummyImg src={creating_new} />
           <TextWrapper>
             <Title>Creating sustainable rollup economics</Title>
             <Details>
@@ -122,7 +152,7 @@ const BeyondSection = () => {
             </Details>
           </TextWrapper>
         </Row>
-        {window.innerWidth > 750 && !(window.innerWidth < 930) ? (
+        {windowWidth > 750 && !(windowWidth < 930) ? (
           <Row>
             <TextWrapper>
               <Title>Connecting through a shared layer</Title>
@@ -132,11 +162,11 @@ const BeyondSection = () => {
                 optimized for interoperability and efficient data exchange.
               </Details>
             </TextWrapper>
-            <DummyImg src={connecting} />
+            <DummyImg src={connecting_new} />
           </Row>
         ) : (
           <Row>
-            <DummyImg src={connecting} />
+            <DummyImg src={connecting_new} />
             <TextWrapper>
               <Title>Connecting through a shared layer</Title>
               <Details>

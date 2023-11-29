@@ -2,10 +2,10 @@ import styled from 'styled-components';
 // import lab from '../assets/images/lab.svg';
 // import lab_mob from '../assets/images/lab_mob.svg';
 import arrow from '../assets/images/arrow.svg';
-import purple_card_1 from '../assets/images/purple_card_1.svg';
-import purple_card_2 from '../assets/images/purple_card_2.svg';
-import purple_card_3 from '../assets/images/purple_card_3.svg';
-import purple_card_4 from '../assets/images/purple_card_4.svg';
+import purple_new_1 from '../assets/images/purple_new_1.svg';
+import purple_new_2 from '../assets/images/purple_new_2.svg';
+import purple_new_3 from '../assets/images/purple_new_3.svg';
+import purple_new_4 from '../assets/images/purple_new_4.svg';
 import PurpleCards from './PurpleCards';
 import BeyondSection from './BeyondSection';
 // import myvid from '../assets/images/video.mp4';
@@ -17,7 +17,7 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   background: #fff;
-  padding: 41px 30px 238px 30px;
+  padding: 41px 30px 200px 30px;
   align-items: center;
   @media (max-width: 750px) {
     padding: 0;
@@ -299,7 +299,6 @@ const BuiltIn = styled.div`
 `;
 
 type Card = {
-  toppadding: string;
   title: string;
   details: string;
   imgUrl: string;
@@ -308,32 +307,28 @@ type Card = {
 const WhiteSection = () => {
   const cards: Card[] = [
     {
-      toppadding: '36px',
       title: 'Censorship Resistance',
       details:
         'Our trustless approach to transaction ordering remains true to decentralization values with powerful censorship resistance.',
-      imgUrl: purple_card_1,
+      imgUrl: purple_new_1,
     },
     {
-      toppadding: '50px',
       title: 'MEV Success',
       details:
         'While MEV resistance is valuable, sustaining rollup economics can be challenging. At Radius, we build with zero knowledge to find the perfect formula for MEV.',
-      imgUrl: purple_card_2,
+      imgUrl: purple_new_2,
     },
     {
-      toppadding: '45px',
       title: 'Fast Finality',
       details:
         'Fast pre-confirmations and proofs add an extra layer of assurance and transparency for users.',
-      imgUrl: purple_card_4,
+      imgUrl: purple_new_3,
     },
     {
-      toppadding: '44px',
       title: 'Interoperability',
       details:
         'With atomic composability in place, rollups can maximize resources and unlock exciting new possibilities.',
-      imgUrl: purple_card_3,
+      imgUrl: purple_new_4,
     },
   ];
 

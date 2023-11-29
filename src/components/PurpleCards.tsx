@@ -18,11 +18,11 @@ const CardsContainer = styled.div`
   }
 `;
 
-const Half = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-`;
+// const Half = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   gap: 30px;
+// `;
 
 const Container = styled.div`
   width: 100%;

@@ -12,7 +12,6 @@ const StyledLink = styled(Link)`
   display: block;
   text-decoration: none;
   color: inherit;
-  width: 100%;
 `;
 
 const CustomNavBar = styled.div<{ sticky: boolean }>`
@@ -28,6 +27,7 @@ const CustomNavBar = styled.div<{ sticky: boolean }>`
   top: ${({ sticky }) => (sticky ? '0px' : '92px')};
   z-index: 10;
   margin-top: ${({ sticky }) => (sticky ? '0px' : '9px')};
+  padding: ${({ sticky }) => (sticky ? '0px' : '0px 30px')};
 `;
 
 const Content = styled.div`
@@ -35,7 +35,7 @@ const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 20px;
+  gap: 50px;
   max-width: 1480px;
   padding-left: 40px;
   padding-right: 40px;
@@ -47,6 +47,7 @@ const EcoDocGit = styled.div`
   max-width: 600px;
   width: 100%;
   height: 50px;
+  gap: 40px;
   background: #fff;
   justify-content: center;
   align-items: center;

@@ -13,6 +13,9 @@ const MainContainer = styled.div`
   padding: 180px 10px;
   background: #000;
   justify-content: center;
+  @media (max-width: 1400px) {
+    padding: 94px 10px;
+  }
   @media (max-width: 750px) {
     padding: 72px 60px 55px;
   }
@@ -26,6 +29,11 @@ const Content = styled.div`
   gap: 98px;
   align-items: center;
   width: 100%;
+  @media (max-width: 1400px) {
+    font-size: 60px;
+    gap: 59px;
+    flex-direction: column;
+  }
   @media (max-width: 750px) {
     font-size: 24px;
     gap: 26px;

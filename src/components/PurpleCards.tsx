@@ -2,15 +2,17 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const CardsContainer = styled.div`
-  display: flex;
+  display: grid;
   gap: 30px;
   align-items: start;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   @media (max-width: 950px) {
     flex-wrap: wrap;
     gap: 14px;
   }
   @media (max-width: 750px) {
+    display: flex;
     flex-direction: column;
     gap: 14px;
   }
@@ -22,17 +24,20 @@ const Half = styled.div`
   gap: 30px;
 `;
 
-const Container = styled.div<{ toppadding: string }>`
+const Container = styled.div`
   width: 100%;
   max-width: 597px;
-  padding: ${(props) => props.toppadding} 44px 44px 44px;
+  padding: 88px 44px 44px 44px;
   border-radius: 8px;
+  min-height: 589px;
   border: 1px solid #624784;
   background: #381b5b;
+  height: 100%;
   @media (max-width: 750px) {
-    padding: 22px 18px;
+    padding: 34px 22px;
     width: 100%;
-    height: 246px;
+    height: auto;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -52,10 +57,10 @@ const Title = styled.p`
   font-weight: 400;
   line-height: 130%; /* 41.6px */
   margin-bottom: 13px;
+  margin-top: 70px;
   @media (max-width: 750px) {
-    font-size: 16px;
-    margin-top: auto;
-    margin-bottom: 8px;
+    font-size: 24px;
+    margin: 34px 0 10px;
   }
 `;
 
@@ -67,18 +72,17 @@ const Details = styled.p`
   font-weight: 200;
   line-height: 136%; /* 32.64px */
   @media (max-width: 750px) {
-    font-size: 12px;
+    font-size: 18px;
   }
 `;
 
 const ImgContainer = styled.div`
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: center;
 `;
 
 type Props = {
-  toppadding: string;
   title: string;
   details: string;
   imgUrl: string;
@@ -106,71 +110,67 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
 
   return windowWidth > 750 ? (
     <CardsContainer>
-      <Half>
-        <Container key={cards[0].title} toppadding={cards[0].toppadding}>
-          <ImgContainer>
-            <img src={cards[0].imgUrl} alt={cards[0].imgUrl} />
-          </ImgContainer>
-          <Title>{cards[0].title}</Title>
-          <Details>{cards[0].details}</Details>
-        </Container>
-        <Container key={cards[3].title} toppadding={cards[3].toppadding}>
-          <ImgContainer>
-            <img src={cards[3].imgUrl} alt={cards[3].imgUrl} />
-          </ImgContainer>
-          <Title>{cards[3].title}</Title>
-          <Details>{cards[3].details}</Details>
-        </Container>
-      </Half>
-      <Half>
-        <Container key={cards[1].title} toppadding={cards[1].toppadding}>
-          <ImgContainer>
-            <img src={cards[1].imgUrl} alt={cards[1].imgUrl} />
-          </ImgContainer>
-          <Title>{cards[1].title}</Title>
-          <Details>{cards[1].details}</Details>
-        </Container>
-        <Container key={cards[2].title} toppadding={cards[2].toppadding}>
-          <ImgContainer>
-            <img src={cards[2].imgUrl} alt={cards[2].imgUrl} />
-          </ImgContainer>
-          <Title>{cards[2].title}</Title>
-          <Details>{cards[2].details}</Details>
-        </Container>
-      </Half>
+      <Container key={cards[0].title}>
+        <ImgContainer>
+          <img src={cards[0].imgUrl} alt={cards[0].imgUrl} />
+        </ImgContainer>
+        <Title>{cards[0].title}</Title>
+        <Details>{cards[0].details}</Details>
+      </Container>
+      <Container key={cards[3].title}>
+        <ImgContainer>
+          <img src={cards[3].imgUrl} alt={cards[3].imgUrl} />
+        </ImgContainer>
+        <Title>{cards[3].title}</Title>
+        <Details>{cards[3].details}</Details>
+      </Container>
+      <Container key={cards[1].title}>
+        <ImgContainer>
+          <img src={cards[1].imgUrl} alt={cards[1].imgUrl} />
+        </ImgContainer>
+        <Title>{cards[1].title}</Title>
+        <Details>{cards[1].details}</Details>
+      </Container>
+      <Container key={cards[2].title}>
+        <ImgContainer>
+          <img src={cards[2].imgUrl} alt={cards[2].imgUrl} />
+        </ImgContainer>
+        <Title>{cards[2].title}</Title>
+        <Details>{cards[2].details}</Details>
+      </Container>
     </CardsContainer>
   ) : (
     <CardsContainer>
-      <Container key={cards[0].title} toppadding={cards[0].toppadding}>
+      <Container key={cards[0].title}>
         <ImgContainer>
-          <img src={cards[0].imgUrl} width='103px' alt={cards[0].imgUrl} />
+          <img src={cards[0].imgUrl} width='100px' alt={cards[0].imgUrl} />
         </ImgContainer>
         <TextWrapper>
           <Title>{cards[0].title}</Title>
           <Details>{cards[0].details}</Details>
         </TextWrapper>
       </Container>
-      <Container key={cards[3].title} toppadding={cards[3].toppadding}>
+      <Container key={cards[3].title}>
         <ImgContainer>
-          <img src={cards[3].imgUrl} width='103px' alt={cards[3].imgUrl} />
+          <img src={cards[3].imgUrl} width='100px' alt={cards[3].imgUrl} />
         </ImgContainer>
         <TextWrapper>
           <Title>{cards[3].title}</Title>
           <Details>{cards[3].details}</Details>
         </TextWrapper>
       </Container>
-      <Container key={cards[1].title} toppadding={cards[1].toppadding}>
+      <Container key={cards[1].title}>
         <ImgContainer>
-          <img src={cards[1].imgUrl} width='103px' alt={cards[1].imgUrl} />
+          <img src={cards[1].imgUrl} width='100px' alt={cards[1].imgUrl} />
         </ImgContainer>
         <TextWrapper>
           <Title>{cards[1].title}</Title>
           <Details>{cards[1].details}</Details>
         </TextWrapper>
       </Container>
-      <Container key={cards[2].title} toppadding={cards[2].toppadding}>
+      <Container key={cards[2].title}>
         <ImgContainer>
-          <img src={cards[2].imgUrl} width='103px' alt={cards[2].imgUrl} />
+          <img src={cards[2].imgUrl} width='100px' alt={cards[2].imgUrl} />
         </ImgContainer>
         <TextWrapper>
           <Title>{cards[2].title}</Title>

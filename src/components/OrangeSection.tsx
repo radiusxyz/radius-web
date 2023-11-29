@@ -35,6 +35,9 @@ const Title = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 130px */
+  @media (max-width: 1400px) {
+    font-size: 80px;
+  }
   @media (max-width: 750px) {
     font-size: 30px;
   }

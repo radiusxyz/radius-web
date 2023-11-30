@@ -56,6 +56,11 @@ const Column = styled.ul`
   gap: 8px;
 `;
 
+const StyledLink = styled(Link)`
+  color: inherit;
+  text-decoration: none;
+`;
+
 const Row = styled.li`
   color: #777;
   font-family: Gilroy-Medium;
@@ -85,15 +90,45 @@ const FooterV2 = () => {
         <Columns>
           <Column>
             <Row>Follow us</Row>
-            <Row>TWITTER</Row>
-            <Row>DISCORD</Row>
-            <Row>BLOG</Row>
+            <Row>
+              <StyledLink to='https://twitter.com/radius_xyz' target='_blank'>
+                TWITTER
+              </StyledLink>
+            </Row>
+            <Row>
+              <StyledLink
+                to='https://discord.com/invite/wdS6k4wz9H'
+                target='_blank'
+              >
+                DISCORD
+              </StyledLink>
+            </Row>
+            <Row>
+              <StyledLink to='https://medium.com/@radius_xyz' target='_blank'>
+                BLOG
+              </StyledLink>
+            </Row>
           </Column>
           <Column>
             <Row>Recources</Row>
-            <Row>Documentation</Row>
-            <Row>Github</Row>
-            <Row>Brand</Row>
+            <Row>
+              <StyledLink to='https://docs.theradius.xyz/' target='_blank'>
+                Documentation
+              </StyledLink>
+            </Row>
+            <Row>
+              <StyledLink to='https://github.com/radiusxyz' target='_blank'>
+                Github
+              </StyledLink>
+            </Row>
+            <Row>
+              <StyledLink
+                to='https://en.wikipedia.org/wiki/Radius'
+                target='_blank'
+              >
+                Brand
+              </StyledLink>
+            </Row>
           </Column>
         </Columns>
       </Content>

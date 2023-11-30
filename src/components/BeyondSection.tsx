@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import creating_new from '../assets/images/creating_new.svg';
-import connecting_new from '../assets/images/connecting_new.svg';
+import creating_new_new from '../assets/images/creating_new_new.svg';
+import connecting_new_new from '../assets/images/connecting_new_new.svg';
 import { useEffect, useState } from 'react';
 
 const MainContainer = styled.div`
@@ -142,7 +142,7 @@ const BeyondSection = () => {
       </HeaderWrapper>
       <Body>
         <Row>
-          <DummyImg src={creating_new} />
+          <DummyImg src={creating_new_new} />
           <TextWrapper>
             <Title>Creating sustainable rollup economics</Title>
             <Details>
@@ -162,11 +162,11 @@ const BeyondSection = () => {
                 optimized for interoperability and efficient data exchange.
               </Details>
             </TextWrapper>
-            <DummyImg src={connecting_new} />
+            <DummyImg src={connecting_new_new} />
           </Row>
         ) : (
           <Row>
-            <DummyImg src={connecting_new} />
+            <DummyImg src={connecting_new_new} />
             <TextWrapper>
               <Title>Connecting through a shared layer</Title>
               <Details>

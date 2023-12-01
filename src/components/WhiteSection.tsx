@@ -9,7 +9,7 @@ import purple_new_4 from '../assets/images/purple_new_4.svg';
 import PurpleCards from './PurpleCards';
 import BeyondSection from './BeyondSection';
 // import myvid from '../assets/images/video.mp4';
-import newVid from '../assets/images/video_new.mp4';
+import newVid from '../assets/images/video_new_new.mp4';
 import { Link } from 'react-router-dom';
 
 const Container = styled.div`

@@ -92,7 +92,7 @@ const FooterV2 = () => {
             <Row>Follow us</Row>
             <Row>
               <StyledLink to='https://twitter.com/radius_xyz' target='_blank'>
-                TWITTER
+                Twitter
               </StyledLink>
             </Row>
             <Row>
@@ -100,17 +100,17 @@ const FooterV2 = () => {
                 to='https://discord.com/invite/wdS6k4wz9H'
                 target='_blank'
               >
-                DISCORD
+                Discord
               </StyledLink>
             </Row>
             <Row>
               <StyledLink to='https://medium.com/@radius_xyz' target='_blank'>
-                BLOG
+                Blog
               </StyledLink>
             </Row>
           </Column>
           <Column>
-            <Row>Recources</Row>
+            <Row>Resources</Row>
             <Row>
               <StyledLink to='https://docs.theradius.xyz/' target='_blank'>
                 Documentation

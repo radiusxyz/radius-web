@@ -150,7 +150,7 @@ const Footer = () => {
             <CardRow>
               <StyledLink to='https://twitter.com/radius_xyz' target='_blank'>
                 <Card>
-                  <img src={x_footer} />
+                  <img loading='lazy' src={x_footer} />
                   <CardText>Twitter</CardText>
                 </Card>
               </StyledLink>
@@ -159,12 +159,13 @@ const Footer = () => {
                 target='_blank'
               >
                 <Card>
-                  <img src={discord} /> <CardText>Discord</CardText>
+                  <img loading='lazy' src={discord} />{' '}
+                  <CardText>Discord</CardText>
                 </Card>
               </StyledLink>
               <StyledLink to='https://medium.com/@radius_xyz' target='_blank'>
                 <Card>
-                  <img src={medium} /> <CardText>Blog</CardText>
+                  <img loading='lazy' src={medium} /> <CardText>Blog</CardText>
                 </Card>
               </StyledLink>
             </CardRow>
@@ -174,13 +175,13 @@ const Footer = () => {
             <CardRow>
               <StyledLink to='https://docs.theradius.xyz/' target='_blank'>
                 <Card>
-                  <img src={x_footer} />
+                  <img loading='lazy' src={x_footer} />
                   <CardText>Documentation</CardText>
                 </Card>
               </StyledLink>
               <StyledLink to='https://github.com/radiusxyz' target='_blank'>
                 <Card>
-                  <img src={github} />
+                  <img loading='lazy' src={github} />
                   <CardText>Github</CardText>
                 </Card>
               </StyledLink>

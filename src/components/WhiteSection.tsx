@@ -336,7 +336,7 @@ const WhiteSection = () => {
   return (
     <Container>
       <LabWrapper>
-        {/* <Img src={window.innerWidth > 740 ? lab : lab_mob} /> */}
+        {/* <Img loading="lazy" src={window.innerWidth > 740 ? lab : lab_mob} /> */}
         <VideoWrapper>
           <StyledVideo playsInline autoPlay muted loop preload='auto'>
             <source src={newVid} />

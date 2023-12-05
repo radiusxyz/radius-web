@@ -112,28 +112,28 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
     <CardsContainer>
       <Container key={cards[0].title}>
         <ImgContainer>
-          <img src={cards[0].imgUrl} alt={cards[0].imgUrl} />
+          <img loading='lazy' src={cards[0].imgUrl} alt={cards[0].imgUrl} />
         </ImgContainer>
         <Title>{cards[0].title}</Title>
         <Details>{cards[0].details}</Details>
       </Container>
       <Container key={cards[3].title}>
         <ImgContainer>
-          <img src={cards[3].imgUrl} alt={cards[3].imgUrl} />
+          <img loading='lazy' src={cards[3].imgUrl} alt={cards[3].imgUrl} />
         </ImgContainer>
         <Title>{cards[3].title}</Title>
         <Details>{cards[3].details}</Details>
       </Container>
       <Container key={cards[1].title}>
         <ImgContainer>
-          <img src={cards[1].imgUrl} alt={cards[1].imgUrl} />
+          <img loading='lazy' src={cards[1].imgUrl} alt={cards[1].imgUrl} />
         </ImgContainer>
         <Title>{cards[1].title}</Title>
         <Details>{cards[1].details}</Details>
       </Container>
       <Container key={cards[2].title}>
         <ImgContainer>
-          <img src={cards[2].imgUrl} alt={cards[2].imgUrl} />
+          <img loading='lazy' src={cards[2].imgUrl} alt={cards[2].imgUrl} />
         </ImgContainer>
         <Title>{cards[2].title}</Title>
         <Details>{cards[2].details}</Details>
@@ -143,7 +143,12 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
     <CardsContainer>
       <Container key={cards[0].title}>
         <ImgContainer>
-          <img src={cards[0].imgUrl} width='100px' alt={cards[0].imgUrl} />
+          <img
+            loading='lazy'
+            src={cards[0].imgUrl}
+            width='100px'
+            alt={cards[0].imgUrl}
+          />
         </ImgContainer>
         <TextWrapper>
           <Title>{cards[0].title}</Title>
@@ -152,7 +157,12 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
       </Container>
       <Container key={cards[3].title}>
         <ImgContainer>
-          <img src={cards[3].imgUrl} width='100px' alt={cards[3].imgUrl} />
+          <img
+            loading='lazy'
+            src={cards[3].imgUrl}
+            width='100px'
+            alt={cards[3].imgUrl}
+          />
         </ImgContainer>
         <TextWrapper>
           <Title>{cards[3].title}</Title>
@@ -161,7 +171,12 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
       </Container>
       <Container key={cards[1].title}>
         <ImgContainer>
-          <img src={cards[1].imgUrl} width='100px' alt={cards[1].imgUrl} />
+          <img
+            loading='lazy'
+            src={cards[1].imgUrl}
+            width='100px'
+            alt={cards[1].imgUrl}
+          />
         </ImgContainer>
         <TextWrapper>
           <Title>{cards[1].title}</Title>
@@ -170,7 +185,12 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
       </Container>
       <Container key={cards[2].title}>
         <ImgContainer>
-          <img src={cards[2].imgUrl} width='100px' alt={cards[2].imgUrl} />
+          <img
+            loading='lazy'
+            src={cards[2].imgUrl}
+            width='100px'
+            alt={cards[2].imgUrl}
+          />
         </ImgContainer>
         <TextWrapper>
           <Title>{cards[2].title}</Title>

@@ -72,7 +72,7 @@ const BssCards = () => {
   return (
     <CardsContainer>
       <Card>
-        <Img src={bss_icon} alt={bss_icon} />
+        <Img loading='lazy' src={bss_icon} alt={bss_icon} />
         <CardTitle>BUILD</CardTitle>
         <CardDetails>
           Building rollups can be a tough feat. Let us handle the heavy lifting
@@ -80,7 +80,7 @@ const BssCards = () => {
         </CardDetails>
       </Card>
       <Card>
-        <Img src={bss_icon} alt={bss_icon} />
+        <Img loading='lazy' src={bss_icon} alt={bss_icon} />
         <CardTitle>SECURE</CardTitle>
         <CardDetails>
           Our distributed sequencer network ensures liveness, keeping rollups
@@ -88,7 +88,7 @@ const BssCards = () => {
         </CardDetails>
       </Card>
       <Card>
-        <Img src={bss_icon} alt={bss_icon} />
+        <Img loading='lazy' src={bss_icon} alt={bss_icon} />
         <CardTitle>CONNECT</CardTitle>
         <CardDetails>
           Rollups achieve better scale with cross-rollup interactions, creating

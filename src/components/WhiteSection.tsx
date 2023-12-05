@@ -338,7 +338,7 @@ const WhiteSection = () => {
       <LabWrapper>
         {/* <Img src={window.innerWidth > 740 ? lab : lab_mob} /> */}
         <VideoWrapper>
-          <StyledVideo playsInline autoPlay muted loop>
+          <StyledVideo playsInline autoPlay muted loop preload='auto'>
             <source src={newVid} />
           </StyledVideo>
         </VideoWrapper>

@@ -103,7 +103,7 @@ const InvestorsSection = () => {
         <Logos>
           {window.innerWidth > 750 && (
             <LeftGrad>
-              <img src={grad_left} />
+              <img loading='lazy' src={grad_left} />
             </LeftGrad>
           )}{' '}
           <StyledLink to='https://www.hashed.com/' target='_blank'>
@@ -132,7 +132,7 @@ const InvestorsSection = () => {
           </StyledLink>
           {window.innerWidth > 750 && (
             <RightGrad>
-              <img src={grad_right} />
+              <img loading='lazy' src={grad_right} />
             </RightGrad>
           )}
         </Logos>

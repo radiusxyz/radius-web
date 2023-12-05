@@ -275,10 +275,10 @@ const NavBar = () => {
             />
             {isShown ? (
               <CloseButton onClick={handleMenu}>
-                <img src={close} />
+                <img loading='lazy' src={close} />
               </CloseButton>
             ) : (
-              <img onClick={handleMenu} src={hamburger} />
+              <img loading='lazy' onClick={handleMenu} src={hamburger} />
             )}
           </LogoAndClose>
           {isShown && (
@@ -308,7 +308,11 @@ const NavBar = () => {
     <CustomNavBar sticky={sticky}>
       <Content>
         <StyledLink to='/' onClick={() => setSticky(false)}>
-          <img src={sticky ? radius_dark : radius} alt='radius' />
+          <img
+            loading='lazy'
+            src={sticky ? radius_dark : radius}
+            alt='radius'
+          />
         </StyledLink>
 
         <EcoDocGit>

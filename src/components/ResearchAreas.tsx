@@ -114,7 +114,7 @@ const ResearchAreas = () => {
           ))}
         </Tags>
         <StyledLink to='https://twitter.com/radius_xyz' target='_blank'>
-          <img src={x} width='63px' alt='x' />
+          <img loading='lazy' src={x} width='63px' alt='x' />
         </StyledLink>
         <SubText>
           Interested in collaboration? We want to hear from you!

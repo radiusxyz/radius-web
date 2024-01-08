@@ -83,7 +83,11 @@ const FooterV2 = () => {
       <Content>
         <StyledLinkLogo to='/'>
           <img
-            src={window.innerWidth > 750 ? radius_footer : radius_footer_150x37}
+            src={
+              window.innerWidth > 750
+                ? radius_footer
+                : radius_footer_150x37
+            }
             alt='radius_footer'
           />
         </StyledLinkLogo>
@@ -91,7 +95,10 @@ const FooterV2 = () => {
           <Column>
             <Row>Follow us</Row>
             <Row>
-              <StyledLink to='https://twitter.com/radius_xyz' target='_blank'>
+              <StyledLink
+                to='https://twitter.com/radius_xyz'
+                target='_blank'
+              >
                 Twitter
               </StyledLink>
             </Row>
@@ -104,7 +111,10 @@ const FooterV2 = () => {
               </StyledLink>
             </Row>
             <Row>
-              <StyledLink to='https://medium.com/@radius_xyz' target='_blank'>
+              <StyledLink
+                to='https://medium.com/@radius_xyz'
+                target='_blank'
+              >
                 Blog
               </StyledLink>
             </Row>
@@ -112,18 +122,24 @@ const FooterV2 = () => {
           <Column>
             <Row>Resources</Row>
             <Row>
-              <StyledLink to='https://docs.theradius.xyz/' target='_blank'>
+              <StyledLink
+                to='https://docs.theradius.xyz/'
+                target='_blank'
+              >
                 Documentation
               </StyledLink>
             </Row>
             <Row>
-              <StyledLink to='https://github.com/radiusxyz' target='_blank'>
+              <StyledLink
+                to='https://github.com/radiusxyz'
+                target='_blank'
+              >
                 Github
               </StyledLink>
             </Row>
             <Row>
               <StyledLink
-                to='https://en.wikipedia.org/wiki/Radius'
+                to='https://sincere-overlays-393830.framer.app'
                 target='_blank'
               >
                 Brand

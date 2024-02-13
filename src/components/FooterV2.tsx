@@ -96,7 +96,7 @@ const FooterV2 = () => {
             <Row>Follow us</Row>
             <Row>
               <StyledLink
-                to='https://twitter.com/radius_xyz'
+                to='https://mirror.xyz/0x957084A1F20AB33cfA0cE07ed57F50c05954999C'
                 target='_blank'
               >
                 Twitter

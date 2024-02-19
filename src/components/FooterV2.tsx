@@ -82,39 +82,23 @@ const FooterV2 = () => {
     <Container>
       <Content>
         <StyledLinkLogo to='/'>
-          <img
-            src={
-              window.innerWidth > 750
-                ? radius_footer
-                : radius_footer_150x37
-            }
-            alt='radius_footer'
-          />
+          <img src={window.innerWidth > 750 ? radius_footer : radius_footer_150x37} alt='radius_footer' />
         </StyledLinkLogo>
         <Columns>
           <Column>
             <Row>Follow us</Row>
             <Row>
-              <StyledLink
-                to='https://mirror.xyz/0x957084A1F20AB33cfA0cE07ed57F50c05954999C'
-                target='_blank'
-              >
+              <StyledLink to='https://twitter.com/radius_xyz' target='_blank'>
                 Twitter
               </StyledLink>
             </Row>
             <Row>
-              <StyledLink
-                to='https://discord.com/invite/wdS6k4wz9H'
-                target='_blank'
-              >
+              <StyledLink to='https://discord.com/invite/wdS6k4wz9H' target='_blank'>
                 Discord
               </StyledLink>
             </Row>
             <Row>
-              <StyledLink
-                to='https://medium.com/@radius_xyz'
-                target='_blank'
-              >
+              <StyledLink to='https://mirror.xyz/0x957084A1F20AB33cfA0cE07ed57F50c05954999C' target='_blank'>
                 Blog
               </StyledLink>
             </Row>
@@ -122,26 +106,17 @@ const FooterV2 = () => {
           <Column>
             <Row>Resources</Row>
             <Row>
-              <StyledLink
-                to='https://docs.theradius.xyz/'
-                target='_blank'
-              >
+              <StyledLink to='https://docs.theradius.xyz/' target='_blank'>
                 Documentation
               </StyledLink>
             </Row>
             <Row>
-              <StyledLink
-                to='https://github.com/radiusxyz'
-                target='_blank'
-              >
+              <StyledLink to='https://github.com/radiusxyz' target='_blank'>
                 Github
               </StyledLink>
             </Row>
             <Row>
-              <StyledLink
-                to='https://sincere-overlays-393830.framer.app'
-                target='_blank'
-              >
+              <StyledLink to='https://sincere-overlays-393830.framer.app' target='_blank'>
                 Brand
               </StyledLink>
             </Row>

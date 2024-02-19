@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import entanglement from '../assets/images/entanglement.svg';
 import entanglement_mob from '../assets/images/entanglement_mob.svg';
@@ -13,8 +15,12 @@ import saga from '../assets/images/saga.svg';
 import stackr from '../assets/images/stackr.svg';
 import vistara from '../assets/images/vistara.svg';
 import nectar from '../assets/images/nectar.svg';
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import dsrv from '../assets/images/dsrv.svg';
+import gevulot from '../assets/images/gevulot.svg';
+import karnot from '../assets/images/karnot.svg';
+import marlin from '../assets/images/marlin.svg';
+import risczero from '../assets/images/risczero.svg';
+import snarkify from '../assets/images/snarkify.svg';
 
 const IntroSection = styled.div`
   width: 100%;
@@ -339,29 +345,66 @@ const cards = [
     url: 'https://www.saga.xyz/',
     logo: saga,
     title: 'Saga',
-    details:
-      'Saga is a protocol for automatically provisioning application-specific blockchains.',
+    details: 'Saga is a protocol for automatically provisioning application-specific blockchains.',
   },
   {
     url: 'https://www.stackrlabs.xyz/',
     logo: stackr,
     title: 'Stackr',
-    details:
-      'Stackr is a modular SDK for building micro-rollups in general-purpose languages.',
+    details: 'Stackr is a modular SDK for building micro-rollups in general-purpose languages.',
   },
   {
     url: 'https://www.vistara.dev/',
     logo: vistara,
     title: 'Vistara',
-    details:
-      'Vistara is a one-click rollup deployment framework for designing and managing scalable infrastructure.',
+    details: 'Vistara is a one-click rollup deployment framework for designing and managing scalable infrastructure.',
   },
   {
     url: 'https://www.nectarx.io/',
     logo: nectar,
     title: 'Nectar',
+    details: 'Nectar is a safe and affordable on-chain trading for all by WASD3R.',
+  },
+  {
+    title: 'DSRV',
+    url: 'https://www.dsrvlabs.com/',
+    logo: dsrv,
     details:
-      'Nectar is a safe and affordable on-chain trading for all by WASD3R.',
+      'DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity.',
+  },
+  {
+    title: 'Gevulot',
+    url: 'https://www.gevulot.com/',
+    logo: gevulot,
+    details: 'Gevulot is the internet scale compute network for zero-knowledge proof generation and verification.',
+  },
+  {
+    title: 'Karnot',
+    url: 'https://www.karnot.xyz/',
+    logo: karnot,
+    details:
+      'Karnot is the leading RaaS provider for Madara, simplifying scalable ZK app chain deployment so you can focus on building your app.',
+  },
+  {
+    url: 'https://www.marlin.org/',
+    title: 'Marlin',
+    logo: marlin,
+    details:
+      'Marlin is a verifiable computing protocol featuring TEE and ZK-based coprocessors to delegate complex workloads over a decentralized node network.',
+  },
+  {
+    title: 'RISC Zero',
+    logo: risczero,
+    url: 'https://www.risczero.com/',
+    details:
+      'RISC Zero is creating the infrastructure and tooling necessary for developers around the globe to build software that leverages ZK technology.',
+  },
+  {
+    url: 'https://snarkify.io/',
+    logo: snarkify,
+    title: 'Snarkify',
+    details:
+      'Snarkify is scaling ZK for the trustless future, building scalable systems and high performance libraries to accelerate ZK adoption.',
   },
 ];
 
@@ -387,18 +430,15 @@ const EcoPage = () => {
   return (
     <>
       <IntroSection>
-        <IntroBackground
-          src={windowWidth > 750 ? entanglement : entanglement_mob}
-        />
+        <IntroBackground src={windowWidth > 750 ? entanglement : entanglement_mob} />
         <IntroContent>
           <IntroText>
             <IntroMiniTitle>OUR ECOSYSTEM</IntroMiniTitle>
             <IntroTitle>Meet builders and partners</IntroTitle>
             <IntroDetails>
-              We're all about making rollups decentralized, interoperable, and
-              sustainable. We work with like-minded builders and infrastructure
-              partners to collectively advance research and development, shaping
-              a decentralized future together.
+              We're all about making rollups decentralized, interoperable, and sustainable. We work with like-minded
+              builders and infrastructure partners to collectively advance research and development, shaping a
+              decentralized future together.
             </IntroDetails>
           </IntroText>
         </IntroContent>
@@ -407,9 +447,7 @@ const EcoPage = () => {
         <CardsSectionContent>
           <Cards>
             {cards
-              .sort((a, b) =>
-                a.title.toUpperCase() > b.title.toUpperCase() ? 1 : -1
-              )
+              .sort((a, b) => (a.title.toUpperCase() > b.title.toUpperCase() ? 1 : -1))
               .map((card) => (
                 <StyledLink key={card.title} to={card.url} target='_blank'>
                   <Card key={card.title}>
@@ -426,9 +464,7 @@ const EcoPage = () => {
       </CardsSection>
       <GradientSection>
         <GradientContent>
-          <GradientText>
-            Join Radius in decentralizing and future-proofing Ethereum
-          </GradientText>
+          <GradientText>Join Radius in decentralizing and future-proofing Ethereum</GradientText>
           <a href='https://twitter.com/radius_xyz' target='_blank'>
             <GradientLink>Talk to us</GradientLink>
           </a>

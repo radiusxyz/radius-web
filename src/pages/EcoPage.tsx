@@ -377,7 +377,7 @@ const cards = [
     url: 'https://www.gevulot.com/',
     logo: gevulot,
     details:
-      'Gevulot, the new base layer for ZK, is an internet-scale compute network optimized for zero knowledge proofs, offering proving and verification for the modular stack.',
+      'Gevulot is the internet-scale compute network optimized for zero knowledge proofs, offering proving and verification for the modular stack.',
   },
   {
     title: 'Karnot',

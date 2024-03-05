@@ -306,6 +306,16 @@ const Popup = styled.div`
   bottom: 116.45px;
   max-width: 368px;
   width: 100%;
+  @media (max-width: 1919px) {
+    right: 40px;
+    bottom: 14px;
+  }
+  @media (max-width: 750px) {
+    top: 64px;
+    left: 50%;
+    max-width: 315px;
+    transform: translateX(-50%);
+  }
 `;
 
 const Notification = styled.div`
@@ -313,6 +323,10 @@ const Notification = styled.div`
   background: rgba(0, 0, 0, 0.92);
   padding: 24px 25px;
   height: auto;
+
+  @media (max-width: 750px) {
+    padding: 24px 16px;
+  }
 `;
 
 const Interop = styled.img`
@@ -321,6 +335,9 @@ const Interop = styled.img`
   position: absolute;
   opacity: 0.22;
   mix-blend-mode: screen;
+  @media (max-width: 750px) {
+    width: 90px;
+  }
 `;
 
 const Date = styled.div`
@@ -337,6 +354,21 @@ const Status = styled.span`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  @media (max-width: 750px) {
+    font-size: 12px;
+  }
+`;
+
+const Dash = styled.span`
+  color: #fff;
+  font-family: "Atyp Display";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  @media (max-width: 750px) {
+    font-size: 12px;
+  }
 `;
 
 const MonthDay = styled.span`
@@ -346,6 +378,9 @@ const MonthDay = styled.span`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  @media (max-width: 750px) {
+    font-size: 12px;
+  }
 `;
 
 const MessageBox = styled.div`
@@ -368,6 +403,9 @@ const MainMessage = styled.span`
   font-weight: 600;
   line-height: normal;
   letter-spacing: -0.25px;
+  @media (max-width: 750px) {
+    font-size: 22px;
+  }
 `;
 
 const SubMessage = styled.span`
@@ -377,6 +415,9 @@ const SubMessage = styled.span`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  @media (max-width: 750px) {
+    font-size: 22px;
+  }
 `;
 
 const BtnRow = styled.div`
@@ -402,6 +443,11 @@ const NotificationBtn = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
+
+  @media (max-width: 750px) {
+    padding: 12px 20px;
+    font-size: 12px;
+  }
 `;
 
 const DismissBtn = styled(NotificationBtn)``;
@@ -464,7 +510,9 @@ const WhiteSection = () => {
           <Interop src={interop} alt='entangled_chain' />
           <Notification>
             <Date>
-              <Status>OPEN</Status>-<MonthDay>3/6</MonthDay>
+              <Status>OPEN</Status>
+              <Dash>-</Dash>
+              <MonthDay>3/6</MonthDay>
             </Date>
             <MessageBox>
               <MainMessage>Portico Testnet is live!</MainMessage>

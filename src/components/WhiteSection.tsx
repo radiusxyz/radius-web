@@ -335,7 +335,7 @@ const Status = styled.span`
   font-family: "Atyp Display";
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
 `;
 
@@ -344,7 +344,7 @@ const MonthDay = styled.span`
   font-family: "Atyp Display";
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
 `;
 
@@ -365,7 +365,7 @@ const MainMessage = styled.span`
   font-family: "Atyp Display";
   font-size: 26px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: -0.25px;
 `;
@@ -375,7 +375,7 @@ const SubMessage = styled.span`
   font-family: "Atyp Display";
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
 `;
 
@@ -391,7 +391,7 @@ const NotificationBtn = styled.button`
   color: #fff;
   font-family: "Atyp Display";
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 14px; /* 100% */
   letter-spacing: -0.25px;
   display: flex;

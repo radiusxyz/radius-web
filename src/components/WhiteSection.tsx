@@ -1,16 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 // import lab from '../assets/images/lab.svg';
 // import lab_mob from '../assets/images/lab_mob.svg';
-import arrow from '../assets/images/arrow.svg';
-import purple_new_1 from '../assets/images/purple_new_1.svg';
-import purple_new_2 from '../assets/images/purple_new_2.svg';
-import purple_new_3 from '../assets/images/purple_new_3.svg';
-import purple_new_4 from '../assets/images/purple_new_4.svg';
-import PurpleCards from './PurpleCards';
-import BeyondSection from './BeyondSection';
+import arrow from "../assets/images/arrow.svg";
+import purple_new_1 from "../assets/images/purple_new_1.svg";
+import purple_new_2 from "../assets/images/purple_new_2.svg";
+import purple_new_3 from "../assets/images/purple_new_3.svg";
+import purple_new_4 from "../assets/images/purple_new_4.svg";
+import PurpleCards from "./PurpleCards";
+import BeyondSection from "./BeyondSection";
 // import myvid from '../assets/images/video.mp4';
-import newVid from '../assets/images/video.mp4';
-import { Link } from 'react-router-dom';
+import newVid from "../assets/images/video.mp4";
+import { Link } from "react-router-dom";
+import interop from "../assets/images/interop.png";
 
 const Container = styled.div`
   display: flex;
@@ -299,6 +300,116 @@ const BuiltIn = styled.div`
   }
 `;
 
+const Popup = styled.div`
+  position: absolute;
+  right: 230px;
+  bottom: 116.45px;
+  max-width: 368px;
+  width: 100%;
+`;
+
+const Notification = styled.div`
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.92);
+  padding: 24px 25px;
+  height: auto;
+`;
+
+const Interop = styled.img`
+  width: 111px;
+  right: 0;
+  position: absolute;
+  opacity: 0.22;
+  mix-blend-mode: screen;
+`;
+
+const Date = styled.div`
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  margin-bottom: 6px;
+`;
+
+const Status = styled.span`
+  color: #fff;
+  font-family: "Atyp Display";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+`;
+
+const MonthDay = styled.span`
+  color: #ffef5f;
+  font-family: "Atyp Display";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+`;
+
+const MessageBox = styled.div`
+  display: flex;
+  padding: 12px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 10px;
+  position: relative;
+`;
+
+const MainMessage = styled.span`
+  color: #1e1e1e;
+  font-family: "Atyp Display";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.25px;
+`;
+
+const SubMessage = styled.span`
+  color: #1e1e1e;
+  font-family: "Atyp Display";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+`;
+
+const BtnRow = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 6px;
+  align-items: center;
+`;
+
+const NotificationBtn = styled.button`
+  color: #fff;
+  font-family: "Atyp Display";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px; /* 100% */
+  letter-spacing: -0.25px;
+  display: flex;
+  padding: 14px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99999px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+`;
+
+const DismissBtn = styled(NotificationBtn)``;
+
+const LaunchBtn = styled(NotificationBtn)`
+  background: #ff5c00;
+`;
+
 type Card = {
   title: string;
   details: string;
@@ -308,27 +419,26 @@ type Card = {
 const WhiteSection = () => {
   const cards: Card[] = [
     {
-      title: 'Censorship Resistance',
+      title: "Censorship Resistance",
       details:
-        'Our trustless approach to transaction ordering remains true to decentralization values with powerful censorship resistance.',
+        "Our trustless approach to transaction ordering remains true to decentralization values with powerful censorship resistance.",
       imgUrl: purple_new_1,
     },
     {
-      title: 'MEV Success',
+      title: "MEV Success",
       details:
-        'While MEV resistance is valuable, sustaining rollup economics can be challenging. At Radius, we build with zero knowledge to find the perfect formula for MEV.',
+        "While MEV resistance is valuable, sustaining rollup economics can be challenging. At Radius, we build with zero knowledge to find the perfect formula for MEV.",
       imgUrl: purple_new_2,
     },
     {
-      title: 'Fast Finality',
-      details:
-        'Fast pre-confirmations and proofs add an extra layer of assurance and transparency for users.',
+      title: "Fast Finality",
+      details: "Fast pre-confirmations and proofs add an extra layer of assurance and transparency for users.",
       imgUrl: purple_new_3,
     },
     {
-      title: 'Interoperability',
+      title: "Interoperability",
       details:
-        'With atomic composability in place, rollups can maximize resources and unlock exciting new possibilities.',
+        "With atomic composability in place, rollups can maximize resources and unlock exciting new possibilities.",
       imgUrl: purple_new_4,
     },
   ];
@@ -347,21 +457,33 @@ const WhiteSection = () => {
             <IntroTitle>
               Empowering rollups <Bold>Beyond decentralization</Bold>
             </IntroTitle>
-            <IntroSub>
-              Build, connect, and scale rollups with one decentralized shared
-              sequencing layer
-            </IntroSub>
+            <IntroSub>Build, connect, and scale rollups with one decentralized shared sequencing layer</IntroSub>
           </IntroWrapper>
         </Content>
+        <Popup>
+          <Interop src={interop} alt='entangled_chain' />
+          <Notification>
+            <Date>
+              <Status>OPEN</Status>-<MonthDay>3/6</MonthDay>
+            </Date>
+            <MessageBox>
+              <MainMessage>Portico Testnet is live!</MainMessage>
+              <SubMessage>I am serious</SubMessage>
+            </MessageBox>
+            <BtnRow>
+              <DismissBtn>Dismiss</DismissBtn>
+              <LaunchBtn>Launch App</LaunchBtn>
+            </BtnRow>
+          </Notification>
+        </Popup>
       </LabWrapper>
       <EcoWrapper>
         <EcoContent>
           <Eco>
             <Title>Ecosystem</Title>
             <Details>
-              We collaborate with builders and partners who share our
-              decentralized vision to bring together the most promising ideas
-              and forge a better path for Ethereum
+              We collaborate with builders and partners who share our decentralized vision to bring together the most
+              promising ideas and forge a better path for Ethereum
             </Details>
           </Eco>
           <StyledLink to='/ecosystem'>
@@ -375,8 +497,7 @@ const WhiteSection = () => {
         <PurpleContent>
           <TrueToDec>TRUE TO DECENTRALIZATION</TrueToDec>
           <BuiltIn>
-            Built-in defensibility and trustless capabilities with{' '}
-            <strong>zero knowledge</strong>
+            Built-in defensibility and trustless capabilities with <strong>zero knowledge</strong>
           </BuiltIn>
           <PurpleCards cards={cards} />
         </PurpleContent>

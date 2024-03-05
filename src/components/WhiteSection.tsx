@@ -12,6 +12,7 @@ import BeyondSection from "./BeyondSection";
 import newVid from "../assets/images/video.mp4";
 import { Link } from "react-router-dom";
 import interop from "../assets/images/interop.png";
+import { useState } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -463,6 +464,8 @@ type Card = {
 };
 
 const WhiteSection = () => {
+  const [dismiss, setDismiss] = useState(false);
+
   const cards: Card[] = [
     {
       title: "Censorship Resistance",
@@ -506,24 +509,28 @@ const WhiteSection = () => {
             <IntroSub>Build, connect, and scale rollups with one decentralized shared sequencing layer</IntroSub>
           </IntroWrapper>
         </Content>
-        <Popup>
-          <Interop src={interop} alt='entangled_chain' />
-          <Notification>
-            <Date>
-              <Status>OPEN</Status>
-              <Dash>-</Dash>
-              <MonthDay>3/6</MonthDay>
-            </Date>
-            <MessageBox>
-              <MainMessage>Portico Testnet is live!</MainMessage>
-              <SubMessage>I am serious</SubMessage>
-            </MessageBox>
-            <BtnRow>
-              <DismissBtn>Dismiss</DismissBtn>
-              <LaunchBtn>Launch App</LaunchBtn>
-            </BtnRow>
-          </Notification>
-        </Popup>
+        {!dismiss && (
+          <Popup>
+            <Interop src={interop} alt='entangled_chain' />
+            <Notification>
+              <Date>
+                <Status>OPEN</Status>
+                <Dash>-</Dash>
+                <MonthDay>3/6</MonthDay>
+              </Date>
+              <MessageBox>
+                <MainMessage>Portico Testnet is live!</MainMessage>
+                <SubMessage>I am serious</SubMessage>
+              </MessageBox>
+              <BtnRow>
+                <DismissBtn onClick={() => setDismiss(true)}>Dismiss</DismissBtn>
+                <StyledLink to='https://portico.theradius.xyz/' target='_blank'>
+                  <LaunchBtn>Launch App</LaunchBtn>
+                </StyledLink>
+              </BtnRow>
+            </Notification>
+          </Popup>
+        )}
       </LabWrapper>
       <EcoWrapper>
         <EcoContent>

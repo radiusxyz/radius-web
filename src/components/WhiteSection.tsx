@@ -303,7 +303,7 @@ const BuiltIn = styled.div`
 
 const Popup = styled.div`
   position: absolute;
-  right: 230px;
+  right: 0;
   bottom: 116.45px;
   max-width: 368px;
   width: 100%;
@@ -508,29 +508,29 @@ const WhiteSection = () => {
             </IntroTitle>
             <IntroSub>Build, connect, and scale rollups with one decentralized shared sequencing layer</IntroSub>
           </IntroWrapper>
+          {!dismiss && (
+            <Popup>
+              <Interop src={interop} alt='entangled_chain' />
+              <Notification>
+                <Date>
+                  <Status>OPEN</Status>
+                  <Dash>-</Dash>
+                  <MonthDay>3/6</MonthDay>
+                </Date>
+                <MessageBox>
+                  <MainMessage>Portico Testnet is live!</MainMessage>
+                  <SubMessage>I am serious</SubMessage>
+                </MessageBox>
+                <BtnRow>
+                  <DismissBtn onClick={() => setDismiss(true)}>Dismiss</DismissBtn>
+                  <StyledLink to='https://portico.theradius.xyz/' target='_blank'>
+                    <LaunchBtn>Launch App</LaunchBtn>
+                  </StyledLink>
+                </BtnRow>
+              </Notification>
+            </Popup>
+          )}
         </Content>
-        {!dismiss && (
-          <Popup>
-            <Interop src={interop} alt='entangled_chain' />
-            <Notification>
-              <Date>
-                <Status>OPEN</Status>
-                <Dash>-</Dash>
-                <MonthDay>3/6</MonthDay>
-              </Date>
-              <MessageBox>
-                <MainMessage>Portico Testnet is live!</MainMessage>
-                <SubMessage>I am serious</SubMessage>
-              </MessageBox>
-              <BtnRow>
-                <DismissBtn onClick={() => setDismiss(true)}>Dismiss</DismissBtn>
-                <StyledLink to='https://portico.theradius.xyz/' target='_blank'>
-                  <LaunchBtn>Launch App</LaunchBtn>
-                </StyledLink>
-              </BtnRow>
-            </Notification>
-          </Popup>
-        )}
       </LabWrapper>
       <EcoWrapper>
         <EcoContent>

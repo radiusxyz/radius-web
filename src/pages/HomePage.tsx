@@ -20,7 +20,7 @@ const StyledLink = styled(Link)`
 const Popup = styled.div<{ right: number }>`
   position: fixed;
   right: ${({ right }) => (right > 0 ? right + 40 : 70)}px;
-  bottom: 116.45px;
+  bottom: 6vh;
   max-width: 368px;
   width: 100%;
   @media (max-width: 1919px) {

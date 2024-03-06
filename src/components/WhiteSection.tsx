@@ -11,8 +11,6 @@ import BeyondSection from "./BeyondSection";
 // import myvid from '../assets/images/video.mp4';
 import newVid from "../assets/images/video.mp4";
 import { Link } from "react-router-dom";
-import interop from "../assets/images/interop.png";
-import { useState } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -308,8 +306,6 @@ type Card = {
 };
 
 const WhiteSection = () => {
-  const [dismiss, setDismiss] = useState(false);
-
   const cards: Card[] = [
     {
       title: "Censorship Resistance",

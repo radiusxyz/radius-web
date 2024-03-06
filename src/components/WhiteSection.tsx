@@ -515,7 +515,7 @@ const WhiteSection = () => {
                 <Date>
                   <Status>OPEN</Status>
                   <Dash>-</Dash>
-                  <MonthDay>3/6</MonthDay>
+                  <MonthDay>March 6, 2024</MonthDay>
                 </Date>
                 <MessageBox>
                   <MainMessage> Portico Testnet is live!</MainMessage>

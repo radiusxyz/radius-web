@@ -518,8 +518,10 @@ const WhiteSection = () => {
                   <MonthDay>3/6</MonthDay>
                 </Date>
                 <MessageBox>
-                  <MainMessage>Sequencing Liveness </MainMessage>
-                  <SubMessage>& Multi-Rollup Sequencing</SubMessage>
+                  <MainMessage> Portico Testnet is live!</MainMessage>
+                  <SubMessage>
+                    Sequencing Liveness <br /> & Multi-Rollup Sequencing
+                  </SubMessage>
                 </MessageBox>
                 <BtnRow>
                   <DismissBtn onClick={() => setDismiss(true)}>Dismiss</DismissBtn>

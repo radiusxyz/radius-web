@@ -1,26 +1,26 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import entanglement from '../assets/images/entanglement.svg';
-import entanglement_mob from '../assets/images/entanglement_mob.svg';
-import altlayer from '../assets/images/altlayer.svg';
-import caldera from '../assets/images/caldera.svg';
-import celestia from '../assets/images/celestia.svg';
-import herodotus from '../assets/images/herodotus.svg';
-import lumoz from '../assets/images/lumoz.svg';
-import madara from '../assets/images/madara.svg';
-import pragma from '../assets/images/pragma.svg';
-import rollkit from '../assets/images/rollkit.svg';
-import saga from '../assets/images/saga.svg';
-import stackr from '../assets/images/stackr.svg';
-import vistara from '../assets/images/vistara.svg';
-import nectar from '../assets/images/nectar.svg';
-import dsrv from '../assets/images/dsrv.svg';
-import gevulot from '../assets/images/gevulot.svg';
-import karnot from '../assets/images/karnot.svg';
-import marlin from '../assets/images/marlin.svg';
-import risczero from '../assets/images/risczero.svg';
-import snarkify from '../assets/images/snarkify.svg';
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import entanglement from "../assets/images/entanglement.svg";
+import entanglement_mob from "../assets/images/entanglement_mob.svg";
+import altlayer from "../assets/images/altlayer.svg";
+import caldera from "../assets/images/caldera.svg";
+import celestia from "../assets/images/celestia.svg";
+import herodotus from "../assets/images/herodotus.svg";
+import lumoz from "../assets/images/lumoz.svg";
+import madara from "../assets/images/madara.svg";
+import pragma from "../assets/images/pragma.svg";
+import rollkit from "../assets/images/rollkit.svg";
+import saga from "../assets/images/saga.svg";
+import stackr from "../assets/images/stackr.svg";
+import vistara from "../assets/images/vistara.svg";
+import nectar from "../assets/images/nectar.svg";
+import dsrv from "../assets/images/dsrv.svg";
+import gevulot from "../assets/images/gevulot.svg";
+import karnot from "../assets/images/karnot.svg";
+import marlin from "../assets/images/marlin.svg";
+import risczero from "../assets/images/risczero.svg";
+import snarkify from "../assets/images/snarkify.svg";
 
 const IntroSection = styled.div`
   width: 100%;
@@ -286,126 +286,126 @@ const GradientLink = styled.p`
 
 const cards = [
   {
-    url: 'https://altlayer.io/',
+    url: "https://altlayer.io/",
     logo: altlayer,
-    title: 'Altlayer',
+    title: "Altlayer",
     details:
-      'AltLayer is an open and decentralized protocol for developers to launch highly elastic application-tailored rollups.',
+      "AltLayer is an open and decentralized protocol for developers to launch highly elastic application-tailored rollups.",
   },
   {
-    url: 'https://caldera.xyz/',
+    url: "https://caldera.xyz/",
     logo: caldera,
-    title: 'Caldera',
+    title: "Caldera",
     details:
-      'Caldera specializes in building high-performance, customizable, and application-specific layer-two blockchains.',
+      "Caldera specializes in building high-performance, customizable, and application-specific layer-two blockchains.",
   },
   {
-    url: 'https://celestia.org/',
+    url: "https://celestia.org/",
     logo: celestia,
-    title: 'Celestia',
+    title: "Celestia",
     details:
-      'Celestia is a modular data availability network that securely scales with the number of users, making it easy for anyone to launch their own blockchain.',
+      "Celestia is a modular data availability network that securely scales with the number of users, making it easy for anyone to launch their own blockchain.",
   },
   {
     logo: herodotus,
-    url: 'https://www.herodotus.dev/',
-    title: 'Herodotus',
+    url: "https://www.herodotus.dev/",
+    title: "Herodotus",
     details:
-      'Herodotus is a powerful data access middleware that provides smart contracts with synchronous access to both current and historical on-chain data across Ethereum layers.',
+      "Herodotus is a powerful data access middleware that provides smart contracts with synchronous access to both current and historical on-chain data across Ethereum layers.",
   },
   {
-    url: 'https://lumoz.org/',
+    url: "https://lumoz.org/",
     logo: lumoz,
-    title: 'Lumoz',
+    title: "Lumoz",
     details:
-      'Lumoz (Previously Opside) is a decentralized ZK-RaaS platform as well as a PoW network that facilitates ZKP mining.',
+      "Lumoz (Previously Opside) is a decentralized ZK-RaaS platform as well as a PoW network that facilitates ZKP mining.",
   },
   {
-    url: 'https://www.madara.zone/',
+    url: "https://www.madara.zone/",
     logo: madara,
-    title: 'Madara',
+    title: "Madara",
     details:
-      'Madara is standard, customizable and blazing fast Starknet sequencer. Madara delivers unmatched performance and scalability to power Starknet-based Validity Rollup chain.',
+      "Madara is standard, customizable and blazing fast Starknet sequencer. Madara delivers unmatched performance and scalability to power Starknet-based Validity Rollup chain.",
   },
   {
-    url: 'https://www.pragmaoracle.com/',
+    url: "https://www.pragmaoracle.com/",
     logo: pragma,
-    title: 'Pragma',
+    title: "Pragma",
     details:
-      'Pragma is a decentralized, transparent and composable oracle network, leveraging state-of-the-art zero-knowledge cryptography.',
+      "Pragma is a decentralized, transparent and composable oracle network, leveraging state-of-the-art zero-knowledge cryptography.",
   },
   {
-    url: 'https://rollkit.dev/',
+    url: "https://rollkit.dev/",
     logo: rollkit,
-    title: 'Rollkit',
+    title: "Rollkit",
     details:
-      'Rollkit is a rollup framework that gives developers the freedom to deploy rollups throughout the modular stack.',
+      "Rollkit is a rollup framework that gives developers the freedom to deploy rollups throughout the modular stack.",
   },
   {
-    url: 'https://www.saga.xyz/',
+    url: "https://www.saga.xyz/",
     logo: saga,
-    title: 'Saga',
-    details: 'Saga is a protocol for automatically provisioning application-specific blockchains.',
+    title: "Saga",
+    details: "Saga is a protocol for automatically provisioning application-specific blockchains.",
   },
   {
-    url: 'https://www.stackrlabs.xyz/',
+    url: "https://www.stackrlabs.xyz/",
     logo: stackr,
-    title: 'Stackr',
-    details: 'Stackr is a modular SDK for building micro-rollups in general-purpose languages.',
+    title: "Stackr",
+    details: "Stackr is a modular SDK for building micro-rollups in general-purpose languages.",
   },
   {
-    url: 'https://www.vistara.dev/',
+    url: "https://www.vistara.dev/",
     logo: vistara,
-    title: 'Vistara',
-    details: 'Vistara is a one-click rollup deployment framework for designing and managing scalable infrastructure.',
+    title: "Vistara",
+    details: "Vistara is a one-click rollup deployment framework for designing and managing scalable infrastructure.",
   },
   {
-    url: 'https://www.nectarx.io/',
+    url: "https://www.nectarx.io/",
     logo: nectar,
-    title: 'Nectar',
-    details: 'Nectar is a safe and affordable on-chain trading for all by WASD3R.',
+    title: "Nectar",
+    details: "Nectar is a safe and affordable on-chain trading for all by WASD3R.",
   },
   {
-    title: 'DSRV',
-    url: 'https://www.dsrvlabs.com/',
+    title: "DSRV",
+    url: "https://www.dsrvlabs.com/",
     logo: dsrv,
     details:
-      'DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity.',
+      "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity.",
   },
   {
-    title: 'Gevulot',
-    url: 'https://www.gevulot.com/',
+    title: "Gevulot",
+    url: "https://www.gevulot.com/",
     logo: gevulot,
     details:
-      'Gevulot is the internet-scale compute network optimized for zero knowledge proofs, offering proving and verification for the modular stack.',
+      "Gevulot, the first decentralized prover layer, is an internet-scale compute network optimized for zero knowledge proofs, offering proving and verification for the modular stack.",
   },
   {
-    title: 'Karnot',
-    url: 'https://www.karnot.xyz/',
+    title: "Karnot",
+    url: "https://www.karnot.xyz/",
     logo: karnot,
     details:
-      'Karnot is the leading RaaS provider for Madara, simplifying scalable ZK app chain deployment so you can focus on building your app.',
+      "Karnot is the leading RaaS provider for Madara, simplifying scalable ZK app chain deployment so you can focus on building your app.",
   },
   {
-    url: 'https://www.marlin.org/',
-    title: 'Marlin',
+    url: "https://www.marlin.org/",
+    title: "Marlin",
     logo: marlin,
     details:
-      'Marlin is a verifiable computing protocol featuring TEE and ZK-based coprocessors to delegate complex workloads over a decentralized node network.',
+      "Marlin is a verifiable computing protocol featuring TEE and ZK-based coprocessors to delegate complex workloads over a decentralized node network.",
   },
   {
-    title: 'RISC Zero',
+    title: "RISC Zero",
     logo: risczero,
-    url: 'https://www.risczero.com/',
+    url: "https://www.risczero.com/",
     details:
-      'RISC Zero is creating the infrastructure and tooling necessary for developers around the globe to build software that leverages ZK technology.',
+      "RISC Zero is creating the infrastructure and tooling necessary for developers around the globe to build software that leverages ZK technology.",
   },
   {
-    url: 'https://snarkify.io/',
+    url: "https://snarkify.io/",
     logo: snarkify,
-    title: 'Snarkify',
+    title: "Snarkify",
     details:
-      'Snarkify is scaling ZK for the trustless future, building scalable systems and high performance libraries to accelerate ZK adoption.',
+      "Snarkify is scaling ZK for the trustless future, building scalable systems and high performance libraries to accelerate ZK adoption.",
   },
 ];
 
@@ -419,13 +419,13 @@ const EcoPage = () => {
     }
 
     // Add event listener
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Call handler right away so state gets updated with initial window size
     handleResize();
 
     // Remove event listener on cleanup
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty array ensures that effect is only run on mount and unmount
 
   return (

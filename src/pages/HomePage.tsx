@@ -1,5 +1,5 @@
 // import { useEffect, useState } from 'react';
-import { styled } from "styled-components";
+// import { styled } from "styled-components";
 import BuildSecureScale from "../components/BuildSecureScale";
 import InvestorsSection from "../components/InvestorsSection";
 import OrangeSection from "../components/OrangeSection";
@@ -8,7 +8,7 @@ import ResearchAreas from "../components/ResearchAreas";
 import WhiteSection from "../components/WhiteSection";
 // import interop from "../assets/images/interop.png";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 // const StyledLink = styled(Link)`
 //   display: flex;
@@ -144,27 +144,27 @@ import { Link } from "react-router-dom";
 //   align-items: center;
 // `;
 
-const NotificationBtn = styled.button`
-  color: #fff;
-  font-family: "Atyp Display";
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 14px; /* 100% */
-  letter-spacing: -0.25px;
-  display: flex;
-  padding: 14px 24px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 99999px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
+// const NotificationBtn = styled.button`
+//   color: #fff;
+//   font-family: "Atyp Display";
+//   font-size: 14px;
+//   font-weight: 500;
+//   line-height: 14px; /* 100% */
+//   letter-spacing: -0.25px;
+//   display: flex;
+//   padding: 14px 24px;
+//   justify-content: center;
+//   align-items: center;
+//   border-radius: 99999px;
+//   background: transparent;
+//   border: none;
+//   cursor: pointer;
 
-  @media (max-width: 750px) {
-    padding: 12px 20px;
-    font-size: 12px;
-  }
-`;
+//   @media (max-width: 750px) {
+//     padding: 12px 20px;
+//     font-size: 12px;
+//   }
+// `;
 
 // const DismissBtn = styled(NotificationBtn)``;
 

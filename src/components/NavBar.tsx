@@ -44,7 +44,7 @@ const Content = styled.div`
 const EcoDocGit = styled.div`
   display: flex;
   border-radius: 34px;
-  max-width: 600px;
+  max-width: 536px;
   width: 100%;
   height: 50px;
   gap: 40px;
@@ -66,7 +66,7 @@ const EcoBtn = styled.button`
   border: none;
   background: transparent;
   width: 100%;
-  padding: 14px 10px 13px 20px;
+  padding: 14px 10px;
   border-radius: 34px 0px 0px 34px;
   &:hover {
     cursor: pointer;
@@ -93,7 +93,7 @@ const DocBtn = styled.button`
   line-height: 130%; /* 23.4px */
   border: none;
   background: transparent;
-  padding: 14px 10px 13px 10px;
+  padding: 14px 10px;
   &:hover {
     cursor: pointer;
     color: #ff7a00;
@@ -113,7 +113,7 @@ const GitBtn = styled.button`
   border: none;
   width: 100%;
   background: transparent;
-  padding: 14px 20px 13px 10px;
+  padding: 14px 10px;
   border-radius: 0px 20px 24px 10px;
   &:hover {
     cursor: pointer;

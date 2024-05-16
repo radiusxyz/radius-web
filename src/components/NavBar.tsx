@@ -1,12 +1,12 @@
-import { Link, useNavigate } from 'react-router-dom';
-import radius from '../assets/images/radius.svg';
-import radius_dark from '../assets/images/radius_dark.svg';
-import hamburger from '../assets/images/hamburger.svg';
-import close from '../assets/images/close.svg';
-import { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import { useLocation } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
+import radius from "../assets/images/radius.svg";
+import radius_dark from "../assets/images/radius_dark.svg";
+import hamburger from "../assets/images/hamburger.svg";
+import close from "../assets/images/close.svg";
+import { useState, useEffect } from "react";
+import styled from "styled-components";
+import { useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const StyledLink = styled(Link)`
   display: block;
@@ -15,20 +15,19 @@ const StyledLink = styled(Link)`
 `;
 
 const CustomNavBar = styled.div<{ sticky: boolean }>`
-  position: ${({ sticky }) => (sticky ? 'sticky' : 'absolute')};
+  position: ${({ sticky }) => (sticky ? "sticky" : "absolute")};
   width: 100%;
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${({ sticky }) => (sticky ? '#fff' : 'transparent')};
-  box-shadow: ${({ sticky }) =>
-    sticky ? '0px 4px 36px 0px rgba(255, 122, 0, 0.25)' : 'none'};
+  background: ${({ sticky }) => (sticky ? "#fff" : "transparent")};
+  box-shadow: ${({ sticky }) => (sticky ? "0px 4px 36px 0px rgba(255, 122, 0, 0.25)" : "none")};
   // Adjust this property if there is a top alert
-  top: ${({ sticky }) => (sticky ? '0px' : '41px')};
+  top: ${({ sticky }) => (sticky ? "0px" : "41px")};
   z-index: 10;
-  margin-top: ${({ sticky }) => (sticky ? '0px' : '9px')};
-  padding: ${({ sticky }) => (sticky ? '0px' : '0px 30px')};
+  margin-top: ${({ sticky }) => (sticky ? "0px" : "9px")};
+  padding: ${({ sticky }) => (sticky ? "0px" : "0px 30px")};
 `;
 
 const Content = styled.div`
@@ -126,12 +125,12 @@ const GitBtn = styled.button`
 
 const Sticky = styled.div<{ eco: string }>`
   // position: absolute;
-  position: ${(props) => (props.eco === '/ecosystem' ? 'sticky' : 'absolute')};
+  position: ${(props) => (props.eco === "/ecosystem" ? "sticky" : "absolute")};
   width: 100%;
   height: auto;
   z-index: 10;
   // Adjust the below property when there is a top alert
-  top: ${(props) => (props.eco === '/ecosystem' ? '0px' : '0px')};
+  top: ${(props) => (props.eco === "/ecosystem" ? "0px" : "0px")};
 `;
 
 const NavbarContainer = styled.nav`
@@ -210,25 +209,22 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (
-        (location.pathname === '/' && window.scrollY > 162) ||
-        location.pathname === '/ecosystem'
-      ) {
+      if ((location.pathname === "/" && window.scrollY > 162) || location.pathname === "/ecosystem") {
         setSticky(true);
       } else {
         setSticky(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [location]);
 
   useEffect(() => {
-    if (location.pathname === '/ecosystem') {
+    if (location.pathname === "/ecosystem") {
       setSticky(true);
     }
   }, []);
@@ -237,9 +233,9 @@ const NavBar = () => {
     const handleBackButton = () => {
       setSticky(false);
     };
-    window.addEventListener('popstate', handleBackButton);
+    window.addEventListener("popstate", handleBackButton);
     return () => {
-      window.removeEventListener('popstate', handleBackButton);
+      window.removeEventListener("popstate", handleBackButton);
     };
   }, []);
 
@@ -253,13 +249,13 @@ const NavBar = () => {
     }
 
     // Add event listener
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Call handler right away so state gets updated with initial window size
     handleResize();
 
     // Remove event listener on cleanup
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty array ensures that effect is only run on mount and unmount
 
   return windowWidth <= 750 ? (
@@ -267,12 +263,7 @@ const NavBar = () => {
       <Sticky eco={location.pathname}>
         <NavbarContainer>
           <LogoAndClose>
-            <Logo
-              onClick={() => navigate('/')}
-              src={radius}
-              width='93px'
-              alt='Radius'
-            />
+            <Logo onClick={() => navigate("/")} src={radius} width='93px' alt='Radius' />
             {isShown ? (
               <CloseButton onClick={handleMenu}>
                 <img loading='lazy' src={close} />
@@ -286,16 +277,10 @@ const NavBar = () => {
               <StyledNavLink onClick={handleMenu} to='/ecosystem'>
                 Ecosystem
               </StyledNavLink>
-              <StyledNavLink
-                onClick={handleMenu}
-                to='https://docs.theradius.xyz/overview/introduction-to-radius'
-              >
+              <StyledNavLink onClick={handleMenu} to='https://docs.theradius.xyz/overview/introduction-to-radius'>
                 Documentation
               </StyledNavLink>
-              <StyledNavLink
-                onClick={handleMenu}
-                to='https://github.com/radiusxyz'
-              >
+              <StyledNavLink onClick={handleMenu} to='https://github.com/radiusxyz'>
                 Github
               </StyledNavLink>
             </NavLinksContainer>
@@ -308,25 +293,18 @@ const NavBar = () => {
     <CustomNavBar sticky={sticky}>
       <Content>
         <StyledLink to='/' onClick={() => setSticky(false)}>
-          <img
-            loading='lazy'
-            src={sticky ? radius_dark : radius}
-            alt='radius'
-          />
+          <img loading='lazy' src={sticky ? radius_dark : radius} alt='radius' />
         </StyledLink>
 
         <EcoDocGit>
           <StyledLink to='/ecosystem' onClick={() => setSticky(true)}>
             <EcoBtn>Ecosystem</EcoBtn>
           </StyledLink>
-          <StyledLink
-            to='https://docs.theradius.xyz/overview/introduction-to-radius'
-            target='_blank'
-          >
-            <DocBtn>Documentation</DocBtn>
+          <StyledLink to='https://mirror.xyz/0x957084A1F20AB33cfA0cE07ed57F50c05954999C' target='_blank'>
+            <DocBtn>Blog</DocBtn>
           </StyledLink>
-          <StyledLink to='https://github.com/radiusxyz' target='_blank'>
-            <GitBtn>Github</GitBtn>
+          <StyledLink to='https://docs.theradius.xyz/overview/introduction-to-radius' target='_blank'>
+            <GitBtn>Documentation</GitBtn>
           </StyledLink>
         </EcoDocGit>
       </Content>

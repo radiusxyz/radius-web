@@ -346,7 +346,7 @@ const WhiteSection = () => {
             <IntroTitle>
               Empowering rollups <Bold>Beyond decentralization</Bold>
             </IntroTitle>
-            <IntroSub>Build, connect, and scale rollups with one decentralized shared sequencing layer</IntroSub>
+            {/* <IntroSub></IntroSub> */}
           </IntroWrapper>
         </Content>
       </LabWrapper>

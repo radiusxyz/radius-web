@@ -137,17 +137,17 @@ const Bold = styled.span`
   }
 `;
 
-const IntroSub = styled.p`
-  color: rgba(255, 255, 255, 0.8);
-  font-family: Atyp Display;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 200;
-  line-height: 136%; /* 32.64px */
-  @media (max-width: 750px) {
-    font-size: 14px;
-  }
-`;
+// const IntroSub = styled.p`
+//   color: rgba(255, 255, 255, 0.8);
+//   font-family: Atyp Display;
+//   font-size: 24px;
+//   font-style: normal;
+//   font-weight: 200;
+//   line-height: 136%; /* 32.64px */
+//   @media (max-width: 750px) {
+//     font-size: 14px;
+//   }
+// `;
 
 const EcoWrapper = styled.div`
   display: flex;

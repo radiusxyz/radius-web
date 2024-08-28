@@ -181,7 +181,7 @@ const StyledLink = styled(Link)`
   width: 100%;
 `;
 
-const TextIconLink = styled(StyledLink)`
+const TextIconLink = styled.span`
   position: absolute;
   left: 50%;
   width: auto;
@@ -533,8 +533,8 @@ const EcoPage = () => {
                 <StyledLink key={card.title} to={card.url} target="_blank">
                   <Card key={card.title}>
                     <TagsContainer>
-                      {card.types.map((type: string) => (
-                        <Tag>{type}</Tag>
+                      {card.types.map((type: string, index: number) => (
+                        <Tag key={`type_${index}`}>{type}</Tag>
                       ))}
                     </TagsContainer>
                     <Logo src={card.logo} />

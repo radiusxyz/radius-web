@@ -1,0 +1,13 @@
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="shape-arrow 1" clip-path="url(#clip0_49_28)">
+<g id="Group">
+<path id="Vector" d="M1 11L11 1" stroke="white" stroke-miterlimit="10"/>
+<path id="Vector_2" d="M6 1H11V6" stroke="white" stroke-miterlimit="10" stroke-linecap="square"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_49_28">
+<rect width="12" height="12" fill="white"/>
+</clipPath>
+</defs>
+</svg>

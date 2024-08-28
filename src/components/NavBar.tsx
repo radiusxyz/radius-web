@@ -122,8 +122,6 @@ const GitBtn = styled.button`
   }
 `;
 
-// Styled components
-
 const Sticky = styled.div<{ $eco: string }>`
   // position: absolute;
   position: ${(props) => (props.$eco === "/ecosystem" ? "sticky" : "absolute")};

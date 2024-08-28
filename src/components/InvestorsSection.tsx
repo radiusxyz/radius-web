@@ -88,14 +88,6 @@ const RightGrad = styled.div`
 `;
 
 const InvestorsSection = () => {
-  // type Investors = { url: string; img: string }[];
-  // const investorData: Investors = [
-  //   { url: 'https://www.hashed.com/', img: hashed },
-  //   { url: 'https://lambdaclass.com/', img: lambda },
-  //   { url: 'https://www.superscrypt.xyz/', img: superscrypt },
-  //   { url: 'https://crypto.com/capital', img: cryptocom },
-  // ];
-
   return (
     <MainContainer>
       <Content>

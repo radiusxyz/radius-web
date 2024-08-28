@@ -99,12 +99,6 @@ const Card = styled.div`
   }
 `;
 
-// const CardContent = styled.div`
-//   display: flex;
-//   align-items: center;
-//   gap: 19px;
-// `;
-
 const CardText = styled.span`
   color: #c7c7c7;
   font-family: Atyp Display;

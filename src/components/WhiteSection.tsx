@@ -1,6 +1,4 @@
 import styled from "styled-components";
-// import lab from '../assets/images/lab.svg';
-// import lab_mob from '../assets/images/lab_mob.svg';
 import arrow from "../assets/images/arrow.svg";
 import purple_new_1 from "../assets/images/purple_new_1.svg";
 import purple_new_2 from "../assets/images/purple_new_2.svg";
@@ -8,7 +6,6 @@ import purple_new_3 from "../assets/images/purple_new_3.svg";
 import purple_new_4 from "../assets/images/purple_new_4.svg";
 import PurpleCards from "./PurpleCards";
 import BeyondSection from "./BeyondSection";
-// import myvid from '../assets/images/video.mp4';
 import newVid from "../assets/images/video.mp4";
 import { Link } from "react-router-dom";
 
@@ -60,14 +57,6 @@ const StyledVideo = styled.video`
     border-radius: 0px;
   }
 `;
-
-// const Img = styled.img`
-//   width: 100%;
-//   height: auto;
-//   @media (max-width: 750px) {
-//     object-fit: cover;
-//   }
-// `;
 
 const Content = styled.div`
   width: 100%;
@@ -136,18 +125,6 @@ const Bold = styled.span`
     font-size: 30px;
   }
 `;
-
-// const IntroSub = styled.p`
-//   color: rgba(255, 255, 255, 0.8);
-//   font-family: Atyp Display;
-//   font-size: 24px;
-//   font-style: normal;
-//   font-weight: 200;
-//   line-height: 136%; /* 32.64px */
-//   @media (max-width: 750px) {
-//     font-size: 14px;
-//   }
-// `;
 
 const EcoWrapper = styled.div`
   display: flex;

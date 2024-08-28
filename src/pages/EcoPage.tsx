@@ -191,7 +191,9 @@ const TextIcon = styled.span`
   transform: translateX(-50%);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
   ${StyledLink}:hover & {
     opacity: 1;
     visibility: visible;
@@ -527,7 +529,7 @@ const EcoPage = () => {
           <Cards>
             {cards
               .sort((a, b) =>
-                a.title.toUpperCase() > b.title.toUpperCase() ? 1 : -1
+                a.title.toUpperCase() > b.title.toUpperCase() ? 1 : -1,
               )
               .map((card) => (
                 <StyledLink key={card.title} to={card.url} target="_blank">

@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import creating_new_new from '../assets/images/creating_new_new.svg';
-import connecting_new_new from '../assets/images/connecting_new_new.svg';
-import { useEffect, useState } from 'react';
+import styled from "styled-components";
+import creating_new_new from "../assets/images/creating_new_new.svg";
+import connecting_new_new from "../assets/images/connecting_new_new.svg";
+import { useEffect, useState } from "react";
 
 const MainContainer = styled.div`
   display: flex;
@@ -125,13 +125,13 @@ const BeyondSection = () => {
     }
 
     // Add event listener
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Call handler right away so state gets updated with initial window size
     handleResize();
 
     // Remove event listener on cleanup
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty array ensures that effect is only run on mount and unmount
   return (
     <MainContainer>

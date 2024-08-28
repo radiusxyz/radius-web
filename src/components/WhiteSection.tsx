@@ -321,7 +321,8 @@ const WhiteSection = () => {
     },
     {
       title: "Fast Finality",
-      details: "Fast pre-confirmations and proofs add an extra layer of assurance and transparency for users.",
+      details:
+        "Fast pre-confirmations and proofs add an extra layer of assurance and transparency for users.",
       imgUrl: purple_new_3,
     },
     {
@@ -337,7 +338,7 @@ const WhiteSection = () => {
       <LabWrapper>
         {/* <Img loading="lazy" src={window.innerWidth > 740 ? lab : lab_mob} /> */}
         <VideoWrapper>
-          <StyledVideo playsInline autoPlay muted loop preload='auto'>
+          <StyledVideo playsInline autoPlay muted loop preload="auto">
             <source src={newVid} />
           </StyledVideo>
         </VideoWrapper>
@@ -355,13 +356,14 @@ const WhiteSection = () => {
           <Eco>
             <Title>Ecosystem</Title>
             <Details>
-              We collaborate with builders and partners who share our decentralized vision to bring together the most
-              promising ideas and forge a better path for Ethereum
+              We collaborate with builders and partners who share our
+              decentralized vision to bring together the most promising ideas
+              and forge a better path for Ethereum
             </Details>
           </Eco>
-          <StyledLink to='/ecosystem'>
+          <StyledLink to="/ecosystem">
             <Button>
-              <Arrow src={arrow} alt='arrow_right' />
+              <Arrow src={arrow} alt="arrow_right" />
             </Button>
           </StyledLink>
         </EcoContent>
@@ -370,7 +372,8 @@ const WhiteSection = () => {
         <PurpleContent>
           <TrueToDec>TRUE TO DECENTRALIZATION</TrueToDec>
           <BuiltIn>
-            Built-in defensibility and trustless capabilities with <strong>zero knowledge</strong>
+            Built-in defensibility and trustless capabilities with{" "}
+            <strong>zero knowledge</strong>
           </BuiltIn>
           <PurpleCards cards={cards} />
         </PurpleContent>

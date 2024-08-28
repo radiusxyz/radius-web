@@ -17,7 +17,8 @@ html {
 
 @font-face {
   font-family: "Gilroy-Light";
-  src: url("./assets/fonts/gilroy/Gilroy-Light.woff2") format("woff2"),
+  src:
+    url("./assets/fonts/gilroy/Gilroy-Light.woff2") format("woff2"),
     url("./assets/fonts/gilroy/Gilroy-Light.woff") format("woff"),
     url("./assets/fonts/gilroy/Gilroy-Light.ttf") format("truetype");
   font-display: swap;
@@ -28,7 +29,8 @@ html {
 
 @font-face {
   font-family: "Gilroy-Bold";
-  src: url("./assets/fonts/gilroy/Gilroy-Bold.woff2") format("woff2"),
+  src:
+    url("./assets/fonts/gilroy/Gilroy-Bold.woff2") format("woff2"),
     url("./assets/fonts/gilroy/Gilroy-Bold.woff") format("woff"),
     url("./assets/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
   font-weight: 700;
@@ -38,7 +40,8 @@ html {
 
 @font-face {
   font-family: "Gilroy-SemiBold";
-  src: url("./assets/fonts/gilroy/Gilroy-SemiBold.woff2") format("woff2"),
+  src:
+    url("./assets/fonts/gilroy/Gilroy-SemiBold.woff2") format("woff2"),
     url("./assets/fonts/gilroy/Gilroy-SemiBold.woff") format("woff"),
     url("./assets/fonts/gilroy/Gilroy-SemiBold.ttf") format("truetype");
   font-weight: 600;
@@ -48,7 +51,8 @@ html {
 
 @font-face {
   font-family: "Gilroy-Medium";
-  src: url("./assets/fonts/gilroy/Gilroy-Medium.woff2") format("woff2"),
+  src:
+    url("./assets/fonts/gilroy/Gilroy-Medium.woff2") format("woff2"),
     url("./assets/fonts/gilroy/Gilroy-Medium.woff") format("woff"),
     url("./assets/fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
   font-weight: 500;
@@ -58,7 +62,8 @@ html {
 
 @font-face {
   font-family: "Gilroy-Regular";
-  src: url("./assets/fonts/gilroy/Gilroy-Regular.woff2") format("woff2"),
+  src:
+    url("./assets/fonts/gilroy/Gilroy-Regular.woff2") format("woff2"),
     url("./assets/fonts/gilroy/Gilroy-Regular.woff") format("woff"),
     url("./assets/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -68,7 +73,8 @@ html {
 
 @font-face {
   font-family: "Atyp Display";
-  src: url("./assets/fonts/atyp/AtypDisplay-Regular.woff2") format("woff2"),
+  src:
+    url("./assets/fonts/atyp/AtypDisplay-Regular.woff2") format("woff2"),
     url("./assets/fonts/atyp/AtypDisplay-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -77,7 +83,8 @@ html {
 
 @font-face {
   font-family: "Atyp Display";
-  src: url("./assets/fonts/atyp/AtypDisplay-Semibold.woff2") format("woff2"),
+  src:
+    url("./assets/fonts/atyp/AtypDisplay-Semibold.woff2") format("woff2"),
     url("./assets/fonts/atyp/AtypDisplay-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
@@ -86,7 +93,8 @@ html {
 
 @font-face {
   font-family: "Atyp Display";
-  src: url("./assets/fonts/atyp/AtypDisplay-Medium.woff2") format("woff2"),
+  src:
+    url("./assets/fonts/atyp/AtypDisplay-Medium.woff2") format("woff2"),
     url("./assets/fonts/atyp/AtypDisplay-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
@@ -95,7 +103,8 @@ html {
 
 @font-face {
   font-family: "Atyp Display";
-  src: url("./assets/fonts/atyp/AtypDisplay-Bold.woff2") format("woff2"),
+  src:
+    url("./assets/fonts/atyp/AtypDisplay-Bold.woff2") format("woff2"),
     url("./assets/fonts/atyp/AtypDisplay-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
@@ -104,7 +113,8 @@ html {
 
 @font-face {
   font-family: "Atyp Display";
-  src: url("./assets/fonts/atyp/AtypDisplay-Thin.woff2") format("woff2"),
+  src:
+    url("./assets/fonts/atyp/AtypDisplay-Thin.woff2") format("woff2"),
     url("./assets/fonts/atyp/AtypDisplay-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;

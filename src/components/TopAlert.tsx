@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -34,8 +34,8 @@ const TopAlert = () => {
       <Text>
         Our first testnet is live! Sign up to participate&nbsp;
         <Link
-          href='https://7r9olam1w6v.typeform.com/to/k3fkrwY6'
-          target='_blank'
+          href="https://7r9olam1w6v.typeform.com/to/k3fkrwY6"
+          target="_blank"
         >
           here
         </Link>

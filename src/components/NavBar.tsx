@@ -231,7 +231,7 @@ const NavBar = () => {
     if (location.pathname === "/ecosystem") {
       setSticky(true);
     }
-  }, []);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleBackButton = () => {

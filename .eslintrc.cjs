@@ -14,7 +14,13 @@ module.exports = {
       "warn",
       { allowConstantExport: true },
     ],
-    "no-unused-vars": "warn", // Warn about unused variables
-    "@typescript-eslint/no-unused-vars": ["warn"], // Warn about unused variables in TypeScript
+    "no-unused-vars": [
+      "warn",
+      { vars: "all", args: "after-used", ignoreRestSiblings: true },
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { vars: "all", args: "after-used", ignoreRestSiblings: true },
+    ],
   },
 };

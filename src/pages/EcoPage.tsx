@@ -163,14 +163,15 @@ const Cards = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 19px 18px;
 
-  @media (max-width: 850px) {
-    grid-wrap: wrap;
-    gap: 10px;
-  }
-  @media (max-width: 750px) {
-    display: flex;
+  @media (max-width: 1106px) {
+    grid-template-columns: repeat(2, 1fr);
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    gap: 4px;
   }
 `;
 
@@ -220,13 +221,12 @@ const Card = styled.div`
   &:hover {
     background: #5e5772;
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 1106px) {
     height: 252px;
+    padding: 0 60px;
   }
-  @media (max-width: 750px) {
-    gap: 15.48px;
-    min-height: 157px;
-    padding: 20px;
+  @media (max-width: 768px) {
+    padding: 8px 36px 0px 36px;
   }
 `;
 
@@ -260,8 +260,10 @@ const Logo = styled.img`
   max-width: 300px;
   width: 100%;
   height: auto;
-  @media (max-width: 750px) {
-    width: 30px;
+  @media (max-width: 1106px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
     height: auto;
   }
 `;

@@ -181,7 +181,7 @@ const StyledLink = styled(Link)`
   width: 100%;
 `;
 
-const TextIconLink = styled.span`
+const TextIcon = styled.span`
   position: absolute;
   left: 50%;
   width: auto;
@@ -198,7 +198,7 @@ const TextIconLink = styled.span`
   }
 `;
 
-const LinkText = styled.span`
+const Text = styled.span`
   color: #fff;
   font-family: Gilroy-Medium;
   font-size: 16px;
@@ -538,14 +538,10 @@ const EcoPage = () => {
                       ))}
                     </TagsContainer>
                     <Logo src={card.logo} />
-                    <TextIconLink
-                      key={card.title}
-                      to={card.url}
-                      target="_blank"
-                    >
-                      <LinkText>Visit Website</LinkText>
+                    <TextIcon key={card.title}>
+                      <Text>Visit Website</Text>
                       <img src={linkarrow} />
-                    </TextIconLink>
+                    </TextIcon>
                   </Card>
                 </StyledLink>
               ))}

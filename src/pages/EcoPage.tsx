@@ -247,7 +247,7 @@ const TagsContainer = styled.div`
 
 const Tag = styled.div`
   display: flex;
-  padding: 8px 16px 6px 16px;
+  padding: 8px 16px;
   flex-direction: column;
   justify-content: center;
   align-items: center;

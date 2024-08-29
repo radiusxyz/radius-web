@@ -286,15 +286,15 @@ const NavBar = () => {
               </StyledNavLink>
               <StyledNavLink
                 onClick={handleMenu}
-                to="https://docs.theradius.xyz/overview/introduction-to-radius"
+                to="https://mirror.xyz/0x957084A1F20AB33cfA0cE07ed57F50c05954999C"
               >
-                Documentation
+                Blog
               </StyledNavLink>
               <StyledNavLink
                 onClick={handleMenu}
-                to="https://github.com/radiusxyz"
+                to="https://docs.theradius.xyz/overview/introduction-to-radius"
               >
-                Github
+                Documentation
               </StyledNavLink>
             </NavLinksContainer>
           )}

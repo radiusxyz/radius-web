@@ -212,7 +212,7 @@ const Text = styled.span`
 const Card = styled.div`
   position: relative;
   border-radius: 12px;
-  border: 2px rgba(229, 227, 232, 0.12);
+  border: 2px solid rgba(229, 227, 232, 0.12);
   background: #34303b;
   width: 100%;
   max-width: 454px;

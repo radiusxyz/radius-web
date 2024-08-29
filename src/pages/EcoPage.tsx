@@ -554,7 +554,7 @@ const EcoPage = () => {
                     <Logo src={card.logo} />
                     <TextIcon key={card.title}>
                       <Text>Visit Website</Text>
-                      <img src={linkarrow} />
+                      <img loading="lazy" src={linkarrow} />
                     </TextIcon>
                   </Card>
                 </StyledLink>

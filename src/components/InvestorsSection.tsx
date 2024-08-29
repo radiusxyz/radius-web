@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import hashed from '../assets/images/hashed.svg';
-import lambda from '../assets/images/lambda.svg';
-import cryptocom from '../assets/images/cryptocom.svg';
-import superscrypt from '../assets/images/superscrypt.svg';
-import grad_left from '../assets/images/grad_left.svg';
-import grad_right from '../assets/images/grad_right.svg';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import hashed from "../assets/images/hashed.svg";
+import lambda from "../assets/images/lambda.svg";
+import cryptocom from "../assets/images/cryptocom.svg";
+import superscrypt from "../assets/images/superscrypt.svg";
+import grad_left from "../assets/images/grad_left.svg";
+import grad_right from "../assets/images/grad_right.svg";
+import { Link } from "react-router-dom";
 
 const MainContainer = styled.div`
   display: flex;
@@ -88,14 +88,6 @@ const RightGrad = styled.div`
 `;
 
 const InvestorsSection = () => {
-  // type Investors = { url: string; img: string }[];
-  // const investorData: Investors = [
-  //   { url: 'https://www.hashed.com/', img: hashed },
-  //   { url: 'https://lambdaclass.com/', img: lambda },
-  //   { url: 'https://www.superscrypt.xyz/', img: superscrypt },
-  //   { url: 'https://crypto.com/capital', img: cryptocom },
-  // ];
-
   return (
     <MainContainer>
       <Content>
@@ -103,36 +95,36 @@ const InvestorsSection = () => {
         <Logos>
           {window.innerWidth > 750 && (
             <LeftGrad>
-              <img loading='lazy' src={grad_left} />
+              <img loading="lazy" src={grad_left} />
             </LeftGrad>
-          )}{' '}
-          <StyledLink to='https://www.hashed.com/' target='_blank'>
+          )}{" "}
+          <StyledLink to="https://www.hashed.com/" target="_blank">
             <img
               src={hashed}
-              width={(window.innerWidth < 750 && '126px') || 'auto'}
+              width={(window.innerWidth < 750 && "126px") || "auto"}
             />
           </StyledLink>
-          <StyledLink to='https://lambdaclass.com/' target='_blank'>
+          <StyledLink to="https://lambdaclass.com/" target="_blank">
             <img
               src={lambda}
-              width={(window.innerWidth < 750 && '126px') || 'auto'}
+              width={(window.innerWidth < 750 && "126px") || "auto"}
             />
           </StyledLink>
-          <StyledLink to='https://www.superscrypt.xyz/' target='_blank'>
+          <StyledLink to="https://www.superscrypt.xyz/" target="_blank">
             <img
               src={superscrypt}
-              width={(window.innerWidth < 750 && '126px') || 'auto'}
+              width={(window.innerWidth < 750 && "126px") || "auto"}
             />
           </StyledLink>
-          <StyledLink to='https://crypto.com/capital' target='_blank'>
+          <StyledLink to="https://crypto.com/capital" target="_blank">
             <img
               src={cryptocom}
-              width={(window.innerWidth < 750 && '126px') || 'auto'}
-            />{' '}
+              width={(window.innerWidth < 750 && "126px") || "auto"}
+            />{" "}
           </StyledLink>
           {window.innerWidth > 750 && (
             <RightGrad>
-              <img loading='lazy' src={grad_right} />
+              <img loading="lazy" src={grad_right} />
             </RightGrad>
           )}
         </Logos>

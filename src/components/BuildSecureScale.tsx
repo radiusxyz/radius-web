@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import BssCards from './BssCards';
-import black_mosaic from '../assets/images/black_mosaic.svg';
+import styled from "styled-components";
+import BssCards from "./BssCards";
+import black_mosaic from "../assets/images/black_mosaic.svg";
 
 const Container = styled.div`
   width: 100%;

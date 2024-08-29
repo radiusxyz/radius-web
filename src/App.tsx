@@ -1,12 +1,12 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './index.css';
-import EcoPage from './pages/EcoPage';
-import HomePage from './pages/HomePage';
-import RootLayout from './pages/RootLayout';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
+import EcoPage from "./pages/EcoPage";
+import HomePage from "./pages/HomePage";
+import RootLayout from "./pages/RootLayout";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <RootLayout />,
     children: [
       {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
         },
       },
       {
-        path: 'ecosystem',
+        path: "ecosystem",
         element: <EcoPage />,
         loader: () => {
           window.scrollTo(0, 0);

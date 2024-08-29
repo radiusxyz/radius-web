@@ -1,9 +1,9 @@
-declare module '*.svg' {
-  const content: any;
+declare module "*.svg" {
+  const content: string;
   export default content;
 }
 
-declare module '*.ttf' {
-  const content: any;
+declare module "*.ttf" {
+  const content: string;
   export default content;
 }

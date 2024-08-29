@@ -14,20 +14,21 @@ const StyledLink = styled(Link)`
   color: inherit;
 `;
 
-const CustomNavBar = styled.div<{ sticky: boolean }>`
-  position: ${({ sticky }) => (sticky ? "sticky" : "absolute")};
+const CustomNavBar = styled.div<{ $sticky: boolean }>`
+  position: ${({ $sticky }) => ($sticky ? "sticky" : "absolute")};
   width: 100%;
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${({ sticky }) => (sticky ? "#fff" : "transparent")};
-  box-shadow: ${({ sticky }) => (sticky ? "0px 4px 36px 0px rgba(255, 122, 0, 0.25)" : "none")};
+  background: ${({ $sticky }) => ($sticky ? "#fff" : "transparent")};
+  box-shadow: ${({ $sticky }) =>
+    $sticky ? "0px 4px 36px 0px rgba(255, 122, 0, 0.25)" : "none"};
   // Adjust this property if there is a top alert
-  top: ${({ sticky }) => (sticky ? "0px" : "41px")};
+  top: ${({ $sticky }) => ($sticky ? "0px" : "41px")};
   z-index: 10;
-  margin-top: ${({ sticky }) => (sticky ? "0px" : "9px")};
-  padding: ${({ sticky }) => (sticky ? "0px" : "0px 30px")};
+  margin-top: ${({ $sticky }) => ($sticky ? "0px" : "9px")};
+  padding: ${({ $sticky }) => ($sticky ? "0px" : "0px 30px")};
 `;
 
 const Content = styled.div`
@@ -121,16 +122,14 @@ const GitBtn = styled.button`
   }
 `;
 
-// Styled components
-
-const Sticky = styled.div<{ eco: string }>`
+const Sticky = styled.div<{ $eco: string }>`
   // position: absolute;
-  position: ${(props) => (props.eco === "/ecosystem" ? "sticky" : "absolute")};
+  position: ${(props) => (props.$eco === "/ecosystem" ? "sticky" : "absolute")};
   width: 100%;
   height: auto;
   z-index: 10;
   // Adjust the below property when there is a top alert
-  top: ${(props) => (props.eco === "/ecosystem" ? "0px" : "0px")};
+  top: ${(props) => (props.$eco === "/ecosystem" ? "0px" : "0px")};
 `;
 
 const NavbarContainer = styled.nav`
@@ -209,7 +208,10 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if ((location.pathname === "/" && window.scrollY > 162) || location.pathname === "/ecosystem") {
+      if (
+        (location.pathname === "/" && window.scrollY > 162) ||
+        location.pathname === "/ecosystem"
+      ) {
         setSticky(true);
       } else {
         setSticky(false);
@@ -227,7 +229,7 @@ const NavBar = () => {
     if (location.pathname === "/ecosystem") {
       setSticky(true);
     }
-  }, []);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleBackButton = () => {
@@ -260,27 +262,38 @@ const NavBar = () => {
 
   return windowWidth <= 750 ? (
     <>
-      <Sticky eco={location.pathname}>
+      <Sticky $eco={location.pathname}>
         <NavbarContainer>
           <LogoAndClose>
-            <Logo onClick={() => navigate("/")} src={radius} width='93px' alt='Radius' />
+            <Logo
+              onClick={() => navigate("/")}
+              src={radius}
+              width="93px"
+              alt="Radius"
+            />
             {isShown ? (
               <CloseButton onClick={handleMenu}>
-                <img loading='lazy' src={close} />
+                <img loading="lazy" src={close} />
               </CloseButton>
             ) : (
-              <img loading='lazy' onClick={handleMenu} src={hamburger} />
+              <img loading="lazy" onClick={handleMenu} src={hamburger} />
             )}
           </LogoAndClose>
           {isShown && (
             <NavLinksContainer>
-              <StyledNavLink onClick={handleMenu} to='/ecosystem'>
+              <StyledNavLink onClick={handleMenu} to="/ecosystem">
                 Ecosystem
               </StyledNavLink>
-              <StyledNavLink onClick={handleMenu} to='https://docs.theradius.xyz/overview/introduction-to-radius'>
+              <StyledNavLink
+                onClick={handleMenu}
+                to="https://docs.theradius.xyz/overview/introduction-to-radius"
+              >
                 Documentation
               </StyledNavLink>
-              <StyledNavLink onClick={handleMenu} to='https://github.com/radiusxyz'>
+              <StyledNavLink
+                onClick={handleMenu}
+                to="https://github.com/radiusxyz"
+              >
                 Github
               </StyledNavLink>
             </NavLinksContainer>
@@ -290,20 +303,30 @@ const NavBar = () => {
       {isShown && <Backdrop onClick={handleMenu} />}
     </>
   ) : (
-    <CustomNavBar sticky={sticky}>
+    <CustomNavBar $sticky={sticky}>
       <Content>
-        <StyledLink to='/' onClick={() => setSticky(false)}>
-          <img loading='lazy' src={sticky ? radius_dark : radius} alt='radius' />
+        <StyledLink to="/" onClick={() => setSticky(false)}>
+          <img
+            loading="lazy"
+            src={sticky ? radius_dark : radius}
+            alt="radius"
+          />
         </StyledLink>
 
         <EcoDocGit>
-          <StyledLink to='/ecosystem' onClick={() => setSticky(true)}>
+          <StyledLink to="/ecosystem" onClick={() => setSticky(true)}>
             <EcoBtn>Ecosystem</EcoBtn>
           </StyledLink>
-          <StyledLink to='https://mirror.xyz/0x957084A1F20AB33cfA0cE07ed57F50c05954999C' target='_blank'>
+          <StyledLink
+            to="https://mirror.xyz/0x957084A1F20AB33cfA0cE07ed57F50c05954999C"
+            target="_blank"
+          >
             <DocBtn>Blog</DocBtn>
           </StyledLink>
-          <StyledLink to='https://docs.theradius.xyz/overview/introduction-to-radius' target='_blank'>
+          <StyledLink
+            to="https://docs.theradius.xyz/overview/introduction-to-radius"
+            target="_blank"
+          >
             <GitBtn>Documentation</GitBtn>
           </StyledLink>
         </EcoDocGit>

@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import { useEffect, useState } from "react";
+import styled from "styled-components";
 
 const CardsContainer = styled.div`
   display: grid;
@@ -17,12 +17,6 @@ const CardsContainer = styled.div`
     gap: 14px;
   }
 `;
-
-// const Half = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   gap: 30px;
-// `;
 
 const Container = styled.div`
   width: 100%;
@@ -99,41 +93,41 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
     }
 
     // Add event listener
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Call handler right away so state gets updated with initial window size
     handleResize();
 
     // Remove event listener on cleanup
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty array ensures that effect is only run on mount and unmount
 
   return windowWidth > 750 ? (
     <CardsContainer>
       <Container key={cards[0].title}>
         <ImgContainer>
-          <img loading='lazy' src={cards[0].imgUrl} alt={cards[0].imgUrl} />
+          <img loading="lazy" src={cards[0].imgUrl} alt={cards[0].imgUrl} />
         </ImgContainer>
         <Title>{cards[0].title}</Title>
         <Details>{cards[0].details}</Details>
       </Container>
       <Container key={cards[3].title}>
         <ImgContainer>
-          <img loading='lazy' src={cards[3].imgUrl} alt={cards[3].imgUrl} />
+          <img loading="lazy" src={cards[3].imgUrl} alt={cards[3].imgUrl} />
         </ImgContainer>
         <Title>{cards[3].title}</Title>
         <Details>{cards[3].details}</Details>
       </Container>
       <Container key={cards[1].title}>
         <ImgContainer>
-          <img loading='lazy' src={cards[1].imgUrl} alt={cards[1].imgUrl} />
+          <img loading="lazy" src={cards[1].imgUrl} alt={cards[1].imgUrl} />
         </ImgContainer>
         <Title>{cards[1].title}</Title>
         <Details>{cards[1].details}</Details>
       </Container>
       <Container key={cards[2].title}>
         <ImgContainer>
-          <img loading='lazy' src={cards[2].imgUrl} alt={cards[2].imgUrl} />
+          <img loading="lazy" src={cards[2].imgUrl} alt={cards[2].imgUrl} />
         </ImgContainer>
         <Title>{cards[2].title}</Title>
         <Details>{cards[2].details}</Details>
@@ -144,9 +138,9 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
       <Container key={cards[0].title}>
         <ImgContainer>
           <img
-            loading='lazy'
+            loading="lazy"
             src={cards[0].imgUrl}
-            width='100px'
+            width="100px"
             alt={cards[0].imgUrl}
           />
         </ImgContainer>
@@ -158,9 +152,9 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
       <Container key={cards[3].title}>
         <ImgContainer>
           <img
-            loading='lazy'
+            loading="lazy"
             src={cards[3].imgUrl}
-            width='100px'
+            width="100px"
             alt={cards[3].imgUrl}
           />
         </ImgContainer>
@@ -172,9 +166,9 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
       <Container key={cards[1].title}>
         <ImgContainer>
           <img
-            loading='lazy'
+            loading="lazy"
             src={cards[1].imgUrl}
-            width='100px'
+            width="100px"
             alt={cards[1].imgUrl}
           />
         </ImgContainer>
@@ -186,9 +180,9 @@ const PurpleCards = ({ cards }: { cards: Props[] }) => {
       <Container key={cards[2].title}>
         <ImgContainer>
           <img
-            loading='lazy'
+            loading="lazy"
             src={cards[2].imgUrl}
-            width='100px'
+            width="100px"
             alt={cards[2].imgUrl}
           />
         </ImgContainer>

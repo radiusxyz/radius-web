@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import x from '../assets/images/x.svg';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import x from "../assets/images/x.svg";
+import { Link } from "react-router-dom";
 const Container = styled.div`
   height: 100%;
   width: 100%;
@@ -91,13 +91,13 @@ const StyledLink = styled(Link)`
 `;
 
 const tagTexts = [
-  '# MEV',
-  '# Zero Knowledge',
-  '# Encrypted Mempool',
-  '# Distributed Sequencer',
-  '# Interoperability',
-  '# Proposer Builder Separation',
-  '# Atomic Composability',
+  "# MEV",
+  "# Zero Knowledge",
+  "# Encrypted Mempool",
+  "# Distributed Sequencer",
+  "# Interoperability",
+  "# Proposer Builder Separation",
+  "# Atomic Composability",
 ];
 const ResearchAreas = () => {
   return (
@@ -113,8 +113,8 @@ const ResearchAreas = () => {
             <Tag key={tag}>{tag}</Tag>
           ))}
         </Tags>
-        <StyledLink to='https://twitter.com/radius_xyz' target='_blank'>
-          <img loading='lazy' src={x} width='63px' alt='x' />
+        <StyledLink to="https://twitter.com/radius_xyz" target="_blank">
+          <img loading="lazy" src={x} width="63px" alt="x" />
         </StyledLink>
         <SubText>
           Interested in collaboration? We want to hear from you!

@@ -3,24 +3,34 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import entanglement from "../assets/images/entanglement.svg";
 import entanglement_mob from "../assets/images/entanglement_mob.svg";
-import altlayer from "../assets/images/altlayer.svg";
-import caldera from "../assets/images/caldera.svg";
-import celestia from "../assets/images/celestia.svg";
-import herodotus from "../assets/images/herodotus.svg";
-import lumoz from "../assets/images/lumoz.svg";
-import madara from "../assets/images/madara.svg";
-import pragma from "../assets/images/pragma.svg";
-import rollkit from "../assets/images/rollkit.svg";
-import saga from "../assets/images/saga.svg";
-import stackr from "../assets/images/stackr.svg";
-import vistara from "../assets/images/vistara.svg";
-import nectar from "../assets/images/nectar.svg";
-import dsrv from "../assets/images/dsrv.svg";
-import gevulot from "../assets/images/gevulot.svg";
-import karnot from "../assets/images/karnot.svg";
-import marlin from "../assets/images/marlin.svg";
-import risczero from "../assets/images/risczero.svg";
-import snarkify from "../assets/images/snarkify.svg";
+import linkarrow from "../assets/images/linkarrow.svg";
+import altlayer from "../assets/images/altlayer.png";
+import caldera from "../assets/images/caldera.png";
+import herodotus from "../assets/images/herodotus.png";
+import lumoz from "../assets/images/lumoz.png";
+import madara from "../assets/images/madara.png";
+import pragma from "../assets/images/pragma.png";
+import rollkit from "../assets/images/rollkit.png";
+import saga from "../assets/images/saga.png";
+import stackr from "../assets/images/stackr.png";
+import vistara from "../assets/images/vistara.png";
+import dsrv from "../assets/images/dsrv.png";
+import karnot from "../assets/images/karnot.png";
+import marlin from "../assets/images/marlin.png";
+import risczero from "../assets/images/risczero.png";
+import snarkify from "../assets/images/snarkify.png";
+import celestia from "../assets/images/celestia.png";
+import gevulot from "../assets/images/gevulot.png";
+import vessel from "../assets/images/vessel.png";
+import swell from "../assets/images/swell.png";
+import starknet from "../assets/images/starknet.png";
+import zkcross from "../assets/images/zkcross.png";
+import aligned from "../assets/images/aligned.png";
+import avail from "../assets/images/avail.png";
+import nuffle from "../assets/images/nuffle.png";
+import witnesschain from "../assets/images/witnesschain.png";
+import symbiotic from "../assets/images/symbiotic.png";
+import eigenlayer from "../assets/images/eigenlayer.png";
 
 const IntroSection = styled.div`
   width: 100%;
@@ -149,86 +159,114 @@ const CardsSectionContent = styled.div`
 
 const Cards = styled.div`
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(3, 1fr);
   gap: 19px 18px;
 
-  @media (max-width: 850px) {
-    grid-wrap: wrap;
-    gap: 10px;
-  }
-  @media (max-width: 750px) {
-    display: flex;
+  @media (max-width: 1106px) {
+    grid-template-columns: repeat(2, 1fr);
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    gap: 4px;
   }
 `;
 
 const StyledLink = styled(Link)`
   display: block;
   text-decoration: none;
-  color: inherit;
   width: 100%;
+`;
+
+const TextIcon = styled.span`
+  position: absolute;
+  left: 50%;
+  width: auto;
+  bottom: 20px;
+  display: flex;
+  gap: 4px;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  ${StyledLink}:hover & {
+    opacity: 1;
+    visibility: visible;
+  }
+`;
+
+const Text = styled.span`
+  color: #fff;
+  font-family: Gilroy-Medium;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
 `;
 
 const Card = styled.div`
+  position: relative;
   border-radius: 12px;
-  border: 1px solid #444;
-  background: #2d2d2d;
+  border: 2px rgba(229, 227, 232, 0.12);
+  background: #34303b;
   width: 100%;
   max-width: 454px;
-  padding: 32px;
   display: flex;
-  flex-direction: column;
-  gap: 60px;
-  min-height: 276px;
-  height: 100%;
-  @media (max-width: 750px) {
-    gap: 15.48px;
-    min-height: 157px;
-    padding: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 276px;
+  &:hover {
+    background: #5e5772;
+  }
+  @media (max-width: 1106px) {
+    height: 252px;
+    padding: 0 60px;
+  }
+  @media (max-width: 768px) {
+    padding: 8px 36px 0px 36px;
   }
 `;
 
-const LogoTitle = styled.div`
+const TagsContainer = styled.div`
   display: flex;
-  gap: 12px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  gap: 6px;
+  width: auto;
+`;
+
+const Tag = styled.div`
+  display: flex;
+  padding: 8px 16px 6px 16px;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  @media (max-width: 750px) {
-    gap: 10px;
-  }
+  border-radius: 999px;
+  background: #1b191f;
+  color: #fff;
+  text-align: center;
+  font-family: Gilroy-SemiBold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
 `;
 
 const Logo = styled.img`
+  max-width: 300px;
   width: 100%;
-  width: 60px;
   height: auto;
-  @media (max-width: 750px) {
-    width: 30px;
+  @media (max-width: 1106px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
     height: auto;
-  }
-`;
-
-const CardTitle = styled.span`
-  color: #fff;
-  font-family: Gilroy-Bold;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 130%; /* 31.2px */
-  @media (max-width: 750px) {
-    font-size: 18px;
-  }
-`;
-
-const CardDetails = styled.p`
-  color: #fff;
-  font-family: Gilroy-Light;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 200;
-  line-height: 140.625%; /* 22.5px */
-  @media (max-width: 750px) {
-    font-size: 12px;
   }
 `;
 
@@ -286,129 +324,168 @@ const GradientLink = styled.p`
 
 const cards = [
   {
+    title: "Vessel",
+    types: ["RaaS"],
+    url: "https://vessel.finance/",
+    logo: vessel,
+  },
+  {
+    title: "Swell",
+    types: ["Rollup", "LRT"],
+    url: "https://www.swellnetwork.io/",
+    logo: swell,
+  },
+  {
+    title: "Starknet",
+    types: ["Rollup"],
+    url: "https://www.starknet.io/",
+    logo: starknet,
+  },
+  {
+    title: "AltLayer",
+    types: ["RaaS"],
     url: "https://altlayer.io/",
     logo: altlayer,
-    title: "Altlayer",
-    details:
-      "AltLayer is an open and decentralized protocol for developers to launch highly elastic application-tailored rollups.",
   },
   {
+    title: "Caldera",
+    types: ["RaaS"],
     url: "https://caldera.xyz/",
     logo: caldera,
-    title: "Caldera",
-    details:
-      "Caldera specializes in building high-performance, customizable, and application-specific layer-two blockchains.",
   },
   {
-    url: "https://celestia.org/",
-    logo: celestia,
-    title: "Celestia",
-    details:
-      "Celestia is a modular data availability network that securely scales with the number of users, making it easy for anyone to launch their own blockchain.",
-  },
-  {
-    logo: herodotus,
-    url: "https://www.herodotus.dev/",
-    title: "Herodotus",
-    details:
-      "Herodotus is a powerful data access middleware that provides smart contracts with synchronous access to both current and historical on-chain data across Ethereum layers.",
-  },
-  {
+    title: "Lumoz",
+    types: ["RaaS"],
     url: "https://lumoz.org/",
     logo: lumoz,
-    title: "Lumoz",
-    details:
-      "Lumoz (Previously Opside) is a decentralized ZK-RaaS platform as well as a PoW network that facilitates ZKP mining.",
-  },
-  {
-    url: "https://www.madara.zone/",
-    logo: madara,
-    title: "Madara",
-    details:
-      "Madara is standard, customizable and blazing fast Starknet sequencer. Madara delivers unmatched performance and scalability to power Starknet-based Validity Rollup chain.",
-  },
-  {
-    url: "https://www.pragmaoracle.com/",
-    logo: pragma,
-    title: "Pragma",
-    details:
-      "Pragma is a decentralized, transparent and composable oracle network, leveraging state-of-the-art zero-knowledge cryptography.",
-  },
-  {
-    url: "https://rollkit.dev/",
-    logo: rollkit,
-    title: "Rollkit",
-    details:
-      "Rollkit is a rollup framework that gives developers the freedom to deploy rollups throughout the modular stack.",
-  },
-  {
-    url: "https://www.saga.xyz/",
-    logo: saga,
-    title: "Saga",
-    details: "Saga is a protocol for automatically provisioning application-specific blockchains.",
-  },
-  {
-    url: "https://www.stackrlabs.xyz/",
-    logo: stackr,
-    title: "Stackr",
-    details: "Stackr is a modular SDK for building micro-rollups in general-purpose languages.",
-  },
-  {
-    url: "https://www.vistara.dev/",
-    logo: vistara,
-    title: "Vistara",
-    details: "Vistara is a one-click rollup deployment framework for designing and managing scalable infrastructure.",
-  },
-  {
-    url: "https://www.nectarx.io/",
-    logo: nectar,
-    title: "Nectar",
-    details: "Nectar is a safe and affordable on-chain trading for all by WASD3R.",
-  },
-  {
-    title: "DSRV",
-    url: "https://www.dsrvlabs.com/",
-    logo: dsrv,
-    details:
-      "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity.",
-  },
-  {
-    title: "Gevulot",
-    url: "https://www.gevulot.com/",
-    logo: gevulot,
-    details:
-      "Gevulot, the first decentralized prover layer, is an internet-scale compute network optimized for zero knowledge proofs, offering proving and verification for the modular stack.",
   },
   {
     title: "Karnot",
+    types: ["RaaS"],
     url: "https://www.karnot.xyz/",
     logo: karnot,
-    details:
-      "Karnot is the leading RaaS provider for Madara, simplifying scalable ZK app chain deployment so you can focus on building your app.",
   },
   {
-    url: "https://www.marlin.org/",
-    title: "Marlin",
-    logo: marlin,
-    details:
-      "Marlin is a verifiable computing protocol featuring TEE and ZK-based coprocessors to delegate complex workloads over a decentralized node network.",
+    title: "Vistara",
+    types: ["RaaS"],
+    url: "https://www.vistara.dev/",
+    logo: vistara,
+  },
+  {
+    title: "Madara",
+    types: ["Framework"],
+    url: "https://www.madara.zone/",
+    logo: madara,
+  },
+  {
+    title: "Rollkit",
+    types: ["Framework"],
+    url: "https://rollkit.dev/",
+    logo: rollkit,
+  },
+  {
+    title: "Celestia",
+    types: ["DA"],
+    url: "https://celestia.org/",
+    logo: celestia,
+  },
+  {
+    title: "Saga",
+    types: ["Framework"],
+    url: "https://www.saga.xyz/",
+    logo: saga,
+  },
+  {
+    title: "Stackr",
+    types: ["Framework"],
+    url: "https://www.stackrlabs.xyz/",
+    logo: stackr,
+  },
+  {
+    title: "ZKCross",
+    types: ["Framework"],
+    url: "https://www.zkcross.org/",
+    logo: zkcross,
   },
   {
     title: "RISC Zero",
-    logo: risczero,
+    types: ["Prover"],
     url: "https://www.risczero.com/",
-    details:
-      "RISC Zero is creating the infrastructure and tooling necessary for developers around the globe to build software that leverages ZK technology.",
+    logo: risczero,
   },
   {
+    title: "Snarkify",
+    types: ["Prover"],
     url: "https://snarkify.io/",
     logo: snarkify,
-    title: "Snarkify",
-    details:
-      "Snarkify is scaling ZK for the trustless future, building scalable systems and high performance libraries to accelerate ZK adoption.",
+  },
+  {
+    title: "Marlin",
+    types: ["Prover", "Operator"],
+    url: "https://www.marlin.org/",
+    logo: marlin,
+  },
+  {
+    title: "Herodotus",
+    types: ["Storage Proof"],
+    url: "https://www.herodotus.dev/",
+    logo: herodotus,
+  },
+  {
+    title: "Aligned",
+    types: ["DA", "Proof Verification"],
+    url: "https://alignedlayer.com/",
+    logo: aligned,
+  },
+  {
+    title: "Avail",
+    types: ["DA", "Proof Aggregation"],
+    url: "https://www.availproject.org/",
+    logo: avail,
+  },
+  {
+    title: "Nuffle",
+    types: ["Fast Finality", "AVS"],
+    url: "https://nuff.tech/",
+    logo: nuffle,
+  },
+  {
+    title: "Witness Chain",
+    types: ["Watchtower", "AVS"],
+    url: "https://www.witnesschain.com/",
+    logo: witnesschain,
+  },
+  {
+    title: "Pragma",
+    types: ["Oracle"],
+    url: "https://www.pragmaoracle.com/",
+    logo: pragma,
+  },
+  {
+    title: "Symbiotic",
+    types: ["Restaking"],
+    url: "https://symbiotic.fi/",
+    logo: symbiotic,
+  },
+  {
+    title: "Gevulot",
+    types: ["Prover"],
+    url: "https://www.gevulot.com/",
+    logo: gevulot,
+  },
+  {
+    title: "Eigenlayer",
+    types: ["Restaking"],
+    logo: eigenlayer,
+    url: "https://www.eigenlayer.xyz/",
+  },
+  {
+    title: "DSRV",
+    types: ["Operator"],
+    url: "https://www.dsrvlabs.com/",
+    logo: dsrv,
   },
 ];
-
 const EcoPage = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -431,15 +508,18 @@ const EcoPage = () => {
   return (
     <>
       <IntroSection>
-        <IntroBackground src={windowWidth > 750 ? entanglement : entanglement_mob} />
+        <IntroBackground
+          src={windowWidth > 750 ? entanglement : entanglement_mob}
+        />
         <IntroContent>
           <IntroText>
             <IntroMiniTitle>OUR ECOSYSTEM</IntroMiniTitle>
             <IntroTitle>Meet builders and partners</IntroTitle>
             <IntroDetails>
-              We're all about making rollups decentralized, interoperable, and sustainable. We work with like-minded
-              builders and infrastructure partners to collectively advance research and development, shaping a
-              decentralized future together.
+              We're all about making rollups decentralized, interoperable, and
+              sustainable. We work with like-minded builders and infrastructure
+              partners to collectively advance research and development, shaping
+              a decentralized future together.
             </IntroDetails>
           </IntroText>
         </IntroContent>
@@ -448,15 +528,22 @@ const EcoPage = () => {
         <CardsSectionContent>
           <Cards>
             {cards
-              .sort((a, b) => (a.title.toUpperCase() > b.title.toUpperCase() ? 1 : -1))
+              .sort((a, b) =>
+                a.title.toUpperCase() > b.title.toUpperCase() ? 1 : -1,
+              )
               .map((card) => (
-                <StyledLink key={card.title} to={card.url} target='_blank'>
+                <StyledLink key={card.title} to={card.url} target="_blank">
                   <Card key={card.title}>
-                    <LogoTitle>
-                      <Logo src={card.logo} />
-                      <CardTitle>{card.title}</CardTitle>
-                    </LogoTitle>
-                    <CardDetails>{card.details}</CardDetails>
+                    <TagsContainer>
+                      {card.types.map((type: string, index: number) => (
+                        <Tag key={`type_${index}`}>{type}</Tag>
+                      ))}
+                    </TagsContainer>
+                    <Logo src={card.logo} />
+                    <TextIcon key={card.title}>
+                      <Text>Visit Website</Text>
+                      <img src={linkarrow} />
+                    </TextIcon>
                   </Card>
                 </StyledLink>
               ))}
@@ -465,8 +552,10 @@ const EcoPage = () => {
       </CardsSection>
       <GradientSection>
         <GradientContent>
-          <GradientText>Join Radius in decentralizing and future-proofing Ethereum</GradientText>
-          <a href='https://twitter.com/radius_xyz' target='_blank'>
+          <GradientText>
+            Join Radius in decentralizing and future-proofing Ethereum
+          </GradientText>
+          <a href="https://twitter.com/radius_xyz" target="_blank">
             <GradientLink>Talk to us</GradientLink>
           </a>
         </GradientContent>

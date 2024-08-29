@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import radius_footer from '../assets/images/radius_footer.svg';
-import x_footer from '../assets/images/x_footer.svg';
-import radius_footer_150x37 from '../assets/images/radius_150x37.svg';
-import discord from '../assets/images/discord.svg';
-import medium from '../assets/images/medium.svg';
-import github from '../assets/images/github.svg';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import radius_footer from "../assets/images/radius_footer.svg";
+import x_footer from "../assets/images/x_footer.svg";
+import radius_footer_150x37 from "../assets/images/radius_150x37.svg";
+import discord from "../assets/images/discord.svg";
+import medium from "../assets/images/medium.svg";
+import github from "../assets/images/github.svg";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -99,12 +99,6 @@ const Card = styled.div`
   }
 `;
 
-// const CardContent = styled.div`
-//   display: flex;
-//   align-items: center;
-//   gap: 19px;
-// `;
-
 const CardText = styled.span`
   color: #c7c7c7;
   font-family: Atyp Display;
@@ -138,34 +132,34 @@ const Footer = () => {
   return (
     <Container>
       <Content>
-        <StyledLinkLogo to='/'>
+        <StyledLinkLogo to="/">
           <img
             src={window.innerWidth > 750 ? radius_footer : radius_footer_150x37}
-            alt='radius_footer'
+            alt="radius_footer"
           />
         </StyledLinkLogo>
         <Links>
           <RowWrapper>
             <RowTitle>Follow us</RowTitle>
             <CardRow>
-              <StyledLink to='https://twitter.com/radius_xyz' target='_blank'>
+              <StyledLink to="https://twitter.com/radius_xyz" target="_blank">
                 <Card>
-                  <img loading='lazy' src={x_footer} />
+                  <img loading="lazy" src={x_footer} />
                   <CardText>Twitter</CardText>
                 </Card>
               </StyledLink>
               <StyledLink
-                to='https://discord.com/invite/wdS6k4wz9H'
-                target='_blank'
+                to="https://discord.com/invite/wdS6k4wz9H"
+                target="_blank"
               >
                 <Card>
-                  <img loading='lazy' src={discord} />{' '}
+                  <img loading="lazy" src={discord} />{" "}
                   <CardText>Discord</CardText>
                 </Card>
               </StyledLink>
-              <StyledLink to='https://medium.com/@radius_xyz' target='_blank'>
+              <StyledLink to="https://medium.com/@radius_xyz" target="_blank">
                 <Card>
-                  <img loading='lazy' src={medium} /> <CardText>Blog</CardText>
+                  <img loading="lazy" src={medium} /> <CardText>Blog</CardText>
                 </Card>
               </StyledLink>
             </CardRow>
@@ -173,15 +167,15 @@ const Footer = () => {
           <RowWrapper>
             <RowTitle>Recources</RowTitle>
             <CardRow>
-              <StyledLink to='https://docs.theradius.xyz/' target='_blank'>
+              <StyledLink to="https://docs.theradius.xyz/" target="_blank">
                 <Card>
-                  <img loading='lazy' src={x_footer} />
+                  <img loading="lazy" src={x_footer} />
                   <CardText>Documentation</CardText>
                 </Card>
               </StyledLink>
-              <StyledLink to='https://github.com/radiusxyz' target='_blank'>
+              <StyledLink to="https://github.com/radiusxyz" target="_blank">
                 <Card>
-                  <img loading='lazy' src={github} />
+                  <img loading="lazy" src={github} />
                   <CardText>Github</CardText>
                 </Card>
               </StyledLink>

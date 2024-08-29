@@ -228,6 +228,7 @@ const Card = styled.div`
     padding: 0 60px;
   }
   @media (max-width: 768px) {
+    height: 144px;
     padding: 8px 36px 0px 36px;
   }
 `;
@@ -239,6 +240,10 @@ const TagsContainer = styled.div`
   right: 20px;
   gap: 6px;
   width: auto;
+  @media (max-width: 768px) {
+    top: 8px;
+    right: 8px;
+  }
 `;
 
 const Tag = styled.div`
@@ -251,11 +256,15 @@ const Tag = styled.div`
   background: #1b191f;
   color: #fff;
   text-align: center;
-  font-family: Gilroy-SemiBold;
+  font-family: Gilroy-Medium;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
 `;
 
 const Logo = styled.img`
@@ -536,7 +545,11 @@ const EcoPage = () => {
                   <Card key={card.title}>
                     <TagsContainer>
                       {card.types.map((type: string, index: number) => (
-                        <Tag key={`type_${index}`}>{type}</Tag>
+                        <Tag key={`type_${index}`}>
+                          {windowWidth <= 769 && type.length > 10
+                            ? type.slice(5)
+                            : type}
+                        </Tag>
                       ))}
                     </TagsContainer>
                     <Logo src={card.logo} />

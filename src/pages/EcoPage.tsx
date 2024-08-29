@@ -215,7 +215,6 @@ const Card = styled.div`
   border: 2px solid rgba(229, 227, 232, 0.12);
   background: #34303b;
   width: 100%;
-  max-width: 454px;
   display: flex;
   justify-content: center;
   align-items: center;
